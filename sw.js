@@ -2,8 +2,7 @@ const CACHE_NAME = "sw-cache-v1"
 // The files we want to cache
 var urlsToCache = [
   '/',
-  '/styles/main.css',
-  '/script/main.js'
+  '/js/jquery-3.4.1.min.js'
 ];
 
 // Set the callback for the install step
