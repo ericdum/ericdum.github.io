@@ -1,3 +1,4 @@
+const CACHE_NAME = "sw-cache-v1"
 // The files we want to cache
 var urlsToCache = [
   '/',
@@ -7,6 +8,8 @@ var urlsToCache = [
 
 // Set the callback for the install step
 self.addEventListener('install', function(event) {
+  console.log('install')
+  debugger
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,6 +21,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+  console.log('fetch', event.request, event)
   event.respondWith(
     caches.match(event.request)
     .then(function(response) {
