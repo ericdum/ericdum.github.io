@@ -9,7 +9,6 @@ var urlsToCache = [
 // Set the callback for the install step
 self.addEventListener('install', function(event) {
   console.log('install')
-  debugger
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
