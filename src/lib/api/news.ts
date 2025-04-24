@@ -1,7 +1,13 @@
 export interface NewsItem {
   id: number;
-  title: string;
-  content: string;
+  title: {
+    en: string;
+    zh: string;
+  };
+  content: {
+    en: string;
+    zh: string;
+  };
   date: string;
   sourceUrl?: string;
   fullContent?: string;
@@ -13,8 +19,14 @@ export interface NewsItem {
 const news: NewsItem[] = [
   {
     id: 1,
-    title: "白云机场推出国内首个飞机泊位警示系统",
-    content: "该警示系统将交通信号灯和原有泊位系统结合起来，通过系统自动化控制飞机泊位引导、信息自动化处理和信号灯指挥三个流程，实现自动泊位系统根据当前机位的不同状态显示相应的交通信号，确保飞机进位的安全性，提高了服务车道运行速度，降低飞机进位风险。",
+    title: {
+      en: "Baiyun Airport Launches First Aircraft Parking Warning System in China",
+      zh: "白云机场推出国内首个飞机泊位警示系统"
+    },
+    content: {
+      en: "The warning system combines traffic signals with the existing parking system, automating three processes: aircraft parking guidance, information processing, and signal light control. It ensures aircraft parking safety by displaying appropriate traffic signals based on the current parking status, improving service lane operation speed and reducing aircraft parking risks.",
+      zh: "该警示系统将交通信号灯和原有泊位系统结合起来，通过系统自动化控制飞机泊位引导、信息自动化处理和信号灯指挥三个流程，实现自动泊位系统根据当前机位的不同状态显示相应的交通信号，确保飞机进位的安全性，提高了服务车道运行速度，降低飞机进位风险。"
+    },
     date: "2021-10-14",
     author: "中国民航局",
     sourceUrl: "http://zn.caac.gov.cn/ZN_XXGK/ZN_HYDT/202110/t20211014_209614.html",
@@ -31,8 +43,14 @@ const news: NewsItem[] = [
   },
   {
     id: 2,
-    title: "科技抗疫 阿里云、千方科技助力民航疫情防控",
-    content: "2月28日，阿里云发布航空行业热度预测服务。这项服务联合飞猪和航班管家，在疫情防控后期阶段，为航空公司的航线运行恢复以及服务的精细化管理提供支持。",
+    title: {
+      en: "Tech Against COVID: Alibaba Cloud and Qianfang Technology Support Civil Aviation Epidemic Prevention",
+      zh: "科技抗疫 阿里云、千方科技助力民航疫情防控"
+    },
+    content: {
+      en: "On February 28, Alibaba Cloud released an aviation industry heat prediction service. This service, in collaboration with Fliggy and Flight Manager, provides support for airlines' route operation recovery and service refinement management during the later stages of epidemic prevention and control.",
+      zh: "2月28日，阿里云发布航空行业热度预测服务。这项服务联合飞猪和航班管家，在疫情防控后期阶段，为航空公司的航线运行恢复以及服务的精细化管理提供支持。"
+    },
     date: "2020-03-04",
     author: "中国民航网",
     sourceUrl: "http://caacnews.com.cn/1/4/202003/t20200304_1294451.html",
@@ -52,8 +70,14 @@ const news: NewsItem[] = [
   },
   {
     id: 10,
-    title: "第一次见到支持学生开公司的学校，羡慕已经说累了",
-    content: "杭I的能力就是人类的能力」，木酱老师教会了同学们怎么利用AIGC学习复杂的知识点。同学们自己画图，一步一步把芯片、处理器、连线接入自制集成电路板中，最后终于实现「爱做多少个按钮，就做多少个按钮了！",
+    title: {
+      en: "First Time Seeing a School Supporting Students to Start Companies, Can't Stop Being Envious",
+      zh: "第一次见到支持学生开公司的学校，羡慕已经说累了"
+    },
+    content: {
+      en: "The ability of AI is human ability. Teacher Mu taught students how to use AIGC to learn complex knowledge points. Students drew diagrams themselves, step by step connecting chips, processors, and wires into self-made integrated circuit boards, finally achieving 'as many buttons as you want!'",
+      zh: "杭I的能力就是人类的能力」，木酱老师教会了同学们怎么利用AIGC学习复杂的知识点。同学们自己画图，一步一步把芯片、处理器、连线接入自制集成电路板中，最后终于实现「爱做多少个按钮，就做多少个按钮了！"
+    },
     date: "2024-10-22",
     author: "谷雨星球",
     sourceUrl: "https://www.sohu.com/a/819023431_121948389",
@@ -182,8 +206,14 @@ const news: NewsItem[] = [
   },
   {
     id: 9,
-    title: "【麦苗成长】智启未来，AI赋能童年——记杭州市卖鱼桥小学第十八届科技节",
-    content: "特别关注的《拥抱 AI 时代》讲座中，杭州市科协代立晨老师通过趣味互动，揭开人工智能的神秘面纱。从大模型语言解析原理到 AI 写诗实践，从旅行规划应用到文化内涵探讨，同学们在 \"人机对话\" 中感受科技进步，现场生成的个性化 AI 旅行攻略成为热门话题。 ",
+    title: {
+      en: "【Wheat Seedling Growth】Intelligence Enlightens the Future, AI Empowers Childhood—Record of the 18th Science and Technology Festival of Hangzhou Maiyuqiao Primary School",
+      zh: "【麦苗成长】智启未来，AI赋能童年——记杭州市卖鱼桥小学第十八届科技节"
+    },
+    content: {
+      en: "In the specially关注ed 'Embracing the AI Era' lecture, Hangzhou Science and Technology Association's Dai Lichen teacher unveiled the mystery of artificial intelligence through fun interactions. From large model language parsing principles to AI poetry practice, from travel planning applications to cultural connotation discussions, students experienced technological progress in 'human-machine dialogue,' with the on-site generated personalized AI travel攻略 becoming a hot topic.",
+      zh: "特别关注的《拥抱 AI 时代》讲座中，杭州市科协代立晨老师通过趣味互动，揭开人工智能的神秘面纱。从大模型语言解析原理到 AI 写诗实践，从旅行规划应用到文化内涵探讨，同学们在 \"人机对话\" 中感受科技进步，现场生成的个性化 AI 旅行攻略成为热门话题。"
+    },
     date: "2025-03-17",
     author: "杭州市卖鱼桥小学",
     sourceUrl: "https://mp.weixin.qq.com/s?__biz=MzU2MzAxODI0Nw==&mid=2247567386&idx=1&sn=3ae23b2581765efcf8e3fc3f87933310",
@@ -246,8 +276,14 @@ const news: NewsItem[] = [
   },
   {
     id: 6,
-    title: "第二届科学教育大会\"科技成果科普发布\"年度特别策划活动举行",
-    content: "在代立晨看来，并没有一个叫做\"AI使用技巧\" 的技能，会使用AI\"是要求一个人能够理解场景、与他人共情、识别社会生活中的机会、考虑未来的不同可能性……\"AI时代一定会产生新的艺术形式、新的工作方式、新的生活乐趣，我们都将会有更加美好的人生。\"",
+    title: {
+      en: "Second Science Education Conference \"Science and Technology Achievement Popularization Release\" Annual Special Planning Activity Held",
+      zh: "第二届科学教育大会\"科技成果科普发布\"年度特别策划活动举行"
+    },
+    content: {
+      en: "In Dai Lichen's view, there is no skill called 'AI usage techniques.' Using AI 'requires a person to understand scenarios, empathize with others, identify opportunities in social life, consider different future possibilities...' The AI era will definitely produce new art forms, new ways of working, and new life pleasures. We will all have better lives.",
+      zh: "在代立晨看来，并没有一个叫做\"AI使用技巧\" 的技能，会使用AI\"是要求一个人能够理解场景、与他人共情、识别社会生活中的机会、考虑未来的不同可能性……\"AI时代一定会产生新的艺术形式、新的工作方式、新的生活乐趣，我们都将会有更加美好的人生。\""
+    },
     date: "2024-08-26",
     author: "省科协科普部、橙柿互动",
     sourceUrl: "https://www.zast.org.cn/art/2024/8/26/art_1673864_58973805.html",
@@ -304,8 +340,14 @@ const news: NewsItem[] = [
   },
   {
     id: 3,
-    title: "央视新闻聚焦贵州：为大山里的孩子造\"火箭\"",
-    content: "在贵州省黔西南州普安县的大山里，一群山里娃实现了造火箭的梦想。这个项目由几个城里来的年轻人帮助实现，他们不仅给孩子们造出了会飞的火箭，还给孩子们种下了探索的种子。",
+    title: {
+      en: "CCTV News Focuses on Guizhou: Building 'Rockets' for Children in the Mountains",
+      zh: "央视新闻聚焦贵州：为大山里的孩子造\"火箭\""
+    },
+    content: {
+      en: "In the mountains of Pu'an County, Guizhou Province, a group of mountain children realized their dream of building rockets. This project was made possible by several young people from the city, who not only built flying rockets for the children but also planted seeds of exploration in their hearts.",
+      zh: "在贵州省黔西南州普安县的大山里，一群山里娃实现了造火箭的梦想。这个项目由几个城里来的年轻人帮助实现，他们不仅给孩子们造出了会飞的火箭，还给孩子们种下了探索的种子。"
+    },
     date: "2022-01-14",
     author: "央视新闻",
     sourceUrl: "https://news.qq.com/rain/a/20220114A01FUN00",
@@ -365,8 +407,14 @@ const news: NewsItem[] = [
   },
   {
     id: 5,
-    title: "白云机场推出国内首个飞机泊位警示系统",
-    content: "该警示系统将交通信号灯和原有泊位系统结合起来，通过系统自动化控制飞机泊位引导、信息自动化处理和信号灯指挥三个流程，实现自动泊位系统根据当前机位的不同状态显示相应的交通信号，确保飞机进位的安全性，提高了服务车道运行速度，降低飞机进位风险。",
+    title: {
+      en: "Baiyun Airport Launches First Aircraft Parking Warning System in China",
+      zh: "白云机场推出国内首个飞机泊位警示系统"
+    },
+    content: {
+      en: "The warning system combines traffic signals with the existing parking system, automating three processes: aircraft parking guidance, information processing, and signal light control. It ensures aircraft parking safety by displaying appropriate traffic signals based on the current parking status, improving service lane operation speed and reducing aircraft parking risks.",
+      zh: "该警示系统将交通信号灯和原有泊位系统结合起来，通过系统自动化控制飞机泊位引导、信息自动化处理和信号灯指挥三个流程，实现自动泊位系统根据当前机位的不同状态显示相应的交通信号，确保飞机进位的安全性，提高了服务车道运行速度，降低飞机进位风险。"
+    },
     date: "2021-10-14",
     author: "中国民航局",
     sourceUrl: "http://zn.caac.gov.cn/ZN_XXGK/ZN_HYDT/202110/t20211014_209614.html",
@@ -384,8 +432,14 @@ const news: NewsItem[] = [
   
   {
     id: 4,
-    title: "科技抗疫 阿里云、千方科技助力民航疫情防控",
-    content: "2月28日，阿里云发布航空行业热度预测服务。这项服务联合飞猪和航班管家，在疫情防控后期阶段，为航空公司的航线运行恢复以及服务的精细化管理提供支持。",
+    title: {
+      en: "Tech Against COVID: Alibaba Cloud and Qianfang Technology Support Civil Aviation Epidemic Prevention",
+      zh: "科技抗疫 阿里云、千方科技助力民航疫情防控"
+    },
+    content: {
+      en: "On February 28, Alibaba Cloud released an aviation industry heat prediction service. This service, in collaboration with Fliggy and Flight Manager, provides support for airlines' route operation recovery and service refinement management during the later stages of epidemic prevention and control.",
+      zh: "2月28日，阿里云发布航空行业热度预测服务。这项服务联合飞猪和航班管家，在疫情防控后期阶段，为航空公司的航线运行恢复以及服务的精细化管理提供支持。"
+    },
     date: "2020-03-04",
     author: "中国民航网",
     sourceUrl: "http://caacnews.com.cn/1/4/202003/t20200304_1294451.html",
@@ -405,8 +459,14 @@ const news: NewsItem[] = [
   },
   {
     id: 7,
-    title: "有一种\"科技尽孝\"叫远程智慧养老",
-    content: "国务院在2017年公布的《\"十三五\"国家老龄事业发展和养老体系建设规划》中指出：\"预计到2020年（也就是明年），全国60岁以上老年人口将增加到2.55亿人左右，独居和空巢老年人将增加到1.18亿人左右。\"",
+    title: {
+      en: "There's a Kind of 'Tech Filial Piety' Called Remote Smart Elderly Care",
+      zh: "有一种\"科技尽孝\"叫远程智慧养老"
+    },
+    content: {
+      en: "The '13th Five-Year Plan' for National Aging Development and Elderly Care System Construction released by the State Council in 2017 pointed out: 'It is expected that by 2020 (next year), the national elderly population over 60 years old will increase to about 255 million, and the number of elderly living alone and empty nesters will increase to about 118 million.'",
+      zh: "国务院在2017年公布的《\"十三五\"国家老龄事业发展和养老体系建设规划》中指出：\"预计到2020年（也就是明年），全国60岁以上老年人口将增加到2.55亿人左右，独居和空巢老年人将增加到1.18亿人左右。\""
+    },
     date: "2019-02-25",
     author: "阿里巴巴公益",
     sourceUrl: "https://mp.weixin.qq.com/s?__biz=MzU2MzAxODI0Nw==&mid=2247567386&idx=1&sn=3ae23b2581765efcf8e3fc3f87933310",
@@ -465,8 +525,14 @@ const news: NewsItem[] = [
   },
   {
     id: 8,
-    title: "阿里云IoT工程师智能改造视障家庭，让房子变得\"能听会看\"",
-    content: "通过阿里云已有的IoT智能人居技术，代立晨对老房子内的照明、家电、窗帘等设置了控制指令，全部都可以通过语音统一控制。这还没完，只要你在这房子里住久了，房子还会学习你的生活习惯。",
+    title: {
+      en: "Alibaba Cloud IoT Engineer Intelligently Transforms Visually Impaired Homes, Making Houses 'Able to Hear and See'",
+      zh: "阿里云IoT工程师智能改造视障家庭，让房子变得\"能听会看\""
+    },
+    content: {
+      en: "Using Alibaba Cloud's existing IoT smart living technology, Dai Lichen set up control commands for lighting, appliances, curtains, etc. in the old house, all of which can be controlled uniformly through voice. That's not all - if you live in this house long enough, the house will learn your living habits.",
+      zh: "通过阿里云已有的IoT智能人居技术，代立晨对老房子内的照明、家电、窗帘等设置了控制指令，全部都可以通过语音统一控制。这还没完，只要你在这房子里住久了，房子还会学习你的生活习惯。"
+    },
     date: "2018-07-30",
     author: "阿里云",
     sourceUrl: "https://mp.weixin.qq.com/s?__biz=MzU2MzAxODI0Nw==&mid=2247567386&idx=1&sn=3ae23b2581765efcf8e3fc3f87933310",

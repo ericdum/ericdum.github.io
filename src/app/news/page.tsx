@@ -6,14 +6,21 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 interface NewsItem {
   id: number;
-  title: string;
-  content: string;
+  title: {
+    en: string;
+    zh: string;
+  };
+  content: {
+    en: string;
+    zh: string;
+  };
   date: string;
+  author?: string;
   thumbnail?: string;
 }
 
 export default function NewsPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -23,15 +30,7 @@ export default function NewsPage() {
       try {
         setLoading(true);
         const newsData = await getNews();
-        // 确保 newsData 是数组
-        if (Array.isArray(newsData)) {
-          setNews(newsData);
-        } else if (newsData && typeof newsData === 'object' && 'items' in newsData) {
-          // 如果返回的是 { items: [...] } 格式
-          setNews(newsData.items);
-        } else {
-          setNews([]);
-        }
+        setNews(newsData);
       } catch (err) {
         setError('Failed to load news');
         console.error('Error loading news:', err);
@@ -74,15 +73,18 @@ export default function NewsPage() {
                       <div className="w-48 h-32 flex-shrink-0">
                         <img
                           src={item.thumbnail}
-                          alt={item.title}
+                          alt={item.title[language]}
                           className="w-full h-full object-cover rounded-lg"
                         />
                       </div>
                     )}
                     <div className="flex-1">
-                      <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
-                      <p className="text-gray-700 mb-2">{item.content}</p>
-                      <p className="text-gray-500 text-sm">{item.date}</p>
+                      <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-1">{item.title[language]}</h2>
+                      <p className="text-gray-700 mb-2 line-clamp-3">{item.content[language]}</p>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        {item.author && <span className="mr-4">{item.author}</span>}
+                        <span>{item.date}</span>
+                      </div>
                     </div>
                   </div>
                 </a>

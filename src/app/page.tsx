@@ -22,14 +22,21 @@ interface Patent {
 
 interface NewsItem {
   id: number;
-  title: string;
-  content: string;
+  title: {
+    en: string;
+    zh: string;
+  };
+  content: {
+    en: string;
+    zh: string;
+  };
   date: string;
+  author?: string;
   thumbnail?: string;
 }
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [profile, setProfile] = useState<any>(null);
   const [projects, setProjects] = useState<any[]>([]);
   const [news, setNews] = useState<NewsItem[]>([]);
@@ -126,15 +133,18 @@ export default function Home() {
                     <div className="w-32 h-24 flex-shrink-0">
                       <img
                         src={item.thumbnail}
-                        alt={item.title}
+                        alt={item.title[language]}
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
                   )}
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                    <p className="text-gray-700">{item.content}</p>
-                    <p className="text-gray-500 text-sm mt-1">{item.date}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 line-clamp-1">{item.title[language]}</h3>
+                    <p className="text-gray-700 line-clamp-2">{item.content[language]}</p>
+                    <div className="flex items-center text-gray-500 text-sm mt-1">
+                      {item.author && <span className="mr-4">{item.author}</span>}
+                      <span>{item.date}</span>
+                    </div>
                   </div>
                 </div>
               </a>
