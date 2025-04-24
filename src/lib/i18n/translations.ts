@@ -16,9 +16,12 @@ export const translations = {
       title: "Patents",
       patentNumber: "Patent Number",
       filingDate: "Filing Date",
+      grantDate: "Grant Date",
       status: "Status",
       granted: "Granted",
       pending: "Pending",
+      inventors: "Inventors",
+      abstract: "Abstract"
     },
     news: {
       title: "Related News",
@@ -27,6 +30,7 @@ export const translations = {
       allRightsReserved: "All rights reserved",
       readMore: "Read More",
       viewDetails: "View Details",
+      lang: "en"
     },
     footer: {
       copyright: "© {year} {name}. All rights reserved.",
@@ -62,9 +66,12 @@ export const translations = {
       title: "专利成果",
       patentNumber: "专利号",
       filingDate: "申请日期",
+      grantDate: "授权日期",
       status: "状态",
       granted: "已授权",
       pending: "申请中",
+      inventors: "发明人",
+      abstract: "专利摘要"
     },
     news: {
       title: "相关新闻",
@@ -73,6 +80,7 @@ export const translations = {
       allRightsReserved: "保留所有权利",
       readMore: "阅读更多",
       viewDetails: "查看详情",
+      lang: "zh"
     },
     footer: {
       copyright: "© {year} {name}. 保留所有权利.",
