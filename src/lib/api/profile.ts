@@ -16,7 +16,7 @@ export interface Profile {
     zh: string;
   };
   email: string;
-  phone: string;
+  //phone: string;
   bio: {
     en: string;
     zh: string;
@@ -76,7 +76,7 @@ const profile: Profile = {
     zh: "代立晨（木酱）"
   },
   title: {
-    en: "Associate Professor, Pilot",
+    en: "Senior Professional Title, Pilot",
     zh: "副高级职称、飞行员"
   },
   currentPosition: {
