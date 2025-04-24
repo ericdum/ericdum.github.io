@@ -76,11 +76,11 @@ export default function Home() {
             />
           </div>
           <div className="md:w-2/3">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">{profile.name}</h1>
-            <h2 className="text-xl text-gray-600 mb-2">{profile.title}</h2>
-            <p className="text-gray-700 mb-2">{profile.currentPosition}</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">{profile.name[language]}</h1>
+            <h2 className="text-xl text-gray-600 mb-2">{profile.title[language]}</h2>
+            <p className="text-gray-700 mb-2">{profile.currentPosition[language]}</p>
             <p className="text-gray-700 mb-4">
-              {profile.bio}
+              {profile.bio[language]}
             </p>
             <div className="flex space-x-4">
               <a target="_blank" href="https://github.com/ericdum" className="text-blue-600 hover:text-blue-800">GitHub</a>
@@ -106,15 +106,15 @@ export default function Home() {
             <div key={patent.id} className="border-b border-gray-200 pb-4 last:border-0">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{patent.title[t('common.lang') as keyof typeof patent.title]}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">{patent.title[language]}</h3>
                   <p className="text-gray-600">{t('patents.patentNumber')}：{patent.patentNumber}</p>
                   <p className="text-gray-600">{t('patents.filingDate')}：{patent.filingDate}</p>
-                  <p className="text-gray-600">{t('patents.status')}：{patent.status[t('common.lang') as keyof typeof patent.status]}</p>
+                  <p className="text-gray-600">{t('patents.status')}：{patent.status[language]}</p>
                 </div>
                 <span className={`px-2 py-1 rounded text-sm ${
-                  patent.status[t('common.lang') as keyof typeof patent.status] === t('patents.granted') ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                  patent.status[language] === t('patents.granted') ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
                 }`}>
-                  {patent.status[t('common.lang') as keyof typeof patent.status]}
+                  {patent.status[language]}
                 </span>
               </div>
             </div>

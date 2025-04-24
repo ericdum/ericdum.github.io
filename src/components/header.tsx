@@ -6,13 +6,19 @@ import { LanguageSwitcher } from './language-switcher';
 
 interface HeaderProps {
   profile: {
-    name: string;
-    title: string;
+    name: {
+      en: string;
+      zh: string;
+    };
+    title: {
+      en: string;
+      zh: string;
+    };
   };
 }
 
 export function Header({ profile }: HeaderProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <header className="bg-white shadow">
@@ -20,9 +26,9 @@ export function Header({ profile }: HeaderProps) {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-900">
-              {profile.name}
+              {profile.name[language]}
             </Link>
-            <span className="ml-4 text-gray-600">{profile.title}</span>
+            <span className="ml-4 text-gray-600">{profile.title[language]}</span>
           </div>
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-600 hover:text-gray-900">
