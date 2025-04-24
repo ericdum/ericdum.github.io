@@ -11,6 +11,12 @@ export const translations = {
       technologies: "Technologies",
       role: "Role",
       duration: "Duration",
+      relatedNews: "Related News",
+      technicalHighlights: "Technical Highlights",
+      relatedSkills: "Related Skills",
+      screenshot: "Screenshot",
+      enlargedImage: "Enlarged Image",
+      videoNotSupported: "Your browser does not support video playback."
     },
     patents: {
       title: "Patents",
@@ -81,6 +87,12 @@ export const translations = {
       technologies: "技术栈",
       role: "角色",
       duration: "时间",
+      relatedNews: "相关新闻",
+      technicalHighlights: "技术亮点",
+      relatedSkills: "相关技能",
+      screenshot: "截图",
+      enlargedImage: "放大图片",
+      videoNotSupported: "您的浏览器不支持视频播放。"
     },
     patents: {
       title: "专利成果",

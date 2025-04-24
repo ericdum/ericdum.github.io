@@ -5,8 +5,10 @@ import { useState, useEffect } from 'react';
 import type { Project } from '@/lib/api/projects';
 import type { Profile } from '@/lib/api/profile';
 import { LazyMedia } from '@/components/ui/lazy-media';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function ProjectsPage() {
+  const { t, language } = useLanguage();
   const [projects, setProjects] = useState<Project[]>([]);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [selectedMedia, setSelectedMedia] = useState<{ url: string; type: 'image' | 'video' } | null>(null);
@@ -108,27 +110,27 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-8">
       <section className="bg-white rounded-lg shadow p-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">技术项目</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">{t('projects.title')}</h1>
         
         <div className="space-y-8">
           {[...projects].reverse().map((project) => (
             <div key={project.id} id={`project-${project.id}`} className="border-b border-gray-200 pb-8 last:border-0">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h2 className="text-2xl font-semibold text-gray-900">{project.title}</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900">{language === 'en' ? project.titleEn : project.title}</h2>
                   <p className="text-gray-600 mt-1">
-                    {project.company} | {project.role} | {project.period}
+                    {language === 'en' ? project.companyEn : project.company} | {language === 'en' ? project.roleEn : project.role} | {project.period}
                   </p>
                 </div>
               </div>
 
               <div className="prose max-w-none">
                 <div className="mb-4">
-                  <p className="text-gray-700">{project.description}</p>
-                  <p className="text-gray-700 italic mt-2">{project.impact}</p>
+                  <p className="text-gray-700">{language === 'en' ? project.descriptionEn : project.description}</p>
+                  <p className="text-gray-700 italic mt-2">{language === 'en' ? project.impactEn : project.impact}</p>
                   {project.newsLinks && project.newsLinks.length > 0 && (
                     <div className="mt-2">
-                      相关新闻：
+                      {t('projects.relatedNews')}：
                       {project.newsLinks.map((link, index) => (
                         <a
                           key={index}
@@ -140,7 +142,7 @@ export default function ProjectsPage() {
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
-                          {link.title}
+                          {language === 'en' ? link.titleEn : link.title}
                         </a>
                       ))}
                     </div>
@@ -180,7 +182,7 @@ export default function ProjectsPage() {
                               <LazyMedia
                                 src={image}
                                 type="image"
-                                alt={`${project.title} 截图 ${index + 1}`}
+                                alt={`${language === 'en' ? project.titleEn : project.title} ${t('projects.screenshot')} ${index + 1}`}
                                 className="w-full h-full object-cover"
                               />
                               <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center">
@@ -198,18 +200,18 @@ export default function ProjectsPage() {
 
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">技术亮点</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('projects.technicalHighlights')}</h3>
                     <ul className="list-disc list-inside text-gray-700 space-y-1">
-                      {project.technicalDetails.map((detail, index) => (
+                      {(language === 'en' ? project.technicalDetailsEn : project.technicalDetails).map((detail, index) => (
                         <li key={index}>{detail}</li>
                       ))}
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">使用技术</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('projects.technologies')}</h3>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
+                      {(language === 'en' ? project.technologiesEn : project.technologies).map((tech) => (
                         <span
                           key={tech}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
@@ -221,14 +223,14 @@ export default function ProjectsPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">相关技能</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('projects.relatedSkills')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {profile.skills.map((skillGroup) => (
                         <div key={skillGroup.category}>
                           <h4 className="text-sm font-semibold text-gray-900 mb-2">{skillGroup.category}</h4>
                           <div className="flex flex-wrap gap-2">
                             {skillGroup.items
-                              .filter(skill => project.relatedSkills.includes(skill.name))
+                              .filter(skill => (language === 'en' ? project.relatedSkillsEn : project.relatedSkills).includes(skill.name))
                               .map(skill => (
                                 <div
                                   key={skill.name}
@@ -287,7 +289,7 @@ export default function ProjectsPage() {
               <LazyMedia
                 src={selectedMedia.url}
                 type="image"
-                alt="放大图片"
+                alt={t('projects.enlargedImage')}
                 className="max-w-full max-h-[90vh] object-contain rounded-lg"
                 preload={true}
               />
@@ -299,7 +301,7 @@ export default function ProjectsPage() {
                 autoPlay
               >
                 <source src={selectedMedia.url} type="video/mp4" />
-                您的浏览器不支持视频播放。
+                {t('projects.videoNotSupported')}
               </video>
             )}
           </div>

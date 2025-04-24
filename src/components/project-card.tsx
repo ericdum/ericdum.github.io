@@ -8,9 +8,13 @@ import Image from 'next/image';
 interface Project {
   id: number;
   title: string;
+  titleEn: string;
   description: string;
+  descriptionEn: string;
   technologies: string[];
+  technologiesEn: string[];
   role: string;
+  roleEn: string;
   duration: string;
   images?: string[];
   videos?: string[];
@@ -21,7 +25,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [imageError, setImageError] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const firstImage = project.images?.[0];
@@ -50,7 +54,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {firstImage ? (
             <Image
               src={firstImage}
-              alt={project.title}
+              alt={language === 'en' ? project.titleEn : project.title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-300 hover:scale-105"
@@ -68,20 +72,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       ) : null}
       <div className={`p-4 ${!hasMedia ? 'pt-4' : ''}`}>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{project.title}</h3>
-        <p className="text-sm text-gray-600 mb-3 line-clamp-2">{project.description}</p>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+          {language === 'en' ? project.titleEn : project.title}
+        </h3>
+        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+          {language === 'en' ? project.descriptionEn : project.description}
+        </p>
         <div className="flex flex-wrap gap-1">
-          {project.technologies.slice(0, 3).map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded"
-            >
-              {tech}
-            </span>
-          ))}
-          {project.technologies.length > 3 && (
+          {(language === 'en' ? project.technologiesEn : project.technologies)
+            .slice(0, 3)
+            .map((tech) => (
+              <span
+                key={tech}
+                className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded"
+              >
+                {tech}
+              </span>
+            ))}
+          {(language === 'en' ? project.technologiesEn : project.technologies).length > 3 && (
             <span className="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">
-              +{project.technologies.length - 3}
+              +{(language === 'en' ? project.technologiesEn : project.technologies).length - 3}
             </span>
           )}
         </div>
