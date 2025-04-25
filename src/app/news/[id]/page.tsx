@@ -8,6 +8,14 @@ type Props = {
   }>;
 };
 
+// 生成静态参数
+export async function generateStaticParams() {
+  const news = await getNews();
+  return news.map(item => ({
+    id: item.id.toString()
+  }));
+}
+
 export default async function NewsDetailPage({ params }: Props) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
