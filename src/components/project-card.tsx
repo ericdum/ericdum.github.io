@@ -51,8 +51,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link 
       href={`/projects?project=${project.id}`}
-      className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
     >
+      <div className="absolute top-2 right-2 bg-emerald-700/90 backdrop-blur-sm px-2 py-1 rounded text-sm text-white z-10">
+        {project.period}
+      </div>
       {hasMedia ? (
         <div className="relative h-32 overflow-hidden">
           {firstImage ? (

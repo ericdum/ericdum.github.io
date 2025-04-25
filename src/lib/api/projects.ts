@@ -436,8 +436,8 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    title: "DataV 组件开发框架",
-    titleEn: "DataV Component Development Framework",
+    title: "DataV 数据可视化平台",
+    titleEn: "DataV Data Visualization Platform",
     company: "阿里巴巴",
     companyEn: "Alibaba Group",
     role: "技术专家",
@@ -483,8 +483,8 @@ const projects: Project[] = [
   },
   {
     id: 11,
-    title: "DataV 数据可视化平台",
-    titleEn: "DataV Data Visualization Platform",
+    title: "基于 DataV 的阿里巴巴集团双十一数据大屏项目",
+    titleEn: "Based on DataV, Alibaba Group's Double 11 Data Screen Projects",
     company: "阿里巴巴",
     companyEn: "Alibaba Group",
     role: "技术专家",
@@ -684,7 +684,7 @@ const projects: Project[] = [
       {
         title: "白云机场推出国内首个飞机泊位警示系统",
         titleEn: "Baiyun Airport Launches China's First Aircraft Parking Position Warning System",
-        url: "http://zn.caac.gov.cn/ZN_XXGK/ZN_HYDT/202110/t20211014_209614.html"
+        url: "/news/1"
       }
     ],
     videos: ["/images/projects/14/cover.mp4"],
@@ -748,7 +748,7 @@ const projects: Project[] = [
     companyEn: "Alibaba Group",
     role: "高级数据技术专家 & 智慧航空行业技术总监",
     roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
-    period: "2019-2023",
+    period: "2020-2022",
     description: "通过对管制技术的业务洞察，发现对管制进行识别是不必要的，反而可以突破思维惯性，改变管制员通过语音进行管制的交互模式，而改用便捷、准确的计算机交互操作。",
     descriptionEn: "Through business insights into control technology, discovered that control recognition was unnecessary, and instead could break through thinking inertia, changing the interaction mode of controllers from voice-based control to convenient and accurate computer interaction.",
     technicalDetails: [
@@ -793,7 +793,7 @@ const projects: Project[] = [
     companyEn: "Alibaba Group",
     role: "高级数据技术专家 & 智慧航空行业技术总监",
     roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
-    period: "2019-2023",
+    period: "2020-2021",
     description: "在新冠疫情期间，航空公司损失惨重，从公益事业的角度出发，为了帮助航空公司度过难关。我与飞猪合作，基于他们的旅行搜索数据与成交数据训练的算法预测出行热度。",
     descriptionEn: "During the COVID-19 pandemic, airlines suffered heavy losses. From a public welfare perspective, to help airlines overcome difficulties, I collaborated with Fliggy to predict travel popularity based on algorithms trained on their travel search data and transaction data.",
     technicalDetails: [
@@ -832,7 +832,7 @@ const projects: Project[] = [
       {
         title: "科技抗疫 阿里云、千方科技助力民航疫情防控",
         titleEn: "Technology Fights Epidemic: Alibaba Cloud and Qianfang Technology Help Civil Aviation Epidemic Prevention",
-        url: "http://caacnews.com.cn/1/4/202003/t20200304_1294451.html"
+        url: "/news/4"
       }
     ],
     images: [

@@ -167,9 +167,8 @@ function ProjectSection({ project, isTarget }: { project: Project; isTarget: boo
           {language === 'en' ? project.titleEn : project.title}
         </h2>
         <p className="text-gray-600">
-          {language === 'en' ? project.companyEn : project.company}
+          {language === 'en' ? project.companyEn : project.company} · {project.period}
         </p>
-        <p className="text-gray-500">{project.period}</p>
       </div>
 
       <div className="mb-6">
