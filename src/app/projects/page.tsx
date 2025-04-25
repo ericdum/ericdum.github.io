@@ -55,6 +55,32 @@ function ProjectsContent() {
     }
   }, [projectId]);
 
+  // 添加对浏览器前进后退事件的处理
+  useEffect(() => {
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('project');
+      if (projectId) {
+        const element = document.getElementById(`project-${projectId}`);
+        if (element) {
+          const headerOffset = 30;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
   if (isLoading) {
     return <LoadingOverlay />;
   }

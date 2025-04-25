@@ -31,14 +31,23 @@ export function GlobalLoading() {
       setIsLoading(false);
     };
 
-    window.addEventListener('popstate', handleRouteChangeStart);
+    // 监听浏览器的前进后退事件
+    const handlePopState = () => {
+      setIsLoading(true);
+      // 给页面加载一个短暂的时间
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 300);
+    };
+
+    window.addEventListener('popstate', handlePopState);
     window.addEventListener('pushstate', handleRouteChangeStart);
     window.addEventListener('load', handleRouteChangeComplete);
 
     return () => {
       window.removeEventListener('beforeunload', handleStart);
       window.removeEventListener('load', handleStop);
-      window.removeEventListener('popstate', handleRouteChangeStart);
+      window.removeEventListener('popstate', handlePopState);
       window.removeEventListener('pushstate', handleRouteChangeStart);
       window.removeEventListener('load', handleRouteChangeComplete);
     };
