@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 interface LazyMediaProps {
   src: string;
@@ -14,7 +15,7 @@ interface LazyMediaProps {
 export function LazyMedia({ src, type, alt, className, onClick, preload = false }: LazyMediaProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const mediaRef = useRef<HTMLImageElement | HTMLVideoElement>(null);
+  const mediaRef = useRef<HTMLVideoElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -58,15 +59,17 @@ export function LazyMedia({ src, type, alt, className, onClick, preload = false 
         {!isLoaded && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
         )}
-        <img
-          ref={mediaRef as React.RefObject<HTMLImageElement>}
-          src={isVisible ? src : ''}
+        <Image
+          src={src}
           alt={alt || ''}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           onClick={onClick}
           onLoad={handleLoad}
+          unoptimized
         />
       </div>
     );
@@ -78,7 +81,7 @@ export function LazyMedia({ src, type, alt, className, onClick, preload = false 
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
       {src && (<video
-        ref={mediaRef as React.RefObject<HTMLVideoElement>}
+        ref={mediaRef}
         src={isVisible ? src : ''}
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
@@ -89,7 +92,6 @@ export function LazyMedia({ src, type, alt, className, onClick, preload = false 
         playsInline
         preload="metadata"
       />)}
-      
     </div>
   );
 } 

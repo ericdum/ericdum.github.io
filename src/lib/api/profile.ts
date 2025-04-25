@@ -72,11 +72,11 @@ export interface Profile {
 
 const profile: Profile = {
   name: {
-    en: "Lichen Dai (Eric)",
+    en: "Lichen Dai (代立晨)",
     zh: "代立晨（木酱）"
   },
   title: {
-    en: "Senior Professional Title, Pilot",
+    en: "Senior Data Technology Expert, Pilot",
     zh: "副高级职称、飞行员"
   },
   currentPosition: {

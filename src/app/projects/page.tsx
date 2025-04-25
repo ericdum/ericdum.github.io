@@ -1,312 +1,343 @@
-"use client";
+'use client';
 
-import { getProjects, getProfile } from '@/lib/api';
-import { useState, useEffect } from 'react';
-import type { Project } from '@/lib/api/projects';
-import type { Profile } from '@/lib/api/profile';
-import { LazyMedia } from '@/components/ui/lazy-media';
+import { useEffect, useState, useRef } from 'react';
+import { Project } from '@/lib/api/projects';
+import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function ProjectsPage() {
-  const { t, language } = useLanguage();
   const [projects, setProjects] = useState<Project[]>([]);
-  const [profile, setProfile] = useState<Profile | null>(null);
-  const [selectedMedia, setSelectedMedia] = useState<{ url: string; type: 'image' | 'video' } | null>(null);
-  const [currentProject, setCurrentProject] = useState<Project | null>(null);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const searchParams = useSearchParams();
+  const projectId = searchParams.get('project');
+  const { language } = useLanguage();
 
   useEffect(() => {
-    const loadData = async () => {
-      const projectsData = await getProjects();
-      const profileData = await getProfile();
-      setProjects(projectsData);
-      setProfile(profileData);
+    const fetchProjects = async () => {
+      const response = await fetch('/api/projects');
+      const data = await response.json();
+      setProjects(data.reverse());
     };
-    loadData();
+    fetchProjects();
   }, []);
 
   useEffect(() => {
-    // 检查 URL 中是否有项目 ID
-    const hash = window.location.hash;
-    if (hash) {
-      const projectId = hash.replace('#project-', '');
+    if (projectId) {
       const element = document.getElementById(`project-${projectId}`);
       if (element) {
-        // 使用平滑滚动
-        element.scrollIntoView({ behavior: 'smooth' });
+        const headerOffset = 30; // 顶部间距
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     }
-  }, [projects]); // 当项目数据加载完成后执行
+  }, [projectId]);
+
+  return (
+    <div className="container mx-auto px-4">
+      <div className="space-y-12">
+        {projects.map((project) => (
+          <ProjectSection 
+            key={project.id} 
+            project={project} 
+            isTarget={projectId === project.id.toString()}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProjectSection({ project, isTarget }: { project: Project; isTarget: boolean }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedMedia, setSelectedMedia] = useState<{ type: 'image' | 'video'; url: string; index: number } | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { language } = useLanguage();
+  const allMedia = [
+    ...(project.videos?.map(url => ({ type: 'video' as const, url })) || []),
+    ...(project.images?.map(url => ({ type: 'image' as const, url })) || [])
+  ];
 
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (!currentProject) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-      const allMedia = [
-        ...(currentProject.videos || []).map(v => ({ url: v, type: 'video' as const })),
-        ...(currentProject.images || []).map(i => ({ url: i, type: 'image' as const }))
-      ];
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
-      if (event.key === 'Escape') {
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (isTarget && sectionRef.current) {
+      const headerOffset = 30; // 顶部间距
+      const elementPosition = sectionRef.current.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }, [isTarget]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedMedia) return;
+
+      if (e.key === 'Escape') {
         setSelectedMedia(null);
-        setCurrentProject(null);
-        setCurrentIndex(0);
-      } else if (event.key === 'ArrowLeft') {
-        event.preventDefault();
-        const newIndex = (currentIndex - 1 + allMedia.length) % allMedia.length;
-        setCurrentIndex(newIndex);
-        setSelectedMedia(allMedia[newIndex]);
-      } else if (event.key === 'ArrowRight') {
-        event.preventDefault();
-        const newIndex = (currentIndex + 1) % allMedia.length;
-        setCurrentIndex(newIndex);
-        setSelectedMedia(allMedia[newIndex]);
+      } else if (e.key === 'ArrowLeft') {
+        const currentIndex = allMedia.findIndex(
+          media => media.url === selectedMedia.url
+        );
+        if (currentIndex > 0) {
+          setSelectedMedia({
+            type: allMedia[currentIndex - 1].type,
+            url: allMedia[currentIndex - 1].url,
+            index: currentIndex - 1
+          });
+        }
+      } else if (e.key === 'ArrowRight') {
+        const currentIndex = allMedia.findIndex(
+          media => media.url === selectedMedia.url
+        );
+        if (currentIndex < allMedia.length - 1) {
+          setSelectedMedia({
+            type: allMedia[currentIndex + 1].type,
+            url: allMedia[currentIndex + 1].url,
+            index: currentIndex + 1
+          });
+        }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [currentProject, currentIndex]);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedMedia, allMedia]);
 
-  const handleMediaClick = (project: Project, media: string, index: number) => {
-    setCurrentProject(project);
-    setCurrentIndex(index);
-    setSelectedMedia({
-      url: media,
-      type: media.endsWith('.mov') ? 'video' : 'image'
-    });
+  const handlePrev = () => {
+    if (!selectedMedia) return;
+    const currentIndex = allMedia.findIndex(
+      media => media.url === selectedMedia.url
+    );
+    if (currentIndex > 0) {
+      setSelectedMedia({
+        type: allMedia[currentIndex - 1].type,
+        url: allMedia[currentIndex - 1].url,
+        index: currentIndex - 1
+      });
+    }
   };
 
-  const handlePrevMedia = () => {
-    if (!currentProject) return;
-    const allMedia = [
-      ...(currentProject.videos || []).map(v => ({ url: v, type: 'video' as const })),
-      ...(currentProject.images || []).map(i => ({ url: i, type: 'image' as const }))
-    ];
-    const newIndex = (currentIndex - 1 + allMedia.length) % allMedia.length;
-    setCurrentIndex(newIndex);
-    setSelectedMedia(allMedia[newIndex]);
+  const handleNext = () => {
+    if (!selectedMedia) return;
+    const currentIndex = allMedia.findIndex(
+      media => media.url === selectedMedia.url
+    );
+    if (currentIndex < allMedia.length - 1) {
+      setSelectedMedia({
+        type: allMedia[currentIndex + 1].type,
+        url: allMedia[currentIndex + 1].url,
+        index: currentIndex + 1
+      });
+    }
   };
-
-  const handleNextMedia = () => {
-    if (!currentProject) return;
-    const allMedia = [
-      ...(currentProject.videos || []).map(v => ({ url: v, type: 'video' as const })),
-      ...(currentProject.images || []).map(i => ({ url: i, type: 'image' as const }))
-    ];
-    const newIndex = (currentIndex + 1) % allMedia.length;
-    setCurrentIndex(newIndex);
-    setSelectedMedia(allMedia[newIndex]);
-  };
-
-  if (!profile) return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
-    </div>
-  );
 
   return (
-    <div className="space-y-8">
-      <section className="bg-white rounded-lg shadow p-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">{t('projects.title')}</h1>
-        
-        <div className="space-y-8">
-          {[...projects].reverse().map((project) => (
-            <div key={project.id} id={`project-${project.id}`} className="border-b border-gray-200 pb-8 last:border-0">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h2 className="text-2xl font-semibold text-gray-900">{language === 'en' ? project.titleEn : project.title}</h2>
-                  <p className="text-gray-600 mt-1">
-                    {language === 'en' ? project.companyEn : project.company} | {language === 'en' ? project.roleEn : project.role} | {project.period}
-                  </p>
-                </div>
-              </div>
+    <div 
+      ref={sectionRef} 
+      id={`project-${project.id}`}
+      className={`bg-white rounded-lg shadow-md p-6 ${isTarget ? 'ring-2 ring-blue-500' : ''}`}
+    >
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold mb-2">
+          {language === 'en' ? project.titleEn : project.title}
+        </h2>
+        <p className="text-gray-600">
+          {language === 'en' ? project.companyEn : project.company}
+        </p>
+        <p className="text-gray-500">{project.period}</p>
+      </div>
 
-              <div className="prose max-w-none">
-                <div className="mb-4">
-                  <p className="text-gray-700">{language === 'en' ? project.descriptionEn : project.description}</p>
-                  <p className="text-gray-700 italic mt-2">{language === 'en' ? project.impactEn : project.impact}</p>
-                  {project.newsLinks && project.newsLinks.length > 0 && (
-                    <div className="mt-2">
-                      {t('projects.relatedNews')}：
-                      {project.newsLinks.map((link, index) => (
-                        <a
-                          key={index}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1"
-                        >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold mb-2">
+          {language === 'en' ? 'Project Description' : '项目描述'}
+        </h3>
+        <p className="text-gray-700">
+          {language === 'en' ? project.descriptionEn : project.description}
+        </p>
+      </div>
+
+      {project.newsLinks && project.newsLinks.length > 0 && (
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold mb-2">
+            {language === 'en' ? 'Related News' : '相关新闻'}
+          </h3>
+          <ul className="list-disc list-inside text-gray-700">
+            {project.newsLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  {language === 'en' ? link.titleEn : link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {allMedia.length > 0 && (
+        <div className="mb-6">
+          <div className="relative">
+            <div className="overflow-x-auto pb-4">
+              <div className="flex space-x-4" style={{ minWidth: 'min-content' }}>
+                {allMedia.map((media, index) => (
+                  <div 
+                    key={index} 
+                    className="relative w-64 h-48 flex-shrink-0 cursor-pointer"
+                    onClick={() => setSelectedMedia({ type: media.type, url: media.url, index })}
+                  >
+                    {isVisible && (
+                      media.type === 'video' ? (
+                        <video
+                          src={media.url}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      ) : (
+                        <Image
+                          src={media.url}
+                          alt={`${language === 'en' ? project.titleEn : project.title} - ${language === 'en' ? 'Image' : '图片'} ${index + 1}`}
+                          fill
+                          className="object-cover rounded-lg"
+                          loading="lazy"
+                        />
+                      )
+                    )}
+                    {media.type === 'video' && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center">
+                          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
                           </svg>
-                          {language === 'en' ? link.titleEn : link.title}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {(project.videos || project.images) && (
-                  <div className="mb-6">
-                    <div className="overflow-x-auto">
-                      <div className="flex gap-4 pb-2" style={{ minWidth: 'min-content' }}>
-                        {project.videos && project.videos.map((video, index) => (
-                          <div key={`video-${index}`} className="relative" style={{ width: '200px', flexShrink: 0 }}>
-                            <button
-                              onClick={() => handleMediaClick(project, video, index)}
-                              className="w-full h-[150px] rounded-lg overflow-hidden relative group"
-                            >
-                              <LazyMedia
-                                src={video}
-                                type="video"
-                                className="w-full h-full object-cover"
-                              />
-                              <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-50 transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                              </div>
-                            </button>
-                          </div>
-                        ))}
-                        {project.images && project.images.map((image, index) => (
-                          <div key={`image-${index}`} className="relative" style={{ width: '200px', flexShrink: 0 }}>
-                            <button
-                              onClick={() => handleMediaClick(project, image, index + (project.videos?.length || 0))}
-                              className="w-full h-[150px] rounded-lg overflow-hidden relative group"
-                            >
-                              <LazyMedia
-                                src={image}
-                                type="image"
-                                alt={`${language === 'en' ? project.titleEn : project.title} ${t('projects.screenshot')} ${index + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                              <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                              </div>
-                            </button>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('projects.technicalHighlights')}</h3>
-                    <ul className="list-disc list-inside text-gray-700 space-y-1">
-                      {(language === 'en' ? project.technicalDetailsEn : project.technicalDetails).map((detail, index) => (
-                        <li key={index}>{detail}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('projects.technologies')}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {(language === 'en' ? project.technologiesEn : project.technologies).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('projects.relatedSkills')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {profile.skills.map((skillGroup) => (
-                        <div key={skillGroup.category}>
-                          <h4 className="text-sm font-semibold text-gray-900 mb-2">{skillGroup.category}</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {skillGroup.items
-                              .filter(skill => (language === 'en' ? project.relatedSkillsEn : project.relatedSkills).includes(skill.name))
-                              .map(skill => (
-                                <div
-                                  key={skill.name}
-                                  className="px-2 py-1 bg-blue-100 text-blue-800 text-sm rounded"
-                                >
-                                  {skill.name} ({skill.level})
-                                </div>
-                              ))}
-                          </div>
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    )}
                   </div>
-                </div>
+                ))}
               </div>
             </div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+          </div>
+        </div>
+      )}
+
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold mb-2">
+          {language === 'en' ? 'Technical Details' : '技术细节'}
+        </h3>
+        <ul className="list-disc list-inside text-gray-700">
+          {(language === 'en' ? project.technicalDetailsEn : project.technicalDetails).map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold mb-2">
+          {language === 'en' ? 'Technologies' : '使用技术'}
+        </h3>
+        <div className="flex flex-wrap gap-2">
+          {(language === 'en' ? project.technologiesEn : project.technologies).map((tech, index) => (
+            <span
+              key={index}
+              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+            >
+              {tech}
+            </span>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* 媒体查看弹窗 */}
+
       {selectedMedia && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center" onClick={() => setSelectedMedia(null)}>
-          <div className="relative max-w-4xl max-h-[90vh] mx-4">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+          onClick={() => setSelectedMedia(null)}
+        >
+          <div 
+            className="relative max-w-4xl w-full max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {selectedMedia.type === 'image' ? (
+              <Image
+                src={selectedMedia.url}
+                alt={`${language === 'en' ? project.titleEn : project.title} - ${language === 'en' ? 'Image' : '图片'} ${selectedMedia.index + 1}`}
+                width={1200}
+                height={800}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <video
+                src={selectedMedia.url}
+                controls
+                className="w-full h-full object-contain"
+                autoPlay
+              />
+            )}
             <button
               onClick={() => setSelectedMedia(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300"
+              className="absolute top-4 right-4 w-8 h-8 bg-black bg-opacity-50 rounded-full flex items-center justify-center text-white hover:bg-opacity-70 transition-opacity"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
+            <div className="absolute top-4 left-4 text-white text-sm">
+              {language === 'en' ? 'Press ESC to exit | Use arrow keys to navigate' : '按 ESC 退出 | 使用左右方向键切换'}
+            </div>
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                handlePrevMedia();
+                handlePrev();
               }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white hover:text-gray-300"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center text-white hover:bg-opacity-70 transition-opacity"
+              style={{ display: allMedia.findIndex(media => media.url === selectedMedia.url) > 0 ? 'flex' : 'none' }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                handleNextMedia();
+                handleNext();
               }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white hover:text-gray-300"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center text-white hover:bg-opacity-70 transition-opacity"
+              style={{ display: allMedia.findIndex(media => media.url === selectedMedia.url) < allMedia.length - 1 ? 'flex' : 'none' }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-            {selectedMedia.type === 'image' ? (
-              <LazyMedia
-                src={selectedMedia.url}
-                type="image"
-                alt={t('projects.enlargedImage')}
-                className="max-w-full max-h-[90vh] object-contain rounded-lg"
-                preload={true}
-              />
-            ) : (
-              <video
-                src={selectedMedia.url}
-                className="w-full rounded-lg"
-                controls
-                autoPlay
-              >
-                <source src={selectedMedia.url} type="video/mp4" />
-                {t('projects.videoNotSupported')}
-              </video>
-            )}
           </div>
         </div>
       )}
     </div>
   );
-} 
+}

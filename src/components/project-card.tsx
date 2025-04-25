@@ -2,22 +2,31 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface Project {
   id: number;
   title: string;
   titleEn: string;
-  description: string;
-  descriptionEn: string;
-  technologies: string[];
-  technologiesEn: string[];
+  company: string;
+  companyEn: string;
   role: string;
   roleEn: string;
-  duration: string;
+  period: string;
+  description: string;
+  descriptionEn: string;
+  technicalDetails: string[];
+  technicalDetailsEn: string[];
+  technologies: string[];
+  technologiesEn: string[];
+  impact: string;
+  impactEn: string;
+  relatedSkills: string[];
+  relatedSkillsEn: string[];
   images?: string[];
   videos?: string[];
+  newsLinks?: { title: string; titleEn: string; url: string }[];
 }
 
 interface ProjectCardProps {
@@ -28,26 +37,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const { t, language } = useLanguage();
   const [imageError, setImageError] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const firstImage = project.images?.[0];
   const firstVideo = project.videos?.[0];
   const videoThumbnail = firstVideo ? `${firstVideo}#t=0.1` : undefined;
-  const hasMedia = (firstImage || videoThumbnail) && !imageError && !videoError;
-
-  const handleClick = () => {
-    window.location.href = `/projects#project-${project.id}`;
-  };
+  const hasMedia = isClient && (firstImage || videoThumbnail) && !imageError && !videoError;
 
   return (
-    <div 
-      className="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-      onClick={handleClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          handleClick();
-        }
-      }}
+    <Link 
+      href={`/projects?project=${project.id}`}
+      className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300"
     >
       {hasMedia ? (
         <div className="relative h-32 overflow-hidden">
@@ -60,6 +64,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               className="object-cover transition-transform duration-300 hover:scale-105"
               onError={() => setImageError(true)}
               priority={false}
+              unoptimized
             />
           ) : (
             <video
@@ -96,6 +101,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 } 
