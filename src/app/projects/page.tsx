@@ -308,9 +308,6 @@ function ProjectSection({ project, isTarget }: { project: Project; isTarget: boo
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="absolute top-4 left-4 text-white text-sm">
-              {language === 'en' ? 'Press ESC to exit | Use arrow keys to navigate' : '按 ESC 退出 | 使用左右方向键切换'}
-            </div>
             <button
               onClick={(e) => {
                 e.stopPropagation();

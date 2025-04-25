@@ -528,7 +528,7 @@ const projects: Project[] = [
       "System Architecture",
       "Performance Optimization"
     ],
-    videos:["/images/projects/datav/IMG_2152.MOV", "/images/projects/datav/IMG_5068.MOV"],
+    videos:["/images/projects/datav/IMG_2152.mp4", "/images/projects/datav/IMG_5068.mp4"],
     images:["/images/projects/datav/IMG_5064.JPG","/images/projects/datav/IMG_5069.JPG","/images/projects/datav/IMG_5070.JPG"]
   },
   {
@@ -578,7 +578,7 @@ const projects: Project[] = [
       "Security Authentication",
       "System Architecture"
     ],
-    videos:["/images/projects/12/GXIC.m4v","/images/projects/12/IMG_2658.m4v"],
+    videos:["/images/projects/12/GXIC.mp4","/images/projects/12/IMG_2658.mp4"],
     images:["/images/projects/12/IMG_9430.jpg"]
   },
   {
@@ -628,8 +628,14 @@ const projects: Project[] = [
       "IoT",
       "System Architecture"
     ],
-    images: ["/images/projects/13/cover.jpg", "/images/projects/13/team.jpg"],
-    videos: ["/images/projects/13/demo.mov"]
+    images: ["/images/projects/13/cover.jpg", "/images/projects/13/team.jpg"
+      , "/images/projects/13/1.png"
+      , "/images/projects/13/2.png"
+      , "/images/projects/13/3.png"
+      , "/images/projects/13/4.jpg"
+      , "/images/projects/13/5.png"
+    ],
+    // videos: ["/images/projects/13/demo.mov"]
   },
   {
     id: 14,
@@ -681,7 +687,7 @@ const projects: Project[] = [
         url: "http://zn.caac.gov.cn/ZN_XXGK/ZN_HYDT/202110/t20211014_209614.html"
       }
     ],
-    videos: ["/images/projects/14/cover.mov"],
+    videos: ["/images/projects/14/cover.mp4"],
     images: [
       "/images/projects/14/cover.png",
       "/images/projects/14/cover2.jpg",
@@ -732,7 +738,7 @@ const projects: Project[] = [
       "Simulation System",
       "System Architecture"
     ],
-    videos: ["/images/projects/15/ar.mov", "/images/projects/15/tower2.mov"]
+    videos: ["/images/projects/15/ar.mp4", "/images/projects/15/tower2.mp4"]
   },
   {
     id: 16,

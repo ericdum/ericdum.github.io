@@ -22,13 +22,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (savedLanguage) {
       setLanguage(savedLanguage);
     } else {
-      // 如果没有保存的语言设置，则检测浏览器语言
-      const browserLanguage = navigator.language.split('-')[0];
-      if (browserLanguage === 'zh') {
-        setLanguage('zh');
-      } else {
-        setLanguage('en');
-      }
+      // 如果没有保存的语言设置，则默认使用英语
+      setLanguage('en');
     }
   }, []);
 
