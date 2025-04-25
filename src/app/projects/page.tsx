@@ -1,22 +1,40 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo, Suspense } from 'react';
 import { Project } from '@/lib/api/projects';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-export default function ProjectsPage() {
+function LoadingOverlay() {
+  return (
+    <div className="fixed inset-0 bg-white bg-opacity-75 z-50 flex items-center justify-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+    </div>
+  );
+}
+
+function ProjectsContent() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const projectId = searchParams.get('project');
   const { language } = useLanguage();
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const response = await fetch('/api/projects');
-      const data = await response.json();
-      setProjects(data.reverse());
+      try {
+        setIsLoading(true);
+        const response = await fetch('/api/projects');
+        const data = await response.json();
+        setProjects(data.reverse());
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      } finally {
+        setIsLoading(false);
+      }
     };
     fetchProjects();
   }, []);
@@ -25,7 +43,7 @@ export default function ProjectsPage() {
     if (projectId) {
       const element = document.getElementById(`project-${projectId}`);
       if (element) {
-        const headerOffset = 30; // 顶部间距
+        const headerOffset = 30;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -36,6 +54,10 @@ export default function ProjectsPage() {
       }
     }
   }, [projectId]);
+
+  if (isLoading) {
+    return <LoadingOverlay />;
+  }
 
   return (
     <div className="container mx-auto px-4">
@@ -52,15 +74,24 @@ export default function ProjectsPage() {
   );
 }
 
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<LoadingOverlay />}>
+      <ProjectsContent />
+    </Suspense>
+  );
+}
+
 function ProjectSection({ project, isTarget }: { project: Project; isTarget: boolean }) {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState<{ type: 'image' | 'video'; url: string; index: number } | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const { language } = useLanguage();
-  const allMedia = [
+
+  const allMedia = useMemo(() => [
     ...(project.videos?.map(url => ({ type: 'video' as const, url })) || []),
     ...(project.images?.map(url => ({ type: 'image' as const, url })) || [])
-  ];
+  ], [project.videos, project.images]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -222,8 +253,9 @@ function ProjectSection({ project, isTarget }: { project: Project; isTarget: boo
                         <Image
                           src={media.url}
                           alt={`${language === 'en' ? project.titleEn : project.title} - ${language === 'en' ? 'Image' : '图片'} ${index + 1}`}
-                          fill
-                          className="object-cover rounded-lg"
+                          width={256}
+                          height={192}
+                          className="w-full h-full object-cover rounded-lg"
                           loading="lazy"
                         />
                       )

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { getProfile } from '@/lib/api';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { LoadingOverlay } from '@/components/LoadingOverlay';
 
 interface Education {
   degree: string;
@@ -55,11 +57,7 @@ export default function AboutPage() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-[200px]">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-      </div>
-    );
+    return <LoadingOverlay />;
   }
 
   if (error) {
@@ -84,10 +82,13 @@ export default function AboutPage() {
         <h1 className="text-3xl font-bold text-gray-900 mb-8">{t('profile.title')}</h1>
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/3">
-            <img
+            <Image
               src="/avatar.avif"
               alt="Profile Photo"
+              width={300}
+              height={300}
               className="w-full h-auto rounded-lg"
+              priority
             />
           </div>
           <div className="md:w-2/3">

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { getNews } from '@/lib/api';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { LoadingOverlay } from '@/components/LoadingOverlay';
 
 interface NewsItem {
   id: number;
@@ -42,11 +44,7 @@ export default function NewsPage() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-[200px]">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-      </div>
-    );
+    return <LoadingOverlay />;
   }
 
   if (error) {
@@ -71,9 +69,11 @@ export default function NewsPage() {
                   <div className="flex gap-6">
                     {item.thumbnail && (
                       <div className="w-48 h-32 flex-shrink-0">
-                        <img
+                        <Image
                           src={item.thumbnail}
                           alt={item.title[language]}
+                          width={192}
+                          height={128}
                           className="w-full h-full object-cover rounded-lg"
                         />
                       </div>

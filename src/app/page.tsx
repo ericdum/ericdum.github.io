@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { getProfile, getProjects, getNews, getLife, getPatents } from '@/lib/api';
 import { ProjectCard } from '@/components/project-card';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { LanguageSwitcher } from '@/components/language-switcher';
+import { LoadingOverlay } from '@/components/LoadingOverlay';
 
 interface Patent {
   id: number;
@@ -42,24 +43,36 @@ export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [life, setLife] = useState<any>(null);
   const [patents, setPatents] = useState<Patent[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const [profileData, projectsData, newsData, lifeData, patentsData] = await Promise.all([
-        getProfile(),
-        getProjects(),
-        getNews(),
-        getLife(),
-        getPatents(),
-      ]);
-      setProfile(profileData);
-      setProjects(projectsData);
-      setNews(newsData);
-      setLife(lifeData);
-      setPatents(patentsData);
+      try {
+        setIsLoading(true);
+        const [profileData, projectsData, newsData, lifeData, patentsData] = await Promise.all([
+          getProfile(),
+          getProjects(),
+          getNews(),
+          getLife(),
+          getPatents(),
+        ]);
+        setProfile(profileData);
+        setProjects(projectsData);
+        setNews(newsData);
+        setLife(lifeData);
+        setPatents(patentsData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setIsLoading(false);
+      }
     };
     fetchData();
   }, []);
+
+  if (isLoading) {
+    return <LoadingOverlay />;
+  }
 
   if (!profile) return null;
 
@@ -69,10 +82,13 @@ export default function Home() {
       <section className="bg-white rounded-lg shadow p-6">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/4">
-            <img
+            <Image
               src="/avatar.avif"
               alt="Profile Photo"
+              width={300}
+              height={300}
               className="w-full h-auto rounded-lg"
+              priority
             />
           </div>
           <div className="md:w-2/3">
@@ -131,9 +147,11 @@ export default function Home() {
                 <div className="flex gap-4">
                   {item.thumbnail && (
                     <div className="w-32 h-24 flex-shrink-0">
-                      <img
+                      <Image
                         src={item.thumbnail}
                         alt={item.title[language]}
+                        width={128}
+                        height={96}
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>

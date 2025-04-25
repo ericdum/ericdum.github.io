@@ -5,6 +5,7 @@ import { getProfile } from "@/lib/api";
 import { Header } from "@/components/header";
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { Footer } from "@/components/footer";
+import { GlobalLoading } from '@/components/GlobalLoading';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <LanguageProvider>
+          <GlobalLoading />
           <div className="min-h-screen bg-gray-50">
             <Header profile={profile} />
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

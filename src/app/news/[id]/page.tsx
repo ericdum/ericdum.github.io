@@ -2,12 +2,15 @@ import { getNews } from '@/lib/api';
 import { notFound } from 'next/navigation';
 import { NewsDetail } from '@/components/NewsDetail';
 
-export default async function NewsDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const { id } = await Promise.resolve(params);
+type Props = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
+export default async function NewsDetailPage({ params }: Props) {
+  const resolvedParams = await params;
+  const { id } = resolvedParams;
   const news = await getNews();
   const newsItem = news.find((item) => item.id === parseInt(id)); 
 
