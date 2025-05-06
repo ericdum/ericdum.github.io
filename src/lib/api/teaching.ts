@@ -43,6 +43,20 @@ export interface Course {
   }[];
 }
 
+export interface Student {
+  id: string;
+  name: {
+    zh: string;
+    en: string;
+  };
+  github: string;
+  courses: Course[];
+  university: string;
+  major: string;
+  graduationYear: number;
+  avatar: string;
+}
+
 const courses: Course[] = [
   
   {
@@ -63,8 +77,8 @@ const courses: Course[] = [
           en: "Computer Basics"
         },
         description: {
-          zh: "计算机基础知识",
-          en: "Basic computer knowledge"
+          zh: "计算机的基本硬件组成和操作系统的入门，要求学生理解计算机各个硬件的工作原理和关键性能指标。",
+          en: "The basic hardware composition and introductory operating system of computers, requiring students to understand the working principles and key performance indicators of each hardware component of the computer."
         }
       },
       {
@@ -74,8 +88,8 @@ const courses: Course[] = [
           en: "AI Application Development"
         },
         description: {
-          zh: "人工智能应用开发",
-          en: "Artificial intelligence application development"
+          zh: "使用成熟的大模型API，如阿里云的百炼平台。并结合时下流行的开发方法如 Dify 等，让学生了解AI应用开发的基本方法。能够进行知识库、prompt 和简单的工作流开发",
+          en: "Using mature large model APIs, such as Aliyun's Bailei platform. Combining the latest development methods like Dify, students will understand the basic methods of AI application development. They will be able to develop knowledge bases, prompts, and simple workflow applications."
         }
       },
       {
@@ -85,8 +99,8 @@ const courses: Course[] = [
           en: "Data Visualization"
         },
         description: {
-          zh: "数据可视化技术",
-          en: "Data visualization techniques"
+          zh: "要求学生理解常用的数据可视化图表的特征和使用方法、适用场景。了解数据可视化的作用和设计方法。使用 Python、Tableau 或其他数据可视化工具尝试使用数据来表达客观现象和观点",
+          en: "Students will understand the characteristics and usage methods of common data visualization charts, their适用场景. They will also understand the purpose and design methods of data visualization. Using Python, Tableau, or other data visualization tools, they will try to use data to express objective phenomena and viewpoints."
         }
       },
       {
@@ -96,8 +110,8 @@ const courses: Course[] = [
           en: "Office and Multimedia"
         },
         description: {
-          zh: "办公软件和多媒体应用",
-          en: "Office software and multimedia applications"
+          zh: "学习信息时代的基本工作和学习技能，要求掌握 MLA 论文格式的排版和编辑方法，能够使用电子表格处理数据，能够使用PPT进行简单的排版，能够运用视频和图像编辑工具并理解关键的参数指标",
+          en: "Learning the basic work and learning skills in the information age, requiring students to master the formatting and editing methods of the MLA paper format, to use electronic spreadsheets to process data, to use PPT for simple layout, to use video and image editing tools and understand the key parameter indicators."
         }
       },
       {
@@ -107,8 +121,8 @@ const courses: Course[] = [
           en: "Programming Basics"
         },
         description: {
-          zh: "编程基础知识",
-          en: "Basic programming knowledge"
+          zh: "要求学生理解编程逻辑，能够使用AI生成python代码，并能够阅读和调试python代码。",
+          en: "Students will understand the programming logic, be able to use AI to generate Python code, and read and debug Python code."
         }
       }
     ],
@@ -152,7 +166,64 @@ const courses: Course[] = [
       zh: "AP Computer Science Principles 是一门计算机科学原理课程，不局限于特定编程语言。课程涵盖计算机科学的核心概念，包括算法、数据、互联网、编程等。通过项目实践，学生将学习如何运用计算思维解决实际问题，理解计算机科学对社会的影响。",
       en: "AP Computer Science Principles is a computer science principles course not limited to specific programming languages. The course covers core concepts of computer science, including algorithms, data, the internet, programming, and more. Through project practice, students will learn how to apply computational thinking to solve real-world problems and understand the impact of computer science on society."
     },
-    chapters: [],
+    chapters: [
+      {
+        id: "computer-basics",
+        title: {
+          zh: "计算机基础",
+          en: "Computer Basics"
+        },
+        description: {
+          zh: "计算机的基本硬件组成和操作系统的入门，要求学生理解计算机和操作系统的工作原理。",
+          en: "The basic hardware composition and introductory operating system of computers, requiring students to understand the working principles of computers and operating systems."
+        }
+      },
+      {
+        id: "python",
+        title: {
+          zh: "Python编程和算法入门",
+          en: "Python Programming and Algorithm Introduction"
+        },
+        description: {
+          zh: "掌握 Python 语法，并学习算法的概念、评估方法。掌握经典的贪婪、分治、动态规划、启发式算法等方法。",
+          en: "Master Python syntax and learn the concepts and evaluation methods of algorithms. Master classic greedy, divide-and-conquer, dynamic programming, heuristic algorithm, etc."
+        }
+      },
+      {
+        id: "data",
+        title: {
+          zh: "数据",
+          en: "Data"
+        },
+        description: {
+          zh: "掌握数据结构的基本概念，掌握数据的一般表达方式、压缩方式和加密方式，了解结构化数据的设计、处理和可视化。",
+          en: "Master the basic concepts of data structures, understand the general expression, compression, and encryption of data, and learn about the design, processing, and visualization of structured data."
+        }
+      },
+      {
+        id: "network",
+        title: {
+          zh: "计算机网络",
+          en: "Computer Network"
+        },
+        description: {
+          zh: "了解计算机网络的原理、结构、协议、安全等。深入剖析5层网络结构的设计理念和实现方法。",
+          en: "Understand the principles, structure, protocols, and security of computer networks. Deeply analyze the design concepts and implementation methods of the 5-layer network structure."
+        }
+      },
+      {
+        id: "creative-development",
+        title: {
+          zh: "技术创新和社会影响",
+          en: "Innovation and Social Impact"
+        },
+        description: {
+          zh: "了解计算机科学对社会的影响，了解计算机科学在社会中的应用，了解计算机科学在社会中的发展趋势。",
+          en: "Understand the impact of computer science on society, understand the application of computer science in society, and understand the development trend of computer science in society."
+        }
+      },
+
+    ],
     grade: ["G10", "G11"],
     type: {
       zh: "专业基础课",
@@ -181,8 +252,8 @@ const courses: Course[] = [
           en: "Git and Collaboration"
         },
         description: {
-          zh: "版本控制和团队协作",
-          en: "Version control and team collaboration"
+          zh: "学习 Git 的本地和远程命令，并初步学习通过 GitHub 进行协作。",
+          en: "Learn Git's local and remote commands, and initially learn to collaborate through GitHub."
         }
       },
       {
@@ -192,8 +263,8 @@ const courses: Course[] = [
           en: "Markdown"
         },
         description: {
-          zh: "Markdown 语法和使用",
-          en: "Markdown syntax and usage"
+          zh: "学习 Markdown 的语法和使用方法，并初步学习通过 git 来管理纯文本文件。",
+          en: "Learn Markdown syntax and usage, and initially learn to manage plain text files through git."
         }
       },
       {
@@ -203,8 +274,8 @@ const courses: Course[] = [
           en: "Linux"
         },
         description: {
-          zh: "Linux 操作系统基础",
-          en: "Linux operating system basics"
+          zh: "学习 Linux 的基本命令和文件系统结构，了解 Linux 的用户、文件、系统、权限等概念。能够完成软件安装、远程登录、日志管理、进程管理、用户管理等基本任务。",
+          en: "Learn the basic commands and file system structure of Linux, understand the concepts of users, files, systems, and permissions in Linux. Be able to complete basic tasks such as software installation, remote login, log management, process management, and user management."
         }
       },
       {
@@ -214,8 +285,8 @@ const courses: Course[] = [
           en: "Cloud Computing Basics"
         },
         description: {
-          zh: "云计算概念和基础",
-          en: "Cloud computing concepts and fundamentals"
+          zh: "学习云计算的基本概念和原理，了解云计算的架构和实现方式。了解基本的云计算服务并能够通过python编程完成简单的弹性计算编排",
+          en: "Learn the basic concepts and principles of cloud computing, understand the architecture and implementation of cloud computing. Understand basic cloud computing services and be able to complete simple elastic computing orchestration through Python programming."
         }
       }
     ],
@@ -231,8 +302,8 @@ const courses: Course[] = [
     resources: [
       {
         title: {
-          zh: "学生团队笔记",
-          en: "Student Team Notes"
+          zh: "学生团队笔记 2025 春季学期",
+          en: "Student Team Notes 2025 Spring Semester"
         },
         url: "https://github.com/Tylerzhangyi/Yungu-Highschool-G12-Cloud-Computing-Notebook-2025",
         description: {
@@ -260,19 +331,19 @@ const courses: Course[] = [
           en: "Introduction to Machine Learning"
         },
         description: {
-          zh: "机器学习基础介绍",
-          en: "Introduction to machine learning basics"
+          zh: "机器学习基础介绍，回归模型的训练和梯度下降的方法。",
+          en: "Introduction to machine learning basics, regression model training and gradient descent method."
         }
       },
       {
         id: "regression",
         title: {
-          zh: "Regression with Multiple Input Variables",
+          zh: "多元回归分析",
           en: "Regression with Multiple Input Variables"
         },
         description: {
-          zh: "多元回归分析",
-          en: "Multiple regression analysis"
+          zh: "基于矩阵的多元回归分析，和基于矩阵的梯度下降方法实现。",
+          en: "Based on linear algebra and probability theory, introduce the basic theory and implementation methods of multiple regression analysis."
         }
       },
       {
@@ -282,8 +353,8 @@ const courses: Course[] = [
           en: "Classification"
         },
         description: {
-          zh: "分类算法",
-          en: "Classification algorithms"
+          zh: "Sigmoid, Softmax 等用于分类的算法理论和实现",
+          en: "Sigmoid, Softmax and other classification algorithms"
         }
       },
       {
@@ -293,52 +364,8 @@ const courses: Course[] = [
           en: "Neural Network"
         },
         description: {
-          zh: "神经网络基础",
-          en: "Neural network basics"
-        }
-      },
-      {
-        id: "neural-network-training",
-        title: {
-          zh: "Neural Network Training",
-          en: "Neural Network Training"
-        },
-        description: {
-          zh: "神经网络训练",
-          en: "Neural network training"
-        }
-      },
-      {
-        id: "ml-advice",
-        title: {
-          zh: "Advice for applying machine learning",
-          en: "Advice for applying machine learning"
-        },
-        description: {
-          zh: "机器学习应用建议",
-          en: "Machine learning application advice"
-        }
-      },
-      {
-        id: "mid-term",
-        title: {
-          zh: "Mid-Term",
-          en: "Mid-Term"
-        },
-        description: {
-          zh: "期中考试",
-          en: "Mid-term exam"
-        }
-      },
-      {
-        id: "decision-trees",
-        title: {
-          zh: "Decision Trees",
-          en: "Decision Trees"
-        },
-        description: {
-          zh: "决策树算法",
-          en: "Decision tree algorithms"
+          zh: "神经网络的结构理论及基于 Tensorflow 的实现方法.",
+          en: "The theory of neural network structure and its implementation based on Tensorflow."
         }
       },
       {
@@ -348,19 +375,8 @@ const courses: Course[] = [
           en: "Unsupervised Learning"
         },
         description: {
-          zh: "无监督学习",
-          en: "Unsupervised learning"
-        }
-      },
-      {
-        id: "recommender-systems",
-        title: {
-          zh: "Recommender Systems",
-          en: "Recommender Systems"
-        },
-        description: {
-          zh: "推荐系统",
-          en: "Recommender systems"
+          zh: "无监督学习算法理论和实现，包括聚类、降维等",
+          en: "Unsupervised learning algorithm theory and implementation, including clustering and dimensionality reduction."
         }
       },
       {
@@ -370,8 +386,8 @@ const courses: Course[] = [
           en: "Reinforcement Learning"
         },
         description: {
-          zh: "强化学习",
-          en: "Reinforcement learning"
+          zh: "强化学习算法理论和实现，通过 Q-learning 和 DQN 等算法，基于 gym 库实现简单的训练",
+          en: "Reinforcement learning algorithm theory and implementation, through Q-learning and DQN algorithms, and simple training based on the gym library."
         }
       }
     ],
@@ -386,6 +402,36 @@ const courses: Course[] = [
     }
   },
 ];
+
+// const students: Student[] = [
+//   {
+//     id: "1",
+//     name: {
+//       zh: "周子轶",
+//       en: "William Zhou"
+//     },
+//     github: "https://github.com/zhangsan",
+//     courses: [courses.find(course => course.id === "ap-csp")!],
+//     university: "清华大学",
+//     major: "计算机科学与技术",
+//     graduationYear: 2025,
+//     avatar: "https://avatars.githubusercontent.com/u/123456789?v=4"
+//   },
+//   {
+//     id: "2",
+//     name: {
+//       zh: "周子轶",
+//       en: "William Zhou"
+//     },
+//   },
+//   {
+//     id: "3",
+//     name: {
+//       zh: "周子轶",
+//       en: "William Zhou"
+//     },
+//   }
+// ];
 
 export async function getCourses(): Promise<Course[]> {
   return courses;
