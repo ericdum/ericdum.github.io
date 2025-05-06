@@ -60,10 +60,10 @@ export interface Student {
 const courses: Course[] = [
   
   {
-    id: "info-machine-intelligence",
+    id: "ict",
     title: {
-      zh: "信息与机器智能",
-      en: "Information and Machine Intelligence"
+      zh: "信息与智能计算",
+      en: "Information and Intelligent Computing"
     },
     description: {
       zh: "信息与机器智能课程面向所有学生，介绍计算机、互联网和人工智能的基础知识。课程涵盖计算机基础、AI应用开发、数据可视化等内容，通过实践项目，帮助学生掌握数字时代必备的技能，培养对技术的理解和应用能力。",
