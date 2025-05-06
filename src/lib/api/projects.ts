@@ -848,5 +848,16 @@ const projects: Project[] = [
 ];
 
 export async function getProjects() {
-  return projects;
+  // 按结束时间正序排列项目
+  return projects.sort((a, b) => {
+    // 从period字符串中提取结束年份
+    const getYear = (period: string) => {
+      const years = period.match(/\d{4}/g);
+      // 如果找到多个年份，返回最后一个（结束年份）
+      // 如果只有一个年份，返回该年份
+      // 如果没有找到年份，返回0
+      return years ? parseInt(years[years.length - 1]) : 0;
+    };
+    return getYear(a.period) - getYear(b.period);  // 改为a-b，实现正序排列
+  });
 } 

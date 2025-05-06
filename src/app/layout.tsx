@@ -10,8 +10,45 @@ import { GlobalLoading } from '@/components/GlobalLoading';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lichen Dai",
-  description: "Personal website showcasing technical experience and project achievements",
+  title: {
+    default: "Lichen Dai - 代立晨",
+    template: "%s | Lichen Dai"
+  },
+  description: "Personal website of Lichen Dai (代立晨), showcasing technical experience, project achievements, and teaching philosophy",
+  keywords: ["Lichen Dai", "代立晨", "技术专家", "飞行员", "教育科技", "云谷学校"],
+  authors: [{ name: "Lichen Dai" }],
+  creator: "Lichen Dai",
+  publisher: "Lichen Dai",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://lichen.dai'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'zh_CN',
+    siteName: 'Lichen Dai',
+    title: 'Lichen Dai - 代立晨',
+    description: 'Personal website of Lichen Dai (代立晨), showcasing technical experience, project achievements, and teaching philosophy',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lichen Dai - 代立晨',
+    description: 'Personal website of Lichen Dai (代立晨), showcasing technical experience, project achievements, and teaching philosophy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default async function RootLayout({

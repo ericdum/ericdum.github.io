@@ -36,6 +36,7 @@ export const translations = {
       allRightsReserved: "All rights reserved",
       readMore: "Read More",
       viewDetails: "View Details",
+      viewMore: "View More",
       lang: "en"
     },
     footer: {
@@ -112,6 +113,7 @@ export const translations = {
       allRightsReserved: "保留所有权利",
       readMore: "阅读更多",
       viewDetails: "查看详情",
+      viewMore: "查看更多",
       lang: "zh"
     },
     footer: {

@@ -110,5 +110,10 @@ const patents: Patent[] = [
 ];
 
 export async function getPatents() {
-  return patents;
+  // 按申请时间倒序排列专利
+  return patents.sort((a, b) => {
+    const dateA = new Date(a.filingDate);
+    const dateB = new Date(b.filingDate);
+    return dateB.getTime() - dateA.getTime();
+  });
 } 

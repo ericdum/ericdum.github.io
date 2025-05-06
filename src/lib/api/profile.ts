@@ -76,8 +76,8 @@ const profile: Profile = {
     zh: "代立晨（木酱）"
   },
   title: {
-    en: "Senior Data Technology Expert, Pilot",
-    zh: "副高级职称、飞行员"
+    en: "Senior Data Technology Expert of Alibaba, Pilot",
+    zh: "阿里巴巴高级技术专家、飞行员"
   },
   currentPosition: {
     en: "Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School",

@@ -109,9 +109,17 @@ export default function Home() {
       <section className="bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('projects.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[...projects].reverse().map((project) => (
+          {[...projects].reverse().slice(0, 9).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
+        </div>
+        <div className="mt-6 text-center">
+          <a
+            href="/projects"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+          >
+            {t('common.viewMore')}
+          </a>
         </div>
       </section>
 
