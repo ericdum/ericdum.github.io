@@ -6,6 +6,7 @@ import { Header } from "@/components/header";
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { Footer } from "@/components/footer";
 import { GlobalLoading } from '@/components/GlobalLoading';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 

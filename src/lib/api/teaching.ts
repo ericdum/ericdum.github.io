@@ -410,12 +410,12 @@ const courses: Course[] = [
 //       zh: "周子轶",
 //       en: "William Zhou"
 //     },
-//     github: "https://github.com/zhangsan",
+//     github: "https://github.com/ZiFeng11",
 //     courses: [courses.find(course => course.id === "ap-csp")!],
 //     university: "清华大学",
 //     major: "计算机科学与技术",
 //     graduationYear: 2025,
-//     avatar: "https://avatars.githubusercontent.com/u/123456789?v=4"
+//     avatar: "https://avatars.githubusercontent.com/u/130559464?v=4"
 //   },
 //   {
 //     id: "2",
