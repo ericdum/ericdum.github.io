@@ -120,7 +120,7 @@ export default function TeachingPage() {
         </div>
       </section>
 
-      <section className="bg-white rounded-lg shadow p-6">
+      {/* <section className="bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('teaching.studentReviews')}</h2>
         <div className="space-y-4">
           <div className="border-l-4 border-blue-500 pl-4">
@@ -136,7 +136,7 @@ export default function TeachingPage() {
             <p className="text-gray-600 text-sm mt-2">- {t('teaching.studentName')}, 2023</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 } 

@@ -214,12 +214,12 @@ const courses: Course[] = [
       {
         id: "creative-development",
         title: {
-          zh: "技术创新和社会影响",
-          en: "Innovation and Social Impact"
+          zh: "技术创新和社会影响及创造性开发",
+          en: "Innovation and Social Impact and Creative Development"
         },
         description: {
-          zh: "了解计算机科学对社会的影响，了解计算机科学在社会中的应用，了解计算机科学在社会中的发展趋势。",
-          en: "Understand the impact of computer science on society, understand the application of computer science in society, and understand the development trend of computer science in society."
+          zh: "了解计算机科学对社会的影响，了解计算机科学在社会中的应用，了解计算机科学在社会中的发展趋势。能够利用计算机科学解决实际问题，并能够进行创造性开发。",
+          en: "Understand the impact of computer science on society, understand the application of computer science in society, and understand the development trend of computer science in society. Be able to use computer science to solve practical problems and develop creative solutions."
         }
       },
 
