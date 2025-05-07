@@ -159,12 +159,12 @@ const courses: Course[] = [
   {
     id: "ap-csp",
     title: {
-      zh: "AP CSP",
-      en: "AP CSP"
+      zh: "计算机科学基础",
+      en: "Fundamental of Computer Science"
     },
     description: {
-      zh: "AP Computer Science Principles 是一门计算机科学原理课程，不局限于特定编程语言。课程涵盖计算机科学的核心概念，包括算法、数据、互联网、编程等。通过项目实践，学生将学习如何运用计算思维解决实际问题，理解计算机科学对社会的影响。",
-      en: "AP Computer Science Principles is a computer science principles course not limited to specific programming languages. The course covers core concepts of computer science, including algorithms, data, the internet, programming, and more. Through project practice, students will learn how to apply computational thinking to solve real-world problems and understand the impact of computer science on society."
+      zh: "Fundamental of Computer Science 是一门计算机科学原理课程，不局限于特定编程语言。课程涵盖计算机科学的核心概念，包括算法、数据、互联网、编程等。通过项目实践，学生将学习如何运用计算思维解决实际问题，理解计算机科学对社会的影响。",
+      en: "Fundamental of Computer Science is a computer science principles course not limited to specific programming languages. The course covers core concepts of computer science, including algorithms, data, the internet, programming, and more. Through project practice, students will learn how to apply computational thinking to solve real-world problems and understand the impact of computer science on society."
     },
     chapters: [
       {

@@ -73,6 +73,8 @@ export default async function RootLayout({
             <Footer profile={profile} />
           </div>
         </LanguageProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
