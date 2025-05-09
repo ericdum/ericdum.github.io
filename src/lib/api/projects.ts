@@ -747,7 +747,7 @@ const projects: Project[] = [
     companyEn: "Alibaba Group",
     role: "高级数据技术专家 & 智慧航空行业技术总监",
     roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
-    period: "2022",
+    period: "2021",
     description: "通过对管制技术的业务洞察，发现对管制进行识别是不必要的，反而可以突破思维惯性，改变管制员通过语音进行管制的交互模式，而改用便捷、准确的计算机交互操作。",
     descriptionEn: "Through business insights into control technology, discovered that control recognition was unnecessary, and instead could break through thinking inertia, changing the interaction mode of controllers from voice-based control to convenient and accurate computer interaction.",
     technicalDetails: [
@@ -901,7 +901,7 @@ const projects: Project[] = [
     companyEn: "Alibaba Group",
     role: "高级数据技术专家 & 智慧航空行业技术总监",
     roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
-    period: "2022-2023",
+    period: "2020-2023",
     description: "通过融合数据平台中的空管指令、飞机位置、车辆位置数据，实现了全面的场面冲突预警系统，显著提升了机场运行安全性。",
     descriptionEn: "By integrating air traffic control instructions, aircraft positions, and vehicle positions from the data platform, we implemented a comprehensive surface conflict warning system, significantly improving airport operational safety.",
     technicalDetails: [

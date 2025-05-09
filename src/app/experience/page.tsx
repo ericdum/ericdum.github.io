@@ -47,6 +47,26 @@ interface SocialPosition {
   };
 }
 
+interface Award {
+  title: {
+    zh: string;
+    en: string;
+  };
+  issuer: {
+    zh: string;
+    en: string;
+  };
+  date: string;
+  role: {
+    zh: string;
+    en: string;
+  };
+  description?: {
+    zh: string;
+    en: string;
+  };
+}
+
 const experiences: Experience[] = [
   {
     company: {
@@ -242,6 +262,118 @@ const socialPositions: SocialPosition[] = [
   },
 ];
 
+const awards: Award[] = [
+  {
+    title: {
+      zh: "FY22 集团十佳公益项目",
+      en: "FY22 Top 10 Public Welfare Projects"
+    },
+    issuer: {
+      zh: "阿里巴巴集团",
+      en: "Alibaba Group"
+    },
+    date: "2022-02",
+    role: {
+      zh: "项目发起人之一",
+      en: "Project Initiator"
+    }
+  },
+  {
+    title: {
+      zh: "FY21 卓越产品奖",
+      en: "FY21 Excellence Product Award"
+    },
+    issuer: {
+      zh: "数据智能",
+      en: "Data Intelligence"
+    },
+    date: "2020-01",
+    role: {
+      zh: "产研负责人",
+      en: "Product Development Lead"
+    }
+  },
+  {
+    title: {
+      zh: "FY21 自证预言奖",
+      en: "FY21 Self-fulfilling Prophecy Award"
+    },
+    issuer: {
+      zh: "数字产业产研部",
+      en: "Digital Industry R&D Department"
+    },
+    date: "2020-01",
+    role: {
+      zh: "AR 机坪产研负责人",
+      en: "AR Apron R&D Lead"
+    }
+  },
+  {
+    title: {
+      zh: "阿里巴巴2019年度最受欢迎项目——《橙点公益奖》",
+      en: "Alibaba 2019 Most Popular Project - Orange Point Public Welfare Award"
+    },
+    issuer: {
+      zh: "阿里巴巴集团",
+      en: "Alibaba Group"
+    },
+    date: "2020-01",
+    role: {
+      zh: "项目负责人",
+      en: "Project Lead"
+    }
+  },
+  {
+    title: {
+      zh: "阿里巴巴集团党委星火燎原奖（一等奖）",
+      en: "Alibaba Party Committee Spark Award (First Prize)"
+    },
+    issuer: {
+      zh: "阿里巴巴党委",
+      en: "Alibaba Party Committee"
+    },
+    date: "2019-06",
+    role: {
+      zh: "项目发起人，管理人",
+      en: "Project Initiator and Manager"
+    }
+  },
+  {
+    title: {
+      zh: "阿里巴巴2018年度十佳公益项目——《橙点公益奖》",
+      en: "Alibaba 2018 Top 10 Public Welfare Projects - Orange Point Public Welfare Award"
+    },
+    issuer: {
+      zh: "阿里巴巴公益委员会",
+      en: "Alibaba Public Welfare Committee"
+    },
+    date: "2019-04",
+    role: {
+      zh: "项目发起人，管理人",
+      en: "Project Initiator and Manager"
+    }
+  },
+  {
+    title: {
+      zh: "GXIC 智慧园区奖",
+      en: "GXIC Smart Park Award"
+    },
+    issuer: {
+      zh: "阿里云 IoT 事业部",
+      en: "Alibaba Cloud IoT Department"
+    },
+    date: "2017-01",
+    role: {
+      zh: "项目负责人",
+      en: "Project Lead"
+    },
+    description: {
+      zh: "通过摄像头做重点人员轨迹跟踪",
+      en: "Key personnel trajectory tracking through cameras"
+    }
+  }
+];
+
 export default function ExperiencePage() {
   const { t, language } = useLanguage();
 
@@ -250,7 +382,28 @@ export default function ExperiencePage() {
       <div className="bg-white rounded-lg shadow-md p-6">
         <h1 className="text-2xl font-bold mb-8">{t('experience.title')}</h1>
 
-        
+        {/* 获奖经历 */}
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold mb-4">{t('experience.awards')}</h2>
+          <div className="space-y-4">
+            {awards.map((award, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-semibold">{award.title[language]}</h3>
+                    <p className="text-gray-600 text-sm mt-1">{award.issuer[language]}</p>
+                    <p className="text-gray-700 mt-1">{award.role[language]}</p>
+                    {award.description && (
+                      <p className="text-gray-600 text-sm mt-1">{award.description[language]}</p>
+                    )}
+                  </div>
+                  <p className="text-gray-500 text-sm">{award.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* 工作经历 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-4">{t('experience.workExperience')}</h2>

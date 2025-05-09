@@ -80,7 +80,8 @@ export const translations = {
       title: "Work Experience & Education",
       workExperience: "Work Experience",
       education: "Education",
-      socialPositions: "Social Positions"
+      socialPositions: "Social Positions",
+      awards: "Awards & Recognition"
     }
   },
   zh: {
@@ -164,7 +165,8 @@ export const translations = {
       title: "工作经历与学历",
       workExperience: "工作经历",
       education: "学历",
-      socialPositions: "社会任职"
+      socialPositions: "社会任职",
+      awards: "获奖情况"
     }
   },
 }; 
