@@ -250,18 +250,6 @@ export default function ExperiencePage() {
       <div className="bg-white rounded-lg shadow-md p-6">
         <h1 className="text-2xl font-bold mb-8">{t('experience.title')}</h1>
 
-        {/* 社会任职 */}
-        <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4">{t('experience.socialPositions')}</h2>
-        <div className="space-y-4">
-            {socialPositions.map((pos, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <h3 className="font-semibold">{pos.organization[language]}</h3>
-                <p className="text-gray-700">{pos.position[language]}</p>
-            </div>
-            ))}
-        </div>
-        </section>
         
         {/* 工作经历 */}
         <section className="mb-12">
@@ -298,6 +286,19 @@ export default function ExperiencePage() {
               </div>
             ))}
           </div>
+        </section>
+        
+        {/* 社会任职 */}
+        <section className="mb-12">
+        <h2 className="text-xl font-semibold mb-4">{t('experience.socialPositions')}</h2>
+        <div className="space-y-4">
+            {socialPositions.map((pos, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <h3 className="font-semibold">{pos.organization[language]}</h3>
+                <p className="text-gray-700">{pos.position[language]}</p>
+            </div>
+            ))}
+        </div>
         </section>
 
         {/* 学历 */}
