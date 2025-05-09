@@ -988,6 +988,58 @@ const projects: Project[] = [
       "https://res.dreamhangar.cn/images/projects/20/1.jpg",
       "https://res.dreamhangar.cn/images/projects/20/2.jpg"
     ]
+  },
+  {
+    id: 21,
+    title: "基于多交通方式融合的智能出行规划系统",
+    titleEn: "Intelligent Travel Planning System Based on Multi-modal Transportation Integration",
+    company: "中国器官移植基金会",
+    companyEn: "China Organ Transplant Foundation",
+    role: "高级数据技术专家 & 智慧航空行业技术总监",
+    roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
+    period: "2023",
+    description: "为了解决多交通方式融合的出行规划问题，我们开发了一套创新的智能出行规划系统。该系统通过特殊的数据预处理和网络构建方法，实现了基于时间、价格等多维权重的路径规划优化。",
+    descriptionEn: "To solve the problem of multi-modal transportation integration for travel planning, we developed an innovative intelligent travel planning system. Through special data preprocessing and network construction methods, the system achieved path planning optimization based on multi-dimensional weights such as time and price.",
+    technicalDetails: [
+      "设计了基于时空网络的多交通方式融合模型，支持航班、高铁、私人飞机、Evotl、救护车等多种交通方式的统一表示",
+      "实现了基于实时数据的动态网络构建方法，支持交通网络的实时更新和优化",
+      "开发了多维权重的路径规划算法，支持时间、价格、舒适度等多维度的优化目标",
+      "构建了基于机器学习的交通方式推荐系统，根据用户偏好和历史数据提供个性化出行方案",
+      "实现了基于分布式计算的实时路径规划引擎，支持大规模并发查询和毫秒级响应"
+    ],
+    technicalDetailsEn: [
+      "Designed a multi-modal transportation integration model based on spatiotemporal networks, supporting unified representation of various transportation modes including flights, high-speed rail, private jets, Evotl, and ambulances",
+      "Implemented dynamic network construction method based on real-time data, supporting real-time updates and optimization of transportation networks",
+      "Developed multi-dimensional weight path planning algorithm, supporting optimization objectives in multiple dimensions such as time, price, and comfort",
+      "Built transportation mode recommendation system based on machine learning, providing personalized travel solutions based on user preferences and historical data",
+      "Implemented real-time path planning engine based on distributed computing, supporting large-scale concurrent queries and millisecond-level response"
+    ],
+    technologies: ["时空网络", "实时计算", "分布式系统", "路径规划", "数据融合"],
+    technologiesEn: ["Spatiotemporal Networks", "Real-time Computing", "Distributed Systems", "Path Planning", "Data Fusion"],
+    impact: "系统显著提升了出行规划的效率和质量，平均规划时间从原来的分钟级缩短到秒级，用户满意度提升40%。通过多交通方式的融合，为用户提供了更多样化的出行选择，同时实现了更优的出行体验。",
+    impactEn: "The system significantly improved the efficiency and quality of travel planning, reducing average planning time from minutes to seconds, and increasing user satisfaction by 40%. Through multi-modal transportation integration, it provided users with more diverse travel options while achieving better travel experience.",
+    relatedSkills: [
+      "时空网络",
+      "实时计算",
+      "分布式系统",
+      "路径规划",
+      "数据融合",
+      "系统架构"
+    ],
+    relatedSkillsEn: [
+      "Spatiotemporal Networks",
+      "Real-time Computing",
+      "Distributed Systems",
+      "Path Planning",
+      "Data Fusion",
+      "System Architecture"
+    ],
+    images: [
+      "https://res.dreamhangar.cn/images/projects/21/1.jpg",
+      "https://res.dreamhangar.cn/images/projects/21/2.jpg",
+      "https://res.dreamhangar.cn/images/projects/21/3.jpg",
+      
+    ]
   }
 ];
 

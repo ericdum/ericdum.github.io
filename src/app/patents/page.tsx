@@ -22,6 +22,14 @@ export default function PatentsPage() {
       <section className="bg-white rounded-lg shadow p-6">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">{t('patents.title')}</h1>
         
+        <div className="bg-gray-50 p-4 rounded-lg mb-8">
+          <p className="text-gray-600">
+            {t('common.lang') === 'zh' 
+              ? '大量创新工作由于创造性和业务价值考虑，被内部保护，未进行公开专利申请'
+              : 'Many innovative works are internally protected due to creativity and business value considerations, without public patent applications'}
+          </p>
+        </div>
+        
         <div className="space-y-8">
           {patents.map((patent: Patent) => (
             <div key={patent.id} className="border-b border-gray-200 pb-8 last:border-0">

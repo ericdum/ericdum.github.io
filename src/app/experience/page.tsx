@@ -70,6 +70,32 @@ interface Award {
 const experiences: Experience[] = [
   {
     company: {
+      zh: "杭州云谷学校",
+      en: "Hangzhou Yungu School"
+    },
+    period: "2023-present",
+    positions: [
+      {
+        title: {
+          zh: "高中工程技术老师兼教育科技技术顾问",
+          en: "High School Engineering Technology Teacher & Educational Technology Advisor"
+        },
+        period: "2023-present",
+        responsibilities: {
+          zh: [
+            "负责高中工程技术课程教学",
+            "提供教育科技技术咨询"
+          ],
+          en: [
+            "Responsible for high school engineering technology course teaching",
+            "Provide educational technology consulting"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    company: {
       zh: "阿里巴巴集团",
       en: "Alibaba Group"
     },
