@@ -593,18 +593,16 @@ const projects: Project[] = [
     description: "为了弥补现有场面监视系统昂贵、覆盖率不够高、功能单一的问题，我提出使用摄像头作为通用传感器，识别飞机位置、车辆位置、障碍物、桩桶摆放、人员着装规范等对象，结合对于航空器过站保障流程的理解，设计出了数字机坪产品。",
     descriptionEn: "To address the issues of expensive existing surface surveillance systems, insufficient coverage, and limited functionality, I proposed using cameras as universal sensors to identify aircraft positions, vehicle positions, obstacles, cone placement, personnel dress code compliance, and other objects, combined with understanding of aircraft transit support processes, to design the digital apron product.",
     technicalDetails: [
-      "通过CV进行目标分类、目标跟踪，并将所有目标进行id对齐和坐标转换进行跨摄像头跟踪",
-      "实现了异构设备的融合跟踪，对飞机起降、滑行和停机保障过程的全面路径跟踪",
-      "支持视频关联查询，在停机过程中识别行李车、餐车、推车、传送带车等特种车辆",
-      "实现了对轮档、桩桶、人员等小目标的识别，进行对保障过程的数字化",
-      "通过大数据平台进行实时ETL，将视频流数据转换为结构化数据，将多平台数据融合起来大幅提高了交互效率"
+      "定义结构化机场路网，实现基于航图和CAD的快速机场路网构建",
+      "解决定位覆盖率差的问题，利用卷积神经网络和卡尔曼+匈牙利算法进行目标跟踪",
+      "解决定位频率不稳定的问题，利用隐马尔可夫模型和局部异常因子因子模型进行修正",
+      "解决定位误差问题，利用特征工程和数据融合进行修正",
     ],
     technicalDetailsEn: [
-      "Performed target classification and tracking through CV, and conducted cross-camera tracking by aligning IDs and coordinate transformation of all targets",
-      "Implemented fusion tracking of heterogeneous devices, achieving comprehensive path tracking of aircraft takeoff, landing, taxiing, and parking support processes",
-      "Supported video correlation queries, identifying special vehicles such as baggage carts, meal carts, push carts, and conveyor belt vehicles during parking",
-      "Implemented recognition of small targets such as wheel chocks, cones, and personnel, digitizing the support process",
-      "Conducted real-time ETL through big data platform, converting video stream data into structured data, and significantly improved interaction efficiency by integrating multi-platform data"
+      "Defined structured airport networks, implemented rapid airport network construction based on chart and CAD",
+      "Solved the problem of low positioning coverage rate, used convolutional neural networks and Kalman+Hungarian algorithm for target tracking",
+      "Solved the problem of unstable positioning frequency, used hidden Markov model and local outlier factor model for correction",
+      "Solved the problem of positioning error, used feature engineering and data fusion for correction",
     ],
     technologies: ["计算机视觉", "目标跟踪", "多源数据融合", "实时计算", "视频分析", "物联网"],
     technologiesEn: ["Computer Vision", "Target Tracking", "Multi-source Data Fusion", "Real-time Computing", "Video Analysis", "IoT"],
@@ -628,14 +626,15 @@ const projects: Project[] = [
       "IoT",
       "System Architecture"
     ],
-    images: ["https://res.dreamhangar.cn/images/projects/13/cover.jpg", "https://res.dreamhangar.cn/images/projects/13/team.jpg"
+    images: ["https://res.dreamhangar.cn/images/projects/13/cover.jpg"
+      , "https://res.dreamhangar.cn/images/projects/13/team.jpg"
       , "https://res.dreamhangar.cn/images/projects/13/1.png"
       , "https://res.dreamhangar.cn/images/projects/13/2.png"
       , "https://res.dreamhangar.cn/images/projects/13/3.png"
       , "https://res.dreamhangar.cn/images/projects/13/4.jpg"
       , "https://res.dreamhangar.cn/images/projects/13/5.png"
     ],
-    // videos: ["https://res.dreamhangar.cn/images/projects/13/demo.mov"]
+    videos: [ "https://res.dreamhangar.cn/images/projects/15/IMG_2355.mp4"]
   },
   {
     id: 14,
@@ -748,7 +747,7 @@ const projects: Project[] = [
     companyEn: "Alibaba Group",
     role: "高级数据技术专家 & 智慧航空行业技术总监",
     roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
-    period: "2020-2022",
+    period: "2022",
     description: "通过对管制技术的业务洞察，发现对管制进行识别是不必要的，反而可以突破思维惯性，改变管制员通过语音进行管制的交互模式，而改用便捷、准确的计算机交互操作。",
     descriptionEn: "Through business insights into control technology, discovered that control recognition was unnecessary, and instead could break through thinking inertia, changing the interaction mode of controllers from voice-based control to convenient and accurate computer interaction.",
     technicalDetails: [
@@ -793,7 +792,7 @@ const projects: Project[] = [
     companyEn: "Alibaba Group",
     role: "高级数据技术专家 & 智慧航空行业技术总监",
     roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
-    period: "2020-2021",
+    period: "2020",
     description: "在新冠疫情期间，航空公司损失惨重，从公益事业的角度出发，为了帮助航空公司度过难关。我与飞猪合作，基于他们的旅行搜索数据与成交数据训练的算法预测出行热度。",
     descriptionEn: "During the COVID-19 pandemic, airlines suffered heavy losses. From a public welfare perspective, to help airlines overcome difficulties, I collaborated with Fliggy to predict travel popularity based on algorithms trained on their travel search data and transaction data.",
     technicalDetails: [
@@ -843,6 +842,151 @@ const projects: Project[] = [
       "https://res.dreamhangar.cn/images/projects/recovery/5.png",
       "https://res.dreamhangar.cn/images/projects/recovery/6.png",
       "https://res.dreamhangar.cn/images/projects/recovery/7.png"
+    ]
+  },
+  {
+    id: 18,
+    title: "结构化机场路网研究和基于航图的路网标注工具",
+    titleEn: "Structured Airport Road Network Research and Road Network Labeling Tool Based on Chart",
+    company: "阿里巴巴",
+    companyEn: "Alibaba Group",
+    role: "高级数据技术专家 & 智慧航空行业技术总监",
+    roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
+    period: "2020",
+    description: "为了解决机场路网建模和打标的问题，我们设计了一套完整的结构化路网标准，实现了路网的快速建模和自动化打标。",
+    descriptionEn: "To solve the problem of airport road network modeling and labeling, we designed a complete set of structured road network standards, achieving rapid modeling and automated labeling of road networks.",
+    technicalDetails: [
+      "设计了结构化路网标准，支持跑滑位置、停机位位置、滑行道拓补关系、滑行方向限制、转弯方向限制等完整表达",
+      "实现了前端路网构建工具，支持快速路网建模和编辑",
+      "开发了基于AI的路网打标工具，实现了标注工作量的90%减少",
+      "实现了基于路网的飞机位置关联、路径识别、AI飞机自动滑行等功能",
+      "实现了基于路网数据直接生成3D机场场面模型",
+    ],
+    technicalDetailsEn: [
+      "Designed structured road network standards, supporting complete expression of runway positions, parking positions, taxiway topology relationships, taxiing direction restrictions, turning direction restrictions, etc.",
+      "Implemented frontend road network construction tools, supporting rapid road network modeling and editing",
+      "Developed AI-based road network labeling tools, achieving 90% reduction in labeling workload",
+      "Implemented road network-based aircraft position association, path recognition, AI aircraft automatic taxiing and other functions",
+      "Implemented 3D airport surface model generation based on road network data",
+    ],
+    technologies: ["数据结构", "交互", "前端", "3D建模"],
+    technologiesEn: ["Data Structure", "Interaction", "Frontend", "3D Modeling"],
+    impact: "标注工作量减少90%，交叉点漏标率为0，标注时间从1周缩短到半天，培训工作从困难变为简单。",
+    impactEn: "Labeling workload reduced by 90%, intersection labeling omission rate is 0, labeling time reduced from 1 week to half a day, training work changed from difficult to simple.",
+    relatedSkills: [
+      "数据结构",
+      "交互",
+      "前端",
+      "3D建模",
+      "系统架构"
+    ],
+    relatedSkillsEn: [
+      "Data Structure",
+      "Interaction",
+      "Frontend",
+      "3D Modeling",
+      "System Architecture"
+    ],
+    images: ["https://res.dreamhangar.cn/images/projects/18/1.jpg"
+    , "https://res.dreamhangar.cn/images/projects/18/2.jpg"
+    , "https://res.dreamhangar.cn/images/projects/18/3.jpg"
+    , "https://res.dreamhangar.cn/images/projects/18/4.jpg"
+    ]
+  },
+  {
+    id: 19,
+    title: "基于融合感知和实时数据平台的冲突预警系统",
+    titleEn: "Conflict Warning System Based on Fusion Perception and Real-time Data Platform",
+    company: "阿里巴巴",
+    companyEn: "Alibaba Group",
+    role: "高级数据技术专家 & 智慧航空行业技术总监",
+    roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
+    period: "2022-2023",
+    description: "通过融合数据平台中的空管指令、飞机位置、车辆位置数据，实现了全面的场面冲突预警系统，显著提升了机场运行安全性。",
+    descriptionEn: "By integrating air traffic control instructions, aircraft positions, and vehicle positions from the data platform, we implemented a comprehensive surface conflict warning system, significantly improving airport operational safety.",
+    technicalDetails: [
+      "实现了基于语音识别的空管指令识别系统，支持实时指令解析和意图理解",
+      "开发了基于多源数据的滑行意图预测模型，准确预测飞机和车辆的运行轨迹",
+      "设计了基于路径规划的冲突检测算法，实现了指令冲突和滑行冲突的实时识别",
+      "构建了多级预警机制，包括指挥系统预警、监控系统预警、红绿灯预警和服务车辆预警",
+      "实现了基于实时数据的预警信息推送系统，确保相关人员及时获取预警信息"
+    ],
+    technicalDetailsEn: [
+      "Implemented air traffic control instruction recognition system based on speech recognition, supporting real-time instruction parsing and intent understanding",
+      "Developed taxiing intent prediction model based on multi-source data, accurately predicting aircraft and vehicle trajectories",
+      "Designed conflict detection algorithm based on path planning, achieving real-time identification of instruction conflicts and taxiing conflicts",
+      "Built multi-level warning mechanism, including command system warning, monitoring system warning, traffic light warning, and service vehicle warning",
+      "Implemented warning information push system based on real-time data, ensuring timely warning information delivery to relevant personnel"
+    ],
+    technologies: ["语音识别", "路径规划", "实时计算", "数据融合", "预警系统", "物联网"],
+    technologiesEn: ["Speech Recognition", "Path Planning", "Real-time Computing", "Data Fusion", "Warning System", "IoT"],
+    impact: "系统显著提升了机场运行安全性，减少了潜在冲突，提高了机场运行效率。预警系统覆盖了从指挥到执行的全流程，实现了全方位的安全保障。",
+    impactEn: "The system significantly improved airport operational safety, reduced potential conflicts, and enhanced airport operational efficiency. The warning system covered the entire process from command to execution, achieving comprehensive safety protection.",
+    relatedSkills: [
+      "语音识别",
+      "路径规划",
+      "实时计算",
+      "数据融合",
+      "预警系统",
+      "物联网",
+      "系统架构"
+    ],
+    relatedSkillsEn: [
+      "Speech Recognition",
+      "Path Planning",
+      "Real-time Computing",
+      "Data Fusion",
+      "Warning System",
+      "IoT",
+      "System Architecture"
+    ],
+    images: [
+      "https://res.dreamhangar.cn/images/projects/19/1.jpg",
+      "https://res.dreamhangar.cn/images/projects/19/2.jpg"
+    ]
+  },
+  {
+    id: 20,
+    title: "基于多源数据融合的定位修正研究",
+    titleEn: "Research on Location Correction Based on Multi-source Data Fusion",
+    company: "阿里巴巴",
+    companyEn: "Alibaba Group",
+    role: "高级数据技术专家 & 智慧航空行业技术总监",
+    roleEn: "Senior Data Technology Expert & Smart Aviation Industry Technical Director",
+    period: "2021",
+    description: "为了解决机场场面定位数据不准确的问题，我们开发了一套基于多源数据融合的定位修正系统，通过三步修正策略显著提升了定位精度。",
+    descriptionEn: "To solve the problem of inaccurate airport surface positioning data, we developed a positioning correction system based on multi-source data fusion, significantly improving positioning accuracy through a three-step correction strategy.",
+    technicalDetails: [
+      "实现了基于局部异常因子的第一步修正，有效识别和修正异常定位点",
+      "开发了基于隐马路网匹配的第二步修正，利用机场路网结构进行位置优化",
+      "构建了完整的评估体系，实现了98%的定位准确率",
+    ],
+    technicalDetailsEn: [
+      "Implemented first-step correction based on local outlier factor, effectively identifying and correcting abnormal positioning points",
+      "Developed second-step correction based on hidden road network matching, optimizing positions using airport road network structure",
+      "Built comprehensive evaluation system, achieving 98% positioning accuracy",
+    ],
+    technologies: ["数据融合", "异常检测", "路网匹配", "实时计算"],
+    technologiesEn: ["Data Fusion", "Anomaly Detection", "Road Network Matching", "Real-time Computing"],
+    impact: "系统显著提升了机场场面定位精度，为机场运行提供了更准确的位置数据支持。98%的定位准确率和30Hz的更新频率，为机场场面监控和冲突预警提供了可靠的数据基础。",
+    impactEn: "The system significantly improved airport surface positioning accuracy, providing more accurate position data support for airport operations. 98% positioning accuracy and 30Hz update frequency provided reliable data foundation for airport surface monitoring and conflict warning.",
+    relatedSkills: [
+      "数据融合",
+      "异常检测",
+      "路网匹配",
+      "实时计算",
+      "系统架构"
+    ],
+    relatedSkillsEn: [
+      "Data Fusion",
+      "Anomaly Detection",
+      "Road Network Matching",
+      "Real-time Computing",
+      "System Architecture"
+    ],
+    images: [
+      "https://res.dreamhangar.cn/images/projects/20/1.jpg",
+      "https://res.dreamhangar.cn/images/projects/20/2.jpg"
     ]
   }
 ];

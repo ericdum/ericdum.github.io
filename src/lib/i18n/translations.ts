@@ -50,6 +50,7 @@ export const translations = {
       about: "About",
       contact: "Contact",
       teaching: "Teaching",
+      experience: "Experience",
     },
     about: {
       education: "Education",
@@ -74,6 +75,12 @@ export const translations = {
       review1: "The course content is comprehensive and easy to understand. The teacher's explanations are clear, and I have benefited greatly.",
       review2: "The teacher emphasizes practical application, and the course design is reasonable. I have learned many practical skills.",
       studentName: "Student Name"
+    },
+    experience: {
+      title: "Work Experience & Education",
+      workExperience: "Work Experience",
+      education: "Education",
+      socialPositions: "Social Positions"
     }
   },
   zh: {
@@ -127,6 +134,7 @@ export const translations = {
       about: "关于",
       contact: "联系",
       teaching: "教学",
+      experience: "工作经历",
     },
     about: {
       education: "教育经历",
@@ -151,6 +159,12 @@ export const translations = {
       review1: "课程内容深入浅出，老师讲解清晰，让我受益匪浅。",
       review2: "老师非常注重实践，课程设计合理，学到了很多实用的知识。",
       studentName: "学生姓名"
+    },
+    experience: {
+      title: "工作经历与学历",
+      workExperience: "工作经历",
+      education: "学历",
+      socialPositions: "社会任职"
     }
   },
 }; 

@@ -45,16 +45,11 @@ async function processDirectory(dirPath) {
 
 // 处理项目和新闻图片
 async function main() {
-  const projectDir = path.join(__dirname, '../public/images/projects');
-  const newsDir = path.join(__dirname, '../public/images/news');
-  
-  console.log('Processing project images...');
-  await processDirectory(projectDir);
+  const projectDir = "/Users/mujiang/Downloads/未命名文件夹 2";
   
   console.log('Processing news images...');
-  await processDirectory(newsDir);
+  await processDirectory(projectDir);
   
-  console.log('Image compression completed!');
 }
 
 main().catch(console.error); 

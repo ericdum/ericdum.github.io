@@ -72,6 +72,9 @@ export function Header({ profile }: HeaderProps) {
             <Link href="/teaching" className="text-gray-600 hover:text-gray-900">
               {t('header.teaching')}
             </Link> 
+            <Link href="/experience" className="text-gray-600 hover:text-gray-900">
+              {t('header.experience')}
+            </Link>
             <Link href="/contact" className="text-gray-600 hover:text-gray-900">
               {t('header.contact')}
             </Link>
@@ -121,6 +124,13 @@ export function Header({ profile }: HeaderProps) {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('header.teaching')}
+              </Link>
+              <Link
+                href="/experience"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('header.experience')}
               </Link>
               <Link
                 href="/contact"

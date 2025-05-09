@@ -43,16 +43,32 @@ async function processDirectory(dirPath) {
 
 // 处理项目和新闻视频
 async function main() {
-  const projectDir = path.join(__dirname, '../public/images/projects');
-  const newsDir = path.join(__dirname, '../public/images/news');
+  const args = process.argv.slice(2);
+  const inputPath = args[0];
+
+  if (!inputPath) {
+    console.log('请提供文件或目录路径');
+    console.log('用法: node compress-videos.js <文件或目录路径>');
+    return;
+  }
+
+  const fullPath = path.resolve(inputPath);
   
-  console.log('Processing project videos...');
-  await processDirectory(projectDir);
-  
-  console.log('Processing news videos...');
-  await processDirectory(newsDir);
-  
-  console.log('Video compression completed!');
+  try {
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      console.log(`处理目录: ${fullPath}`);
+      await processDirectory(fullPath);
+    } else if (stat.isFile() && /\.(mp4|mov|avi|mkvm|m4v)$/i.test(fullPath)) {
+      console.log(`处理文件: ${fullPath}`);
+      await compressVideo(fullPath);
+    } else {
+      console.log('不支持的文件类型');
+    }
+    console.log('视频压缩完成！');
+  } catch (error) {
+    console.error('错误:', error.message);
+  }
 }
 
 main().catch(console.error); 
