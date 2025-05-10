@@ -62,7 +62,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <LanguageProvider>
           <GlobalLoading />
           <div className="min-h-screen bg-gray-50">
@@ -74,10 +74,10 @@ export default async function RootLayout({
           </div>
         </LanguageProvider>
         {process.env.NEXT_PUBLIC_DOMAIN === 'qqyj.org' && (
-          <>
+          <div>
             <Analytics />
             <SpeedInsights />
-          </>
+          </div>
         )}
       </body>
     </html>
