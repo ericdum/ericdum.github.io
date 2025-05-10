@@ -73,12 +73,6 @@ export default async function RootLayout({
             <Footer profile={profile} />
           </div>
         </LanguageProvider>
-        {process.env.NEXT_PUBLIC_DOMAIN === 'qqyj.org' && (
-          <div>
-            <Analytics />
-            <SpeedInsights />
-          </div>
-        )}
       </body>
     </html>
   );
