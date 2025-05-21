@@ -95,7 +95,7 @@ export default function Home() {
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{profile.name[language]}</h1>
             <h2 className="text-xl text-gray-600 mb-2">{profile.title[language]}</h2>
             <p className="text-gray-700 mb-2">{profile.currentPosition[language]}</p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-4 whitespace-pre-wrap">
               {profile.bio[language]}
             </p>
             <div className="flex space-x-4">

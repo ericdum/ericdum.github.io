@@ -68,6 +68,10 @@ export interface Profile {
     };
     year: string;
   }[];
+  seekingOpportunities: {
+    en: string;
+    zh: string;
+  };
 }
 
 const profile: Profile = {
@@ -76,8 +80,8 @@ const profile: Profile = {
     zh: "代立晨（木酱）"
   },
   title: {
-    en: "Senior Data Technology Expert of Alibaba, Pilot",
-    zh: "阿里巴巴高级技术专家、飞行员"
+    en: "Coder, Pilot",
+    zh: "程序员，飞行员"
   },
   currentPosition: {
     en: "Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School",
@@ -90,8 +94,8 @@ const profile: Profile = {
   email: "formateric@gmail.com",
   // phone: "+86 153 5544 2280",
   bio: {
-    en: "Former Alibaba Cloud Aviation Industry Technical Director, filled multiple gaps in China's digital apron industry. Former head of Alibaba Cloud IoT Innovation Lab, designed smart home systems for special populations that were widely featured on CCTV-2's 'Secret Makeover' and Zhejiang TV's 'Made in China'. Former Alibaba Group Rural Revitalization Technology Officer, documented in the documentary 'Above the Fields' produced by China Foreign Languages Publishing Administration. Science popularization blogger, featured in a 13-minute special report by CCTV News. Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award. 2021 Alibaba Technology Person of the Year.",
-    zh: "原阿里云航空行业技术总监，填补了多项国内数字机坪行业空白。原阿里云 IoT 创新实验室负责人，针对特殊人群设计的智能家居系统曾在 CCTV-2《秘密大改造》、浙江卫视《智造中国》节目中广泛传播。原阿里巴巴集团乡村振兴技术官，记录在中国外文局出品的纪录片《田野之上》。科普博主，曾被央视新闻13分钟专题报道。三次获得阿里巴巴集团公益年度十佳项目奖。2021年阿里技术人年度个人。"
+    en: "Former Alibaba Cloud Aviation Industry Technical Director. \nFormer head of Alibaba Cloud IoT Innovation Lab.\nFormer Alibaba Group Rural Revitalization Technology Officer \nThree-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award. \n2021 Alibaba Technology Person of the Year.",
+    zh: "原阿里云航空行业技术总监，填补了多项国内数字机坪行业空白。\n原阿里云 IoT 创新实验室负责人，针对特殊人群设计的智能家居系统曾在 CCTV-2《秘密大改造》、浙江卫视《智造中国》节目中广泛传播。\n原阿里巴巴集团乡村振兴技术官，记录在中国外文局出品的纪录片《田野之上》。\n科普博主，曾被央视新闻13分钟专题报道。\n三次获得阿里巴巴集团公益年度十佳项目奖。  "
   },
   skills: [
     {
@@ -309,7 +313,11 @@ const profile: Profile = {
       },
       year: "2022"
     }
-  ]
+  ],
+  seekingOpportunities: {
+    en: "I am seeking self-funded part-time or summer PhD opportunities in artificial intelligence, robotics, or education. Interested supervisors are welcome to contact me.",
+    zh: "我正在寻求人工智能、机器人或教育领域的自费兼职或暑期 phd 的机会，有意向的导师可以与我联系。"
+  }
 };
 
 export async function getProfile() {
