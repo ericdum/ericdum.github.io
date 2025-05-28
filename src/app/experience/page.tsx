@@ -408,27 +408,32 @@ export default function ExperiencePage() {
       <div className="bg-white rounded-lg shadow-md p-6">
         <h1 className="text-2xl font-bold mb-8">{t('experience.title')}</h1>
 
-        {/* 获奖经历 */}
+        {/* 学历 */}
         <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-4">{t('experience.awards')}</h2>
+          <h2 className="text-xl font-semibold mb-4">{t('experience.education')}</h2>
           <div className="space-y-4">
-            {awards.map((award, index) => (
+            {education.map((edu, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="font-semibold">{award.title[language]}</h3>
-                    <p className="text-gray-600 text-sm mt-1">{award.issuer[language]}</p>
-                    <p className="text-gray-700 mt-1">{award.role[language]}</p>
-                    {award.description && (
-                      <p className="text-gray-600 text-sm mt-1">{award.description[language]}</p>
-                    )}
-                  </div>
-                  <p className="text-gray-500 text-sm">{award.date}</p>
-                </div>
+                <h3 className="font-semibold">{edu.school[language]}</h3>
+                <p className="text-gray-700">{edu.degree[language]}</p>
               </div>
             ))}
           </div>
         </section>
+        
+        {/* 社会任职 */}
+        <section className="mb-12">
+        <h2 className="text-xl font-semibold mb-4">{t('experience.socialPositions')}</h2>
+        <div className="space-y-4">
+            {socialPositions.map((pos, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <h3 className="font-semibold">{pos.organization[language]}</h3>
+                <p className="text-gray-700">{pos.position[language]}</p>
+            </div>
+            ))}
+        </div>
+        </section>
+
 
         {/* 工作经历 */}
         <section className="mb-12">
@@ -467,27 +472,23 @@ export default function ExperiencePage() {
           </div>
         </section>
         
-        {/* 社会任职 */}
-        <section className="mb-12">
-        <h2 className="text-xl font-semibold mb-4">{t('experience.socialPositions')}</h2>
-        <div className="space-y-4">
-            {socialPositions.map((pos, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <h3 className="font-semibold">{pos.organization[language]}</h3>
-                <p className="text-gray-700">{pos.position[language]}</p>
-            </div>
-            ))}
-        </div>
-        </section>
-
-        {/* 学历 */}
+        {/* 获奖经历 */}
         <section>
-          <h2 className="text-xl font-semibold mb-4">{t('experience.education')}</h2>
+          <h2 className="text-xl font-semibold mb-4">{t('experience.awards')}</h2>
           <div className="space-y-4">
-            {education.map((edu, index) => (
+            {awards.map((award, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <h3 className="font-semibold">{edu.school[language]}</h3>
-                <p className="text-gray-700">{edu.degree[language]}</p>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-semibold">{award.title[language]}</h3>
+                    <p className="text-gray-600 text-sm mt-1">{award.issuer[language]}</p>
+                    <p className="text-gray-700 mt-1">{award.role[language]}</p>
+                    {award.description && (
+                      <p className="text-gray-600 text-sm mt-1">{award.description[language]}</p>
+                    )}
+                  </div>
+                  <p className="text-gray-500 text-sm">{award.date}</p>
+                </div>
               </div>
             ))}
           </div>

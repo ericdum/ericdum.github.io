@@ -23,6 +23,7 @@ export interface Course {
   chapters: Chapter[];
   grade: string[];
   type: {
+    id: string;
     zh: string;
     en: string;
   };
@@ -55,6 +56,16 @@ export interface Student {
   major: string;
   graduationYear: number;
   avatar: string;
+}
+
+export interface StudentReview {
+  id: string;
+  content: {
+    zh: string;
+    en: string;
+  };
+  studentId: string;
+  year: number;
 }
 
 const courses: Course[] = [
@@ -128,6 +139,7 @@ const courses: Course[] = [
     ],
     grade: ["Pre-G10", "G10"],
     type: {
+      id: "popular-science",
       zh: "科普课",
       en: "Popular Science Course"
     },
@@ -148,6 +160,7 @@ const courses: Course[] = [
     chapters: [],
     grade: ["G10", "G11"],
     type: {
+      id: "foundation",
       zh: "专业基础课",
       en: "Professional Foundation Course"
     },
@@ -226,6 +239,7 @@ const courses: Course[] = [
     ],
     grade: ["G10", "G11"],
     type: {
+      id: "foundation",
       zh: "专业基础课",
       en: "Professional Foundation Course"
     },
@@ -292,6 +306,7 @@ const courses: Course[] = [
     ],
     grade: ["G11", "G12"],
     type: {
+      id: "transition",
       zh: "专业衔接课",
       en: "Professional Transition Course"
     },
@@ -393,6 +408,7 @@ const courses: Course[] = [
     ],
     grade: ["G11", "G12"],
     type: {
+      id: "transition",
       zh: "专业衔接课",
       en: "Professional Transition Course"
     },
@@ -401,37 +417,157 @@ const courses: Course[] = [
       en: "Cultivate students' deep understanding of machine learning and artificial intelligence, mastering core algorithms and tools. Through project practice, students will learn how to apply machine learning to solve real-world problems, preparing them for future AI research and application work."
     }
   },
+  {
+    id: "school-team",
+    title: {
+      zh: "校队",
+      en: "School Team"
+    },
+    description: {
+      zh: "校队课程以编程竞赛和应用开发为主，帮助学生掌握计算机科学竞赛和应用开发的基本知识和方法。",
+      en: "The School Team course focuses on programming competitions and application development, helping students master the basic knowledge and methods of computer science competitions and application development."
+    },
+    chapters: [],
+    grade: ["G9", "G10", "G11"],
+    type: {
+      id: "transition",
+      zh: "专业衔接课",
+      en: "Professional Transition Course"
+    },
+    target: {
+      zh: "培养学生对计算机科学竞赛和应用开发的深入理解，掌握核心算法和工具。通过项目实践，学生将学习如何应用机器学习解决实际问题，为未来的AI研究和应用工作做好准备。",
+      en: "Cultivate students' deep understanding of computer science competitions and application development, mastering core algorithms and tools. Through project practice, students will learn how to apply machine learning to solve real-world problems, preparing them for future AI research and application work."
+    }
+  }
 ];
 
-// const students: Student[] = [
-//   {
-//     id: "1",
-//     name: {
-//       zh: "周子轶",
-//       en: "William Zhou"
-//     },
-//     github: "https://github.com/ZiFeng11",
-//     courses: [courses.find(course => course.id === "ap-csp")!],
-//     university: "清华大学",
-//     major: "计算机科学与技术",
-//     graduationYear: 2025,
-//     avatar: "https://avatars.githubusercontent.com/u/130559464?v=4"
-//   },
-//   {
-//     id: "2",
-//     name: {
-//       zh: "周子轶",
-//       en: "William Zhou"
-//     },
-//   },
-//   {
-//     id: "3",
-//     name: {
-//       zh: "周子轶",
-//       en: "William Zhou"
-//     },
-//   }
-// ];
+const studentReviews: StudentReview[] = [
+  {
+    id: "1",
+    content: {
+      zh: "【译】Eric老师是一位非常注重实践的教师。在他的课堂上，我总能学到大量实用的计算机知识。从网络安全到Linux命令，从网站编程到机器学习，Eric老师教会我们像程序员一样思考。作为教师，他不仅传授编程知识，更培养我们的编程思维和用技术解决问题的能力。Eric老师的课程是我上过最好的编程课，内容充实又充满幽默感，通过一个接一个的项目帮助我们巩固各种编程知识。",
+      en: "Mr. Eric is a very practical teacher. In his class, I always learn a lot of useful computer knowledge. From network security to Linux commands, from website programming to machine learning, Mr. Eric teaches us to think like programmers. As a teacher, he not only teaches us programming and knowledge, but also gives us programming thinking and the ability to solve problems with technology. Mr. Eric's class is the best programming class I have ever taken. It is rich in content and humorous at the same time. Through one project after another, he helps us consolidate various programming knowledge."
+    },
+    studentId: "2",
+    year: 2025
+  }
+];
+
+const students: Student[] = [
+  {
+    id: "1",
+    name: {
+      zh: "周子轶",
+      en: "Ziyi Zhou"
+    },
+    github: "https://github.com/ZiFeng11",
+    courses: [courses.find(course => course.id === "ap-csp")!],
+    university: "Stevens Institute of Technology",
+    major: "Computer Science",
+    graduationYear: 2024,
+    avatar: "https://avatars.githubusercontent.com/u/130559464?v=4"
+  },
+  {
+    id: "2",
+    name: {
+      zh: "胡绚琦",
+      en: "Xuanqi Hu"
+    },
+    github: "https://github.com/LiMuma",
+    courses: [courses.find(course => course.id === "ap-csp")!,
+               courses.find(course => course.id === "machine-learning")!, 
+               courses.find(course => course.id === "cloud-computing")!],
+    university: "California State University, Davis",
+    major: "Computer Science",
+    graduationYear: 2025,
+    avatar: "https://avatars.githubusercontent.com/u/121914299?v=4"
+  },
+  {
+    id: "3",
+    name: {
+      zh: "赵轩",
+      en: "Xuan Zhao"
+    },
+    github: "https://github.com/YUHOUCHAXING",
+    courses: [courses.find(course => course.id === "ap-csp")!,
+               courses.find(course => course.id === "machine-learning")!, 
+               courses.find(course => course.id === "cloud-computing")!],
+    university: "California State University, Riverside",
+    major: "Computer Science",
+    graduationYear: 2025,
+    avatar: "https://avatars.githubusercontent.com/u/145020833?v=4"
+  },
+  {
+    id: "4",
+    name: {
+      zh: "张翼",
+      en: "Yi Zhang"
+    },
+    github: "https://github.com/Tylerzhangyi",
+    courses: [
+               courses.find(course => course.id === "machine-learning")!, 
+               courses.find(course => course.id === "cloud-computing")!],
+    university: "",
+    major: "",
+    graduationYear: 2026,
+    avatar: "https://avatars.githubusercontent.com/u/144305826?v=4"
+  },
+  {
+    id: "5",
+    name: {
+      zh: "王家锐",
+      en: "Jiarui Wang"
+    },
+    github: "https://github.com/garywanggali",
+    courses: [courses.find(course => course.id === "school-team")!],
+    university: "",
+    major: "",
+    graduationYear: 2028,
+    avatar: "https://avatars.githubusercontent.com/u/145777433?v=4"
+  },
+  {
+    id: "6",
+    name: {
+      zh: "寇子谦",
+      en: "Ziqian Kou"
+    },
+    github: "https://github.com/kouziqian",
+    courses: [courses.find(course => course.id === "ict")!,
+      courses.find(course => course.id === "school-team")!,
+              
+    ],
+    university: "",
+    major: "",
+    graduationYear: 2028,
+    avatar: "https://avatars.githubusercontent.com/u/134479138?v=4"
+  },
+  {
+    id: "7",
+    name: {
+      zh: "郑博纬",
+      en: "Bowei Zhen"
+    },
+    github: "https://github.com/chihairou111",
+    courses: [courses.find(course => course.id === "school-team")!],
+    university: "",
+    major: "",
+    graduationYear: 2028,
+    avatar: "https://avatars.githubusercontent.com/u/202615932?v=4"
+  },
+  {
+    id: "8",
+    name: {
+      zh: "朱殷磊",
+      en: "Yinlei Zhu"
+    },
+    github: "",
+    courses: [courses.find(course => course.id === "school-team")!],
+    university: "",
+    major: "",
+    graduationYear: 2029,
+    avatar: ""
+  }
+];
 
 export async function getCourses(): Promise<Course[]> {
   return courses;
@@ -444,4 +580,12 @@ export async function getCourseById(id: string): Promise<Course | undefined> {
 export async function getChaptersByCourseId(courseId: string): Promise<Chapter[]> {
   const course = await getCourseById(courseId);
   return course?.chapters || [];
+}
+
+export async function getStudentReviews(): Promise<StudentReview[]> {
+  return studentReviews;
+}
+
+export async function getStudents(): Promise<Student[]> {
+  return students;
 } 

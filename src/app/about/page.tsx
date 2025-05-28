@@ -96,7 +96,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600 mb-4">{profile.title}</p>
             <p className="text-gray-700 mb-4">{profile.currentPosition}</p>
             <div className="prose max-w-none">
-              <p className="text-gray-700 mb-4">{profile.bio}</p>
+              <p className="text-gray-700 mb-4 whitespace-pre-line">{profile.bio}</p>
             </div>
             <div className="flex space-x-4 mt-6">
               <a

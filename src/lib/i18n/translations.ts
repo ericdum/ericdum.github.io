@@ -72,9 +72,10 @@ export const translations = {
       noDescription: "No course description available",
       visitResource: "Visit Resource",
       studentReviews: "Student Reviews",
-      review1: "The course content is comprehensive and easy to understand. The teacher's explanations are clear, and I have benefited greatly.",
-      review2: "The teacher emphasizes practical application, and the course design is reasonable. I have learned many practical skills.",
-      studentName: "Student Name"
+      courseStudents: "Course Students",
+      enrolledCourses: "Enrolled Courses",
+      graduationYear: "High School Graduation",
+      currentGrade: "Current Grade"
     },
     experience: {
       title: "Work Experience & Education",
@@ -157,9 +158,10 @@ export const translations = {
       noDescription: "暂无课程描述",
       visitResource: "访问资源",
       studentReviews: "学生评价",
-      review1: "课程内容深入浅出，老师讲解清晰，让我受益匪浅。",
-      review2: "老师非常注重实践，课程设计合理，学到了很多实用的知识。",
-      studentName: "学生姓名"
+      courseStudents: "课程学生",
+      enrolledCourses: "已选课程",
+      graduationYear: "高中毕业时间",
+      currentGrade: "当前年级"
     },
     experience: {
       title: "工作经历与学历",
