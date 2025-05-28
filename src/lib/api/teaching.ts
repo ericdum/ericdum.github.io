@@ -465,7 +465,7 @@ const students: Student[] = [
     university: "California State University, Santa Cruz",
     major: "Computer Science",
     graduationYear: 2024,
-    avatar: "https://avatars.githubusercontent.com/u/130559464?v=4"
+    avatar: ""
   },
   {
     id: "1",
