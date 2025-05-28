@@ -455,6 +455,19 @@ const studentReviews: StudentReview[] = [
 
 const students: Student[] = [
   {
+    id: "0",
+    name: {
+      zh: "吕一凡",
+      en: "Yifan Lv"
+    },
+    github: "",
+    courses: [courses.find(course => course.id === "ap-csp")!],
+    university: "California State University, Santa Cruz",
+    major: "Computer Science",
+    graduationYear: 2024,
+    avatar: "https://avatars.githubusercontent.com/u/130559464?v=4"
+  },
+  {
     id: "1",
     name: {
       zh: "周子轶",
@@ -478,7 +491,7 @@ const students: Student[] = [
                courses.find(course => course.id === "machine-learning")!, 
                courses.find(course => course.id === "cloud-computing")!],
     university: "California State University, Davis",
-    major: "Computer Science",
+    major: "Computer Engineering",
     graduationYear: 2025,
     avatar: "https://avatars.githubusercontent.com/u/121914299?v=4"
   },
@@ -493,7 +506,7 @@ const students: Student[] = [
                courses.find(course => course.id === "machine-learning")!, 
                courses.find(course => course.id === "cloud-computing")!],
     university: "California State University, Riverside",
-    major: "Computer Science",
+    major: "Robotics",
     graduationYear: 2025,
     avatar: "https://avatars.githubusercontent.com/u/145020833?v=4"
   },
