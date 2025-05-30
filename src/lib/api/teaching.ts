@@ -458,7 +458,7 @@ const students: Student[] = [
     id: "0",
     name: {
       zh: "吕一凡",
-      en: "Yifan Lv"
+      en: "Yifan Lyu"
     },
     github: "",
     courses: [courses.find(course => course.id === "ap-csp")!],
