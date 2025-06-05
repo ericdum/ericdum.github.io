@@ -432,7 +432,7 @@ const projects: Project[] = [
       "Data Analysis",
       "Marketing Strategy"
     ],
-    images:["https://res.dreamhangar.cn/images/projects/9/qjdc.png"]
+    images:["https://res.mojalab.cn/images/projects/9/qjdc.png"]
   },
   {
     id: 10,
@@ -479,7 +479,7 @@ const projects: Project[] = [
       "Configuration System",
       "Editor Development"
     ],
-    images:["https://res.dreamhangar.cn/images/projects/10.1/1.webp","https://res.dreamhangar.cn/images/projects/10.1/2.webp","https://res.dreamhangar.cn/images/projects/10.1/3.webp"]
+    images:["https://res.mojalab.cn/images/projects/10.1/1.webp","https://res.mojalab.cn/images/projects/10.1/2.webp","https://res.mojalab.cn/images/projects/10.1/3.webp"]
   },
   {
     id: 11,
@@ -528,8 +528,8 @@ const projects: Project[] = [
       "System Architecture",
       "Performance Optimization"
     ],
-    videos:["https://res.dreamhangar.cn/images/projects/datav/IMG_2152.mp4", "https://res.dreamhangar.cn/images/projects/datav/IMG_5068.mp4"],
-    images:["https://res.dreamhangar.cn/images/projects/datav/IMG_5064.JPG","https://res.dreamhangar.cn/images/projects/datav/IMG_5069.JPG","https://res.dreamhangar.cn/images/projects/datav/IMG_5070.JPG"]
+    videos:["https://res.mojalab.cn/images/projects/datav/IMG_2152.mp4", "https://res.mojalab.cn/images/projects/datav/IMG_5068.mp4"],
+    images:["https://res.mojalab.cn/images/projects/datav/IMG_5064.JPG","https://res.mojalab.cn/images/projects/datav/IMG_5069.JPG","https://res.mojalab.cn/images/projects/datav/IMG_5070.JPG"]
   },
   {
     id: 12,
@@ -578,8 +578,8 @@ const projects: Project[] = [
       "Security Authentication",
       "System Architecture"
     ],
-    videos:["https://res.dreamhangar.cn/images/projects/12/GXIC.mp4","https://res.dreamhangar.cn/images/projects/12/IMG_2658.mp4"],
-    images:["https://res.dreamhangar.cn/images/projects/12/IMG_9430.jpg"]
+    videos:["https://res.mojalab.cn/images/projects/12/GXIC.mp4","https://res.mojalab.cn/images/projects/12/IMG_2658.mp4"],
+    images:["https://res.mojalab.cn/images/projects/12/IMG_9430.jpg"]
   },
   {
     id: 13,
@@ -626,15 +626,15 @@ const projects: Project[] = [
       "IoT",
       "System Architecture"
     ],
-    images: ["https://res.dreamhangar.cn/images/projects/13/cover.jpg"
-      , "https://res.dreamhangar.cn/images/projects/13/team.jpg"
-      , "https://res.dreamhangar.cn/images/projects/13/1.png"
-      , "https://res.dreamhangar.cn/images/projects/13/2.png"
-      , "https://res.dreamhangar.cn/images/projects/13/3.png"
-      , "https://res.dreamhangar.cn/images/projects/13/4.jpg"
-      , "https://res.dreamhangar.cn/images/projects/13/5.png"
+    images: ["https://res.mojalab.cn/images/projects/13/cover.jpg"
+      , "https://res.mojalab.cn/images/projects/13/team.jpg"
+      , "https://res.mojalab.cn/images/projects/13/1.png"
+      , "https://res.mojalab.cn/images/projects/13/2.png"
+      , "https://res.mojalab.cn/images/projects/13/3.png"
+      , "https://res.mojalab.cn/images/projects/13/4.jpg"
+      , "https://res.mojalab.cn/images/projects/13/5.png"
     ],
-    videos: [ "https://res.dreamhangar.cn/images/projects/15/IMG_2355.mp4"]
+    videos: [ "https://res.mojalab.cn/images/projects/15/IMG_2355.mp4"]
   },
   {
     id: 14,
@@ -686,10 +686,10 @@ const projects: Project[] = [
         url: "/news/1"
       }
     ],
-    videos: ["https://res.dreamhangar.cn/images/projects/14/cover.mp4"],
+    videos: ["https://res.mojalab.cn/images/projects/14/cover.mp4"],
     images: [
-      "https://res.dreamhangar.cn/images/projects/14/cover.png",
-      "https://res.dreamhangar.cn/images/projects/14/cover2.jpg",
+      "https://res.mojalab.cn/images/projects/14/cover.png",
+      "https://res.mojalab.cn/images/projects/14/cover2.jpg",
     ]
   },
   {
@@ -737,7 +737,7 @@ const projects: Project[] = [
       "Simulation System",
       "System Architecture"
     ],
-    videos: ["https://res.dreamhangar.cn/images/projects/15/ar.mp4", "https://res.dreamhangar.cn/images/projects/15/tower2.mp4"]
+    videos: ["https://res.mojalab.cn/images/projects/15/ar.mp4", "https://res.mojalab.cn/images/projects/15/tower2.mp4"]
   },
   {
     id: 16,
@@ -782,7 +782,7 @@ const projects: Project[] = [
       "Data Communication",
       "System Architecture"
     ],
-    images: ["https://res.dreamhangar.cn/images/projects/16/cover.png","https://res.dreamhangar.cn/images/projects/16/show.jpg"],
+    images: ["https://res.mojalab.cn/images/projects/16/cover.png","https://res.mojalab.cn/images/projects/16/show.jpg"],
   },
   {
     id: 17,
@@ -835,13 +835,13 @@ const projects: Project[] = [
       }
     ],
     images: [
-      "https://res.dreamhangar.cn/images/projects/recovery/1.png",
-      "https://res.dreamhangar.cn/images/projects/recovery/2.png",
-      "https://res.dreamhangar.cn/images/projects/recovery/3.png",
-      "https://res.dreamhangar.cn/images/projects/recovery/4.png",
-      "https://res.dreamhangar.cn/images/projects/recovery/5.png",
-      "https://res.dreamhangar.cn/images/projects/recovery/6.png",
-      "https://res.dreamhangar.cn/images/projects/recovery/7.png"
+      "https://res.mojalab.cn/images/projects/recovery/1.png",
+      "https://res.mojalab.cn/images/projects/recovery/2.png",
+      "https://res.mojalab.cn/images/projects/recovery/3.png",
+      "https://res.mojalab.cn/images/projects/recovery/4.png",
+      "https://res.mojalab.cn/images/projects/recovery/5.png",
+      "https://res.mojalab.cn/images/projects/recovery/6.png",
+      "https://res.mojalab.cn/images/projects/recovery/7.png"
     ]
   },
   {
@@ -887,10 +887,10 @@ const projects: Project[] = [
       "3D Modeling",
       "System Architecture"
     ],
-    images: ["https://res.dreamhangar.cn/images/projects/18/1.jpg"
-    , "https://res.dreamhangar.cn/images/projects/18/2.jpg"
-    , "https://res.dreamhangar.cn/images/projects/18/3.jpg"
-    , "https://res.dreamhangar.cn/images/projects/18/4.jpg"
+    images: ["https://res.mojalab.cn/images/projects/18/1.jpg"
+    , "https://res.mojalab.cn/images/projects/18/2.jpg"
+    , "https://res.mojalab.cn/images/projects/18/3.jpg"
+    , "https://res.mojalab.cn/images/projects/18/4.jpg"
     ]
   },
   {
@@ -941,8 +941,8 @@ const projects: Project[] = [
       "System Architecture"
     ],
     images: [
-      "https://res.dreamhangar.cn/images/projects/19/1.jpg",
-      "https://res.dreamhangar.cn/images/projects/19/2.jpg"
+      "https://res.mojalab.cn/images/projects/19/1.jpg",
+      "https://res.mojalab.cn/images/projects/19/2.jpg"
     ]
   },
   {
@@ -985,8 +985,8 @@ const projects: Project[] = [
       "System Architecture"
     ],
     images: [
-      "https://res.dreamhangar.cn/images/projects/20/1.jpg",
-      "https://res.dreamhangar.cn/images/projects/20/2.jpg"
+      "https://res.mojalab.cn/images/projects/20/1.jpg",
+      "https://res.mojalab.cn/images/projects/20/2.jpg"
     ]
   },
   {
@@ -1035,9 +1035,9 @@ const projects: Project[] = [
       "System Architecture"
     ],
     images: [
-      "https://res.dreamhangar.cn/images/projects/21/1.jpg",
-      "https://res.dreamhangar.cn/images/projects/21/2.jpg",
-      "https://res.dreamhangar.cn/images/projects/21/3.jpg",
+      "https://res.mojalab.cn/images/projects/21/1.jpg",
+      "https://res.mojalab.cn/images/projects/21/2.jpg",
+      "https://res.mojalab.cn/images/projects/21/3.jpg",
       
     ]
   }

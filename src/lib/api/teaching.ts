@@ -478,7 +478,7 @@ const students: Student[] = [
     university: "Stevens Institute of Technology",
     major: "Computer Science",
     graduationYear: 2024,
-    avatar: "https://avatars.githubusercontent.com/u/130559464?v=4"
+    avatar: "https://res.mojalab.cn/students/ZiFeng11.jpeg"
   },
   {
     id: "2",
@@ -493,7 +493,7 @@ const students: Student[] = [
     university: "California State University, Davis",
     major: "Computer Engineering",
     graduationYear: 2025,
-    avatar: "https://avatars.githubusercontent.com/u/121914299?v=4"
+    avatar: "https://res.mojalab.cn/students/LiMuma.png"
   },
   {
     id: "3",
@@ -508,7 +508,7 @@ const students: Student[] = [
     university: "California State University, Riverside",
     major: "Robotics",
     graduationYear: 2025,
-    avatar: "https://avatars.githubusercontent.com/u/145020833?v=4"
+    avatar: "https://res.mojalab.cn/students/YUHOUCHAXING.jpeg"
   },
   {
     id: "4",
@@ -523,7 +523,7 @@ const students: Student[] = [
     university: "",
     major: "",
     graduationYear: 2026,
-    avatar: "https://avatars.githubusercontent.com/u/144305826?v=4"
+    avatar: "https://res.mojalab.cn/students/Tylerzhangyi.png"
   },
   {
     id: "5",
@@ -536,7 +536,7 @@ const students: Student[] = [
     university: "",
     major: "",
     graduationYear: 2028,
-    avatar: "https://avatars.githubusercontent.com/u/145777433?v=4"
+    avatar: "https://res.mojalab.cn/students/garywanggali.png"
   },
   {
     id: "6",
@@ -552,7 +552,7 @@ const students: Student[] = [
     university: "",
     major: "",
     graduationYear: 2028,
-    avatar: "https://avatars.githubusercontent.com/u/134479138?v=4"
+    avatar: "https://res.mojalab.cn/students/kouziqian.jpeg"
   },
   {
     id: "7",
@@ -565,7 +565,7 @@ const students: Student[] = [
     university: "",
     major: "",
     graduationYear: 2028,
-    avatar: "https://avatars.githubusercontent.com/u/202615932?v=4"
+    avatar: "https://res.mojalab.cn/students/LiMuma.png"
   },
   {
     id: "8",

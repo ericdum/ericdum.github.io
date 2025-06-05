@@ -83,7 +83,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/4">
             <Image
-              src="https://res.dreamhangar.cn/avatar.avif"
+              src="https://res.mojalab.cn/avatar.avif"
               alt="Profile Photo"
               width={300}
               height={300}
