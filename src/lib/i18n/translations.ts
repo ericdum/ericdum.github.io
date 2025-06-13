@@ -72,7 +72,7 @@ export const translations = {
       noDescription: "No course description available",
       visitResource: "Visit Resource",
       studentReviews: "Student Reviews",
-      courseStudents: "Course Students",
+      courseStudents: "Highlight Students",
       enrolledCourses: "Enrolled Courses",
       graduationYear: "High School Graduation",
       currentGrade: "Current Grade"
@@ -158,7 +158,7 @@ export const translations = {
       noDescription: "暂无课程描述",
       visitResource: "访问资源",
       studentReviews: "学生评价",
-      courseStudents: "课程学生",
+      courseStudents: "专业学生",
       enrolledCourses: "已选课程",
       graduationYear: "高中毕业时间",
       currentGrade: "当前年级"
