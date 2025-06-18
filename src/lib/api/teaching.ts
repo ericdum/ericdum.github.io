@@ -420,14 +420,92 @@ const courses: Course[] = [
   {
     id: "school-team",
     title: {
-      zh: "校队",
-      en: "School Team"
+      zh: "编程校队",
+      en: "Programming School Team"
     },
     description: {
-      zh: "校队课程以编程竞赛和应用开发为主，帮助学生掌握计算机科学竞赛和应用开发的基本知识和方法。",
-      en: "The School Team course focuses on programming competitions and application development, helping students master the basic knowledge and methods of computer science competitions and application development."
+      zh: "编程校队的设立是为了集中在编程领域有深厚基础的同学，经过校队培养能够有能力参加应用开发/游戏开发类的竞赛（如WWDC、Hackthon等）并取得成绩。校队注重实战训练，通过项目实践和竞赛参与，培养学生的综合应用开发能力。",
+      en: "The Programming School Team is established to concentrate students with a solid foundation in programming. Through team training, students will develop the ability to participate in application development/game development competitions (such as WWDC, Hackathon, etc.) and achieve results. The team focuses on practical training and cultivates students' comprehensive application development capabilities through project practice and competition participation."
     },
-    chapters: [],
+    chapters: [
+      {
+        id: "ai-assisted-development",
+        title: {
+          zh: "结合AI工具的应用开发训练",
+          en: "AI-Assisted Application Development Training"
+        },
+        description: {
+          zh: "通过滚动的应用需求提升学生对于应用开发的熟练度，学习如何利用AI工具提高开发效率和代码质量。",
+          en: "Improve students' proficiency in application development through rolling application requirements, and learn how to use AI tools to improve development efficiency and code quality."
+        }
+      },
+      {
+        id: "internal-competitions",
+        title: {
+          zh: "小规模竞赛",
+          en: "Small-scale Competitions"
+        },
+        description: {
+          zh: "通过内部竞争，产生精品应用，激发学生的创新思维和竞争意识。",
+          en: "Generate high-quality applications through internal competition, stimulating students' innovative thinking and competitive awareness."
+        }
+      },
+      {
+        id: "frontend-development",
+        title: {
+          zh: "前端开发",
+          en: "Frontend Development"
+        },
+        description: {
+          zh: "前端开发的常用框架和方法，包括React、Uniapp和相关脚手架等技术栈的学习和应用。",
+          en: "Common frameworks and methods for frontend development, including learning and application of technology stacks such as React, Uniapp, and related scaffolding tools."
+        }
+      },
+      {
+        id: "database-design",
+        title: {
+          zh: "数据库设计",
+          en: "Database Design"
+        },
+        description: {
+          zh: "关系型数据库的数据设计方法，包括E-R图、DBMS和数据库部署方法等核心技能。",
+          en: "Data design methods for relational databases, including core skills such as E-R diagrams, DBMS, and database deployment methods."
+        }
+      },
+      {
+        id: "backend-development",
+        title: {
+          zh: "后端开发",
+          en: "Backend Development"
+        },
+        description: {
+          zh: "后端开发的常用开发框架和方法，包括Flask、MVC架构、微服务架构等现代后端技术。",
+          en: "Common development frameworks and methods for backend development, including modern backend technologies such as Flask, MVC architecture, and microservice architecture."
+        }
+      },
+      {
+        id: "team-collaboration",
+        title: {
+          zh: "团队合作和代码管理",
+          en: "Teamwork and Code Management"
+        },
+        description: {
+          zh: "团队合作和代码管理方法，包括Git和Github等版本控制工具的使用和最佳实践。",
+          en: "Teamwork and code management methods, including the use and best practices of version control tools such as Git and Github."
+        }
+      },
+      {
+        id: "containerization",
+        title: {
+          zh: "容器化技术",
+          en: "Containerization Technology"
+        },
+        description: {
+          zh: "Docker工具链的学习和应用，掌握现代应用部署和容器化开发的核心技能。",
+          en: "Learning and application of Docker toolchain, mastering core skills of modern application deployment and containerized development."
+        }
+      }
+    ],
     grade: ["G9", "G10", "G11"],
     type: {
       id: "transition",
@@ -435,9 +513,22 @@ const courses: Course[] = [
       en: "Professional Transition Course"
     },
     target: {
-      zh: "培养学生对计算机科学竞赛和应用开发的深入理解，掌握核心算法和工具。通过项目实践，学生将学习如何应用机器学习解决实际问题，为未来的AI研究和应用工作做好准备。",
-      en: "Cultivate students' deep understanding of computer science competitions and application development, mastering core algorithms and tools. Through project practice, students will learn how to apply machine learning to solve real-world problems, preparing them for future AI research and application work."
-    }
+      zh: "熟练掌握应用开发相关的技术、技能，能够快速分析用户需求、形成产品设计、系统设计，并最终完成代码开发。通过实战训练和竞赛参与，培养具备完整产品开发能力的技术人才，为参加WWDC、Hackathon等高水平竞赛做好准备。",
+      en: "Master the technologies and skills related to application development, be able to quickly analyze user requirements, form product design and system design, and finally complete code development. Through practical training and competition participation, cultivate technical talents with complete product development capabilities and prepare for high-level competitions such as WWDC and Hackathon."
+    },
+    resources: [
+      {
+        title: {
+          zh: "云谷高中编程校队 GitHub 组织",
+          en: "Yungu High School Programming Team GitHub Organization"
+        },
+        url: "https://github.com/orgs/Yungu-HZ-Highschool/repositories",
+        description: {
+          zh: "校队成员将加入此GitHub组织，积累社区声誉，开源项目作品，共同建设技术社区。",
+          en: "Team members will join this GitHub organization to accumulate community reputation, open source project works, and jointly build a technical community."
+        }
+      }
+    ]
   }
 ];
 
