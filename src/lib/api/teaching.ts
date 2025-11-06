@@ -529,6 +529,139 @@ const courses: Course[] = [
         }
       }
     ]
+  },
+  {
+    id: "python-app-programming",
+    title: {
+      zh: "Python应用编程",
+      en: "Python Application Programming"
+    },
+    description: {
+      zh: "Python应用编程课程旨在让学生能够在AI的帮助下进行应用编程。课程涵盖基于Python的后端程序开发、数据库、MVC、ORM、RESTful API、基本的服务器和安全等；基于Vue和Vite的前端开发，了解HTML、CSS、JS之间的关系；第三方数据API的调用和集成，数据应用的基础；DevOps、单元测试等工程技术。通过系统的学习和实践，帮助学生快速掌握应用相关的各类工程工具的关系逻辑，培养较强的工程实施能力。",
+      en: "Python Application Programming course aims to enable students to engage in application programming with the help of AI. The course covers Python-based backend development, databases, MVC, ORM, RESTful API, basic server and security; Vue and Vite-based frontend development, understanding the relationship between HTML, CSS, and JS; third-party data API calls and integration, fundamentals of data applications; DevOps, unit testing, and other engineering technologies. Through systematic learning and practice, students will quickly master the relationship logic of various engineering tools related to applications and develop strong engineering implementation capabilities."
+    },
+    chapters: [
+      {
+        id: "python-backend",
+        title: {
+          zh: "基于Python的后端程序开发",
+          en: "Python-based Backend Development"
+        },
+        description: {
+          zh: "学习使用Python进行后端应用开发，掌握后端开发的基本概念、框架选择和使用方法。",
+          en: "Learn to use Python for backend application development, master the basic concepts, framework selection, and usage methods of backend development."
+        }
+      },
+      {
+        id: "database",
+        title: {
+          zh: "数据库",
+          en: "Database"
+        },
+        description: {
+          zh: "学习数据库的基本概念和操作，掌握关系型数据库的设计和使用方法。",
+          en: "Learn the basic concepts and operations of databases, master the design and usage methods of relational databases."
+        }
+      },
+      {
+        id: "mvc",
+        title: {
+          zh: "MVC架构",
+          en: "MVC Architecture"
+        },
+        description: {
+          zh: "理解MVC（Model-View-Controller）架构模式，学习如何组织代码结构，实现关注点分离。",
+          en: "Understand the MVC (Model-View-Controller) architecture pattern, learn how to organize code structure and achieve separation of concerns."
+        }
+      },
+      {
+        id: "orm",
+        title: {
+          zh: "ORM",
+          en: "ORM"
+        },
+        description: {
+          zh: "学习对象关系映射（ORM）的概念和使用，掌握如何使用ORM框架简化数据库操作。",
+          en: "Learn the concepts and usage of Object-Relational Mapping (ORM), master how to use ORM frameworks to simplify database operations."
+        }
+      },
+      {
+        id: "restful-api",
+        title: {
+          zh: "RESTful API",
+          en: "RESTful API"
+        },
+        description: {
+          zh: "学习RESTful API的设计原则和实现方法，掌握如何设计和开发符合REST规范的API接口。",
+          en: "Learn the design principles and implementation methods of RESTful API, master how to design and develop API interfaces that conform to REST standards."
+        }
+      },
+      {
+        id: "server-security",
+        title: {
+          zh: "基本的服务器和安全",
+          en: "Basic Server and Security"
+        },
+        description: {
+          zh: "了解服务器的基本概念和部署方法，学习Web应用的基本安全原则和防护措施。",
+          en: "Understand the basic concepts and deployment methods of servers, learn the basic security principles and protection measures of web applications."
+        }
+      },
+      {
+        id: "vue-vite-frontend",
+        title: {
+          zh: "基于Vue和Vite的前端开发",
+          en: "Vue and Vite-based Frontend Development"
+        },
+        description: {
+          zh: "学习使用Vue框架和Vite构建工具进行前端开发，深入理解HTML、CSS、JavaScript之间的关系和协作方式。",
+          en: "Learn to use Vue framework and Vite build tool for frontend development, deeply understand the relationship and collaboration between HTML, CSS, and JavaScript."
+        }
+      },
+      {
+        id: "third-party-api",
+        title: {
+          zh: "第三方数据API的调用和集成",
+          en: "Third-party Data API Calls and Integration"
+        },
+        description: {
+          zh: "学习如何调用和集成第三方数据API，了解数据应用的基础知识和实践方法。",
+          en: "Learn how to call and integrate third-party data APIs, understand the fundamentals and practical methods of data applications."
+        }
+      },
+      {
+        id: "devops",
+        title: {
+          zh: "DevOps",
+          en: "DevOps"
+        },
+        description: {
+          zh: "了解DevOps的基本概念和实践，学习持续集成、持续部署等现代软件开发流程。",
+          en: "Understand the basic concepts and practices of DevOps, learn modern software development processes such as continuous integration and continuous deployment."
+        }
+      },
+      {
+        id: "unit-testing",
+        title: {
+          zh: "单元测试",
+          en: "Unit Testing"
+        },
+        description: {
+          zh: "学习单元测试的基本概念和编写方法，掌握测试驱动开发（TDD）的实践思路。",
+          en: "Learn the basic concepts and writing methods of unit testing, master the practical thinking of Test-Driven Development (TDD)."
+        }
+      }
+    ],
+    grade: ["G10", "G11", "G12"],
+    type: {
+      id: "transition",
+      zh: "专业衔接课",
+      en: "Professional Transition Course"
+    },
+    target: {
+      zh: "让学生能够在AI的帮助下，快速掌握应用相关的各类工程工具的关系逻辑，能够在未来的学习和工作中，拥有较强的工程实施能力。",
+      en: "Enable students to quickly master the relationship logic of various engineering tools related to applications with the help of AI, and develop strong engineering implementation capabilities in future learning and work."
+    }
   }
 ];
 
@@ -610,7 +743,8 @@ const students: Student[] = [
     github: "https://github.com/Tylerzhangyi",
     courses: [
                courses.find(course => course.id === "machine-learning")!, 
-               courses.find(course => course.id === "cloud-computing")!],
+               courses.find(course => course.id === "cloud-computing")!,
+               courses.find(course => course.id === "python-app-programming")!],
     university: "",
     major: "",
     graduationYear: 2026,
@@ -623,7 +757,8 @@ const students: Student[] = [
       en: "Jiarui Wang"
     },
     github: "https://github.com/garywanggali",
-    courses: [courses.find(course => course.id === "school-team")!],
+    courses: [courses.find(course => course.id === "school-team")!,
+               courses.find(course => course.id === "python-app-programming")!],
     university: "",
     major: "",
     graduationYear: 2028,
@@ -656,7 +791,7 @@ const students: Student[] = [
     university: "",
     major: "",
     graduationYear: 2028,
-    avatar: "https://res.mojalab.cn/students/LiMuma.png"
+    avatar: "https://res.mojalab.cn/students/chihairou111.png"
   },
   {
     id: "8",
@@ -670,6 +805,60 @@ const students: Student[] = [
     major: "",
     graduationYear: 2029,
     avatar: ""
+  },
+  {
+    id: "9",
+    name: {
+      zh: "张羽阳",
+      en: "Yuyang Zhang"
+    },
+    github: "https://github.com/Ymm0709",
+    courses: [courses.find(course => course.id === "python-app-programming")!,
+               courses.find(course => course.id === "ap-csa")!],
+    university: "",
+    major: "",
+    graduationYear: 2026,
+    avatar: "https://res.mojalab.cn/students/Ymm0709.png"
+  },
+  {
+    id: "10",
+    name: {
+      zh: "王越舟",
+      en: "Yuezhou Wang"
+    },
+    github: "https://github.com/WRAJE",
+    courses: [courses.find(course => course.id === "python-app-programming")!],
+    university: "",
+    major: "",
+    graduationYear: 2027,
+    avatar: "https://res.mojalab.cn/students/WRAJE.jpeg"
+  },
+  {
+    id: "11",
+    name: {
+      zh: "邓睿涵",
+      en: "Ruihan Deng"
+    },
+    github: "https://github.com/dengruihan",
+    courses: [courses.find(course => course.id === "python-app-programming")!],
+    university: "",
+    major: "",
+    graduationYear: 2027,
+    avatar: "https://res.mojalab.cn/students/dengruihan.png"
+  },
+  {
+    id: "12",
+    name: {
+      zh: "马思嘉",
+      en: "Sijia Ma"
+    },
+    github: "https://github.com/Mathewmsj",
+    courses: [courses.find(course => course.id === "python-app-programming")!,
+               courses.find(course => course.id === "ap-csa")!],
+    university: "",
+    major: "",
+    graduationYear: 2026,
+    avatar: "https://res.mojalab.cn/students/Mathewmsj.png"
   }
 ];
 

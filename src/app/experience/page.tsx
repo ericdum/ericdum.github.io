@@ -382,7 +382,7 @@ const awards: Award[] = [
   {
     title: {
       zh: "GXIC 智慧园区奖",
-      en: "GXIC Smart Park Award"
+      en: "GXIC Smart Campus Award"
     },
     issuer: {
       zh: "阿里云 IoT 事业部",

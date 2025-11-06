@@ -315,8 +315,8 @@ const profile: Profile = {
     }
   ],
   seekingOpportunities: {
-    en: "I am seeking self-funded part-time or summer PhD opportunities in artificial intelligence, robotics, or education. Interested supervisors are welcome to contact me.",
-    zh: "我正在寻求人工智能、机器人或教育领域的自费兼职或暑期 phd 的机会，有意向的导师可以与我联系。"
+    en: "I am seeking self-funded part-time or summer PhD opportunities in artificial intelligence, robotics, human-computer interaction, or education. Interested supervisors are welcome to contact me.",
+    zh: "我正在寻求人工智能、机器人、人机交互或教育领域的自费兼职或暑期 PhD 的机会，有意向的导师可以与我联系。"
   }
 };
 
