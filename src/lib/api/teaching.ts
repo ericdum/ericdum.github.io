@@ -751,6 +751,60 @@ const students: Student[] = [
     avatar: "https://res.mojalab.cn/students/Tylerzhangyi.png"
   },
   {
+    id: "12",
+    name: {
+      zh: "马思嘉",
+      en: "Sijia Ma"
+    },
+    github: "https://github.com/Mathewmsj",
+    courses: [courses.find(course => course.id === "ap-csa")!,
+      courses.find(course => course.id === "python-app-programming")!],
+    university: "",
+    major: "",
+    graduationYear: 2026,
+    avatar: "https://res.mojalab.cn/students/Mathewmsj.png"
+  },
+  {
+    id: "9",
+    name: {
+      zh: "张羽阳",
+      en: "Yuyang Zhang"
+    },
+    github: "https://github.com/Ymm0709",
+    courses: [courses.find(course => course.id === "ap-csa")!,
+      courses.find(course => course.id === "python-app-programming")!],
+    university: "",
+    major: "",
+    graduationYear: 2026,
+    avatar: "https://res.mojalab.cn/students/Ymm0709.png"
+  },
+  {
+    id: "10",
+    name: {
+      zh: "王越舟",
+      en: "Yuezhou Wang"
+    },
+    github: "https://github.com/WRAJE",
+    courses: [courses.find(course => course.id === "python-app-programming")!],
+    university: "",
+    major: "",
+    graduationYear: 2027,
+    avatar: "https://res.mojalab.cn/students/WRAJE.jpeg"
+  },
+  {
+    id: "11",
+    name: {
+      zh: "邓睿涵",
+      en: "Ruihan Deng"
+    },
+    github: "https://github.com/dengruihan",
+    courses: [courses.find(course => course.id === "python-app-programming")!],
+    university: "",
+    major: "",
+    graduationYear: 2027,
+    avatar: "https://res.mojalab.cn/students/dengruihan.png"
+  },
+  {
     id: "5",
     name: {
       zh: "王家锐",
@@ -790,7 +844,7 @@ const students: Student[] = [
     courses: [courses.find(course => course.id === "school-team")!],
     university: "",
     major: "",
-    graduationYear: 2028,
+    graduationYear: 2029,
     avatar: "https://res.mojalab.cn/students/chihairou111.png"
   },
   {
@@ -806,60 +860,6 @@ const students: Student[] = [
     graduationYear: 2029,
     avatar: ""
   },
-  {
-    id: "9",
-    name: {
-      zh: "张羽阳",
-      en: "Yuyang Zhang"
-    },
-    github: "https://github.com/Ymm0709",
-    courses: [courses.find(course => course.id === "python-app-programming")!,
-               courses.find(course => course.id === "ap-csa")!],
-    university: "",
-    major: "",
-    graduationYear: 2026,
-    avatar: "https://res.mojalab.cn/students/Ymm0709.png"
-  },
-  {
-    id: "10",
-    name: {
-      zh: "王越舟",
-      en: "Yuezhou Wang"
-    },
-    github: "https://github.com/WRAJE",
-    courses: [courses.find(course => course.id === "python-app-programming")!],
-    university: "",
-    major: "",
-    graduationYear: 2027,
-    avatar: "https://res.mojalab.cn/students/WRAJE.jpeg"
-  },
-  {
-    id: "11",
-    name: {
-      zh: "邓睿涵",
-      en: "Ruihan Deng"
-    },
-    github: "https://github.com/dengruihan",
-    courses: [courses.find(course => course.id === "python-app-programming")!],
-    university: "",
-    major: "",
-    graduationYear: 2027,
-    avatar: "https://res.mojalab.cn/students/dengruihan.png"
-  },
-  {
-    id: "12",
-    name: {
-      zh: "马思嘉",
-      en: "Sijia Ma"
-    },
-    github: "https://github.com/Mathewmsj",
-    courses: [courses.find(course => course.id === "python-app-programming")!,
-               courses.find(course => course.id === "ap-csa")!],
-    university: "",
-    major: "",
-    graduationYear: 2026,
-    avatar: "https://res.mojalab.cn/students/Mathewmsj.png"
-  }
 ];
 
 export async function getCourses(): Promise<Course[]> {
