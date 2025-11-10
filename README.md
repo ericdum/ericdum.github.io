@@ -34,3 +34,36 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy to GitHub Pages
+
+This project is configured to deploy to GitHub Pages automatically using GitHub Actions.
+
+### Setup Instructions
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository settings
+   - Navigate to "Pages" in the left sidebar
+   - Under "Source", select "GitHub Actions"
+
+2. **Push to main branch:**
+   - The GitHub Actions workflow will automatically build and deploy your site
+   - The workflow triggers on pushes to the `main` branch
+
+3. **Access your site:**
+   - If your repository is `username.github.io`, your site will be available at `https://username.github.io`
+   - If your repository has a different name, your site will be available at `https://username.github.io/repository-name`
+   - If you need to use a custom base path, update `next.config.ts` to include:
+     ```typescript
+     basePath: '/repository-name',
+     ```
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+```bash
+npm run build
+# The static files will be in the ./out directory
+# You can then push the contents of ./out to the gh-pages branch
+```
