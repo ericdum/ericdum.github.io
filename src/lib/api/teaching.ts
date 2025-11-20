@@ -789,6 +789,7 @@ const students: Student[] = [
       en: "Yuezhou Wang"
     },
     github: "https://github.com/WRAJE",
+    website: "https://wraje.github.io/#/",
     courses: [courses.find(course => course.id === "python-app-programming")!],
     university: "",
     major: "",
