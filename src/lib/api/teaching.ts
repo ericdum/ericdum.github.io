@@ -51,6 +51,7 @@ export interface Student {
     en: string;
   };
   github: string;
+  website?: string;
   courses: Course[];
   university: string;
   major: string;
@@ -741,6 +742,7 @@ const students: Student[] = [
       en: "Yi Zhang"
     },
     github: "https://github.com/Tylerzhangyi",
+    website: "https://tylerzhangyi.github.io/",
     courses: [
                courses.find(course => course.id === "machine-learning")!, 
                courses.find(course => course.id === "cloud-computing")!,
@@ -757,6 +759,7 @@ const students: Student[] = [
       en: "Sijia Ma"
     },
     github: "https://github.com/Mathewmsj",
+    website: "https://mathewmsj.github.io/",
     courses: [courses.find(course => course.id === "ap-csa")!,
       courses.find(course => course.id === "python-app-programming")!],
     university: "",
@@ -771,6 +774,7 @@ const students: Student[] = [
       en: "Yuyang Zhang"
     },
     github: "https://github.com/Ymm0709",
+    website: "https://ymm0709.github.io/",
     courses: [courses.find(course => course.id === "ap-csa")!,
       courses.find(course => course.id === "python-app-programming")!],
     university: "",
@@ -798,6 +802,7 @@ const students: Student[] = [
       en: "Ruihan Deng"
     },
     github: "https://github.com/dengruihan",
+    website: "https://dengruihan.github.io/",
     courses: [courses.find(course => course.id === "python-app-programming")!],
     university: "",
     major: "",
@@ -811,6 +816,7 @@ const students: Student[] = [
       en: "Jiarui Wang"
     },
     github: "https://github.com/garywanggali",
+    website: "https://garywanggali.github.io/",
     courses: [courses.find(course => course.id === "school-team")!,
                courses.find(course => course.id === "python-app-programming")!],
     university: "",
