@@ -147,7 +147,20 @@ const courses: Course[] = [
     target: {
       zh: "帮助所有学生建立对计算机、互联网和人工智能的基本认知，掌握数字时代必备的技能。通过实践项目，培养学生的技术应用能力和创新思维，为未来的学习和工作做好准备。",
       en: "Help all students establish a basic understanding of computers, the internet, and artificial intelligence, and master essential skills for the digital age. Through practical projects, cultivate students' technical application abilities and innovative thinking, preparing them for future learning and work."
-    }
+    },
+    resources: [
+      {
+        title: {
+          zh: "首届AI视频制作颁奖典礼",
+          en: "First AI Video Production Awards Ceremony"
+        },
+        url: "https://static.yunguhs.com/ict-2025/screening/",
+        description: {
+          zh: "该奖项属于AI创作单元，学生利用AI技术，逐步完成故事创作、图片创作、脚本创作、视频创作和视频剪辑等工作。他们会在AI的帮助下，通过3分钟的视频来表达他们自己想要表达的观点。",
+          en: "This award belongs to the AI Creation Unit. Students use AI technology to gradually complete story creation, image creation, script creation, video creation, and video editing. With the help of AI, they express their own viewpoints through 3-minute videos."
+        }
+      }
+    ]
   },{
     id: "ap-csa",
     title: {
