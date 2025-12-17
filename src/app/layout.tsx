@@ -8,8 +8,6 @@ import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { Footer } from "@/components/footer";
 import { GlobalLoading } from '@/components/GlobalLoading';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,8 +87,6 @@ export default async function RootLayout({
             <Footer profile={profile} />
           </div>
         </LanguageProvider>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
