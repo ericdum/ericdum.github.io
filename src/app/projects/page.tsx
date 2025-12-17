@@ -5,6 +5,7 @@ import { Project } from '@/lib/api/projects';
 import Image from 'next/image';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { trackThumbnailClick } from '@/lib/analytics';
 
 function LoadingOverlay() {
   return (
@@ -267,7 +268,10 @@ function ProjectSection({ project, isTarget }: { project: Project; isTarget: boo
                   <div 
                     key={index} 
                     className="relative w-64 h-48 flex-shrink-0 cursor-pointer"
-                    onClick={() => setSelectedMedia({ type: media.type, url: media.url, index })}
+                    onClick={() => {
+                      trackThumbnailClick('media', `${project.id}_${index}`, `${language === 'en' ? project.titleEn : project.title}_${media.type}_${index}`);
+                      setSelectedMedia({ type: media.type, url: media.url, index });
+                    }}
                   >
                     {isVisible && (
                       media.type === 'video' ? (

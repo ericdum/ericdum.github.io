@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { trackThumbnailClick } from '@/lib/analytics';
 
 interface Project {
   id: number;
@@ -48,10 +49,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const videoThumbnail = firstVideo ? `${firstVideo}#t=0.1` : undefined;
   const hasMedia = isClient && (firstImage || videoThumbnail) && !imageError && !videoError;
 
+  const handleThumbnailClick = () => {
+    trackThumbnailClick('project', project.id, language === 'en' ? project.titleEn : project.title);
+  };
+
   return (
     <Link 
       href={`/projects?project=${project.id}`}
       className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
+      onClick={handleThumbnailClick}
     >
       <div className="absolute top-2 right-2 bg-emerald-700/90 backdrop-blur-sm px-2 py-1 rounded text-sm text-white z-10">
         {project.period}

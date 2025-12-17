@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { getNews } from '@/lib/api';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { LoadingOverlay } from '@/components/LoadingOverlay';
+import { trackThumbnailClick } from '@/lib/analytics';
 
 interface NewsItem {
   id: number;
@@ -65,7 +66,11 @@ export default function NewsPage() {
           ) : (
             news.map((item) => (
               <div key={item.id} className="border-b border-gray-200 pb-6 last:border-0">
-                <a href={`/news/${item.id}`} className="block hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                <a 
+                  href={`/news/${item.id}`} 
+                  className="block hover:bg-gray-50 p-4 rounded-lg transition-colors"
+                  onClick={() => trackThumbnailClick('news', item.id, item.title[language])}
+                >
                   <div className="flex gap-6">
                     {item.thumbnail && (
                       <div className="w-48 h-32 flex-shrink-0">

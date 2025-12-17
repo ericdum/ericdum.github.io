@@ -6,6 +6,7 @@ import { getProfile, getProjects, getNews, getLife, getPatents } from '@/lib/api
 import { ProjectCard } from '@/components/project-card';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { LoadingOverlay } from '@/components/LoadingOverlay';
+import { trackThumbnailClick } from '@/lib/analytics';
 
 interface Patent {
   id: number;
@@ -159,7 +160,11 @@ export default function Home() {
         <div className="space-y-4">
           {news.map((item: NewsItem) => (
             <div key={item.id} className="border-b border-gray-200 pb-4 last:border-0">
-              <a href={`/news/${item.id}`} className="block hover:bg-gray-50 p-2 rounded-lg transition-colors">
+              <a 
+                href={`/news/${item.id}`} 
+                className="block hover:bg-gray-50 p-2 rounded-lg transition-colors"
+                onClick={() => trackThumbnailClick('news', item.id, item.title[language])}
+              >
                 <div className="flex gap-4">
                   {item.thumbnail && (
                     <div className="w-32 h-24 flex-shrink-0">

@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { Footer } from "@/components/footer";
 import { GlobalLoading } from '@/components/GlobalLoading';
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -66,7 +67,7 @@ export default async function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         {/* Google tag (gtag.js) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-14TY2C3PN1"
+          src="https://www.googletagmanager.com/gtag/js?id=G-TB3J3LVRNQ"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -74,10 +75,11 @@ export default async function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-14TY2C3PN1');
+            gtag('config', 'G-TB3J3LVRNQ');
           `}
         </Script>
         <LanguageProvider>
+          <GoogleAnalytics />
           <GlobalLoading />
           <div className="min-h-screen bg-gray-50">
             <Header profile={profile} />
