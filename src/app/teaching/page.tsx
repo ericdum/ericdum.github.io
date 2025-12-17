@@ -4,6 +4,7 @@ import { getCourses, getStudentReviews, StudentReview, getStudents, Student } fr
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useEffect, useState } from 'react';
 import { Course } from '@/lib/api/teaching';
+import Image from 'next/image';
 
 type CourseType = {
   id: string;
@@ -40,6 +41,66 @@ const getCourseTypeStyle = (type: CourseType): { bgColor: string; textColor: str
   
   return typeMap[type.id] || { bgColor: 'bg-gray-100', textColor: 'text-gray-700' };
 };
+
+// 学生头像组件
+function StudentAvatar({ 
+  avatar, 
+  name, 
+  website, 
+  github 
+}: { 
+  avatar: string | undefined; 
+  name: string; 
+  website?: string; 
+  github?: string;
+}) {
+  const defaultAvatar = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23CBD5E1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E";
+  const [avatarSrc, setAvatarSrc] = useState(() => {
+    if (!avatar) return defaultAvatar;
+    try {
+      new URL(avatar);
+      return avatar;
+    } catch {
+      return defaultAvatar;
+    }
+  });
+  const [hasError, setHasError] = useState(false);
+
+  const handleError = () => {
+    if (!hasError) {
+      setHasError(true);
+      setAvatarSrc(defaultAvatar);
+    }
+  };
+
+  const avatarElement = (
+    <Image
+      src={avatarSrc}
+      alt={name}
+      fill
+      className="rounded-full bg-gray-100 object-cover"
+      unoptimized
+      onError={handleError}
+    />
+  );
+
+  return (
+    <div className="w-12 h-12 flex-shrink-0 relative">
+      {website || github ? (
+        <a
+          href={website || github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full h-full hover:opacity-80 transition-opacity"
+        >
+          {avatarElement}
+        </a>
+      ) : (
+        avatarElement
+      )}
+    </div>
+  );
+}
 
 export default function TeachingPage() {
   const { t, language } = useLanguage();
@@ -198,36 +259,12 @@ export default function TeachingPage() {
           {students.map(student => (
             <div key={student.id} className="bg-gray-50 rounded-lg p-4">
               <div className="flex items-center space-x-4 mb-3">
-                <div className="w-12 h-12 flex-shrink-0">
-                  {student.website || student.github ? (
-                    <a
-                      href={student.website || student.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full h-full hover:opacity-80 transition-opacity"
-                    >
-                      <img
-                        src={getAvatar(student.avatar)}
-                        alt={student.name[language]}
-                        className="w-full h-full rounded-full bg-gray-100 object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = defaultAvatar;
-                        }}
-                      />
-                    </a>
-                  ) : (
-                    <img
-                      src={getAvatar(student.avatar)}
-                      alt={student.name[language]}
-                      className="w-full h-full rounded-full bg-gray-100 object-cover"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = defaultAvatar;
-                      }}
-                    />
-                  )}
-                </div>
+                <StudentAvatar
+                  avatar={student.avatar}
+                  name={student.name[language]}
+                  website={student.website}
+                  github={student.github}
+                />
                 <div>
                   <h3 className="font-semibold text-gray-900 flex items-center gap-2">
                     {student.website || student.github ? (
