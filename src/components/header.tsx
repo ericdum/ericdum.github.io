@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { LanguageSwitcher } from './language-switcher';
 import { useState } from 'react';
+import { trackNavigation } from '@/lib/analytics';
 
 interface HeaderProps {
   profile: {
@@ -27,7 +28,7 @@ export function Header({ profile }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+            <Link href="/" className="text-xl font-bold text-gray-900" onClick={() => trackNavigation('/logo')}>
               {profile.name[language]}
             </Link>
             {/* <span className="ml-4 text-gray-600 hidden sm:inline">{profile.title[language]}</span> */}
@@ -57,25 +58,25 @@ export function Header({ profile }: HeaderProps) {
 
           {/* 桌面端导航 */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
+            <Link href="/" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/')}>
               {t('header.home')}
             </Link>
-            <Link href="/projects" className="text-gray-600 hover:text-gray-900">
+            <Link href="/projects" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/projects')}>
               {t('header.projects')}
             </Link>
-            <Link href="/patents" className="text-gray-600 hover:text-gray-900">
+            <Link href="/patents" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/patents')}>
               {t('header.patents')}
             </Link>
-            <Link href="/news" className="text-gray-600 hover:text-gray-900">
+            <Link href="/news" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/news')}>
               {t('header.news')}
             </Link>
-            <Link href="/teaching" className="text-gray-600 hover:text-gray-900">
+            <Link href="/teaching" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/teaching')}>
               {t('header.teaching')}
             </Link> 
-            <Link href="/experience" className="text-gray-600 hover:text-gray-900">
+            <Link href="/experience" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/experience')}>
               {t('header.experience')}
             </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900" onClick={() => trackNavigation('/contact')}>
               {t('header.contact')}
             </Link>
           </nav>
@@ -93,49 +94,70 @@ export function Header({ profile }: HeaderProps) {
               <Link
                 href="/"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/');
+                }}
               >
                 {t('header.home')}
               </Link>
               <Link
                 href="/projects"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/projects');
+                }}
               >
                 {t('header.projects')}
               </Link>
               <Link
                 href="/patents"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/patents');
+                }}
               >
                 {t('header.patents')}
               </Link>
               <Link
                 href="/news"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/news');
+                }}
               >
                 {t('header.news')}
               </Link>
               <Link
                 href="/teaching"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/teaching');
+                }}
               >
                 {t('header.teaching')}
               </Link>
               <Link
                 href="/experience"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/experience');
+                }}
               >
                 {t('header.experience')}
               </Link>
               <Link
                 href="/contact"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  trackNavigation('/contact');
+                }}
               >
                 {t('header.contact')}
               </Link>

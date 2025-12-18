@@ -70,10 +70,53 @@ export default async function RootLayout({
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-TB3J3LVRNQ');
+            try {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TB3J3LVRNQ');
+            } catch (e) {
+              // 静默处理错误，不影响页面
+            }
+          `}
+        </Script>
+        {/* 百度统计 */}
+        <Script id="baidu-analytics" strategy="afterInteractive">
+          {`
+            (function() {
+              try {
+                window._hmt = window._hmt || [];
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?ebdca9ea1a05f6f3710dde2346434376";
+                hm.async = true;
+                hm.onload = function() {
+                  if (typeof console !== 'undefined' && console.log) {
+                    console.log('Baidu Analytics script loaded successfully');
+                  }
+                };
+                hm.onerror = function() {
+                  // 静默处理加载错误，不影响页面
+                  if (typeof console !== 'undefined' && console.warn) {
+                    console.warn('Baidu Analytics script load failed');
+                  }
+                };
+                var s = document.getElementsByTagName("script")[0]; 
+                if (s && s.parentNode) {
+                  s.parentNode.insertBefore(hm, s);
+                } else {
+                  // 如果找不到 script 标签，直接添加到 head
+                  var head = document.head || document.getElementsByTagName("head")[0];
+                  if (head) {
+                    head.appendChild(hm);
+                  }
+                }
+              } catch (e) {
+                // 静默处理错误，不影响页面
+                if (typeof console !== 'undefined' && console.warn) {
+                  console.warn('Baidu Analytics init error:', e);
+                }
+              }
+            })();
           `}
         </Script>
         <LanguageProvider>
