@@ -36,7 +36,8 @@ const getCourseTypeStyle = (type: CourseType): { bgColor: string; textColor: str
   const typeMap: Record<string, { bgColor: string; textColor: string }> = {
     'popular-science': { bgColor: 'bg-green-100', textColor: 'text-green-700' },
     'foundation': { bgColor: 'bg-yellow-100', textColor: 'text-yellow-700' },
-    'transition': { bgColor: 'bg-red-100', textColor: 'text-red-700' }
+    'transition': { bgColor: 'bg-red-100', textColor: 'text-red-700' },
+    'professional': { bgColor: 'bg-fuchsia-100', textColor: 'text-fuchsia-700' }
   };
   
   return typeMap[type.id] || { bgColor: 'bg-gray-100', textColor: 'text-gray-700' };

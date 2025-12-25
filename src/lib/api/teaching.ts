@@ -159,6 +159,17 @@ const courses: Course[] = [
           zh: "该奖项属于AI创作单元，学生利用AI技术，逐步完成故事创作、图片创作、脚本创作、视频创作和视频剪辑等工作。他们会在AI的帮助下，通过3分钟的视频来表达他们自己想要表达的观点。",
           en: "This award belongs to the AI Creation Unit. Students use AI technology to gradually complete story creation, image creation, script creation, video creation, and video editing. With the help of AI, they express their own viewpoints through 3-minute videos."
         }
+      },
+      {
+        title: {
+          zh: "办公软件和多媒体单元教学平台",
+          en: "Office and Multimedia Unit Teaching Platform"
+        },
+        url: "http://static.yunguhs.com/ict-2025/multi-media/",
+        description: {
+          zh: "思维优先于操作：我们教的不是\"点击哪个按钮\"，而是\"为什么需要这样做\"。AI 作为学习伙伴：利用 AI 大模型的能力，让学生自主探索工具使用。可迁移的能力：软件会更新换代，但处理信息的逻辑是永恒的。",
+          en: "Thinking Before Operation: We teach not 'which button to click', but 'why we need to do this'. AI as Learning Partner: Leverage AI large model capabilities to let students independently explore tool usage. Transferable Skills: Software will be updated, but the logic of processing information is eternal."
+        }
       }
     ]
   },{
@@ -422,9 +433,9 @@ const courses: Course[] = [
     ],
     grade: ["G11", "G12"],
     type: {
-      id: "transition",
-      zh: "专业衔接课",
-      en: "Professional Transition Course"
+      id: "professional",
+      zh: "专业课",
+      en: "Professional Course"
     },
     target: {
       zh: "培养学生对机器学习和人工智能的深入理解，掌握核心算法和工具。通过项目实践，学生将学习如何应用机器学习解决实际问题，为未来的AI研究和应用工作做好准备。",
