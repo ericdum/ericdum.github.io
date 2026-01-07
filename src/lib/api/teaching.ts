@@ -170,6 +170,17 @@ const courses: Course[] = [
           zh: "思维优先于操作：我们教的不是\"点击哪个按钮\"，而是\"为什么需要这样做\"。AI 作为学习伙伴：利用 AI 大模型的能力，让学生自主探索工具使用。可迁移的能力：软件会更新换代，但处理信息的逻辑是永恒的。",
           en: "Thinking Before Operation: We teach not 'which button to click', but 'why we need to do this'. AI as Learning Partner: Leverage AI large model capabilities to let students independently explore tool usage. Transferable Skills: Software will be updated, but the logic of processing information is eternal."
         }
+      },
+      {
+        title: {
+          zh: "计算机通识讲义",
+          en: "Computer Science General Knowledge Textbook"
+        },
+        url: "https://cs-book.yunguhs.com/",
+        description: {
+          zh: "AI时代·计算机通识：一本面向AI时代的计算机通识教材，帮助学生建立对计算机科学的全面认知，理解数字世界的基本原理和思维方式。",
+          en: "AI Era · Computer Science General Knowledge: A comprehensive computer science textbook for the AI era, helping students establish a comprehensive understanding of computer science and understand the basic principles and thinking methods of the digital world."
+        }
       }
     ]
   },{
