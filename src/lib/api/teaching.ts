@@ -902,6 +902,32 @@ const students: Student[] = [
     graduationYear: 2029,
     avatar: ""
   },
+  {
+    id: "13",
+    name: {
+      zh: "谢新晔",
+      en: "Xinye Xie"
+    },
+    github: "",
+    courses: [courses.find(course => course.id === "school-team")!],
+    university: "",
+    major: "",
+    graduationYear: 2029,
+    avatar: ""
+  },
+  {
+    id: "14",
+    name: {
+      zh: "宋一豪",
+      en: "Yihao Song"
+    },
+    github: "",
+    courses: [courses.find(course => course.id === "school-team")!],
+    university: "",
+    major: "",
+    graduationYear: 2029,
+    avatar: ""
+  },
 ];
 
 export async function getCourses(): Promise<Course[]> {
