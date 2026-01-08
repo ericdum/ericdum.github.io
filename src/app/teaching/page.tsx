@@ -1,6 +1,6 @@
 'use client';
 
-import { getCourses, getStudentReviews, StudentReview, getStudents, Student } from '@/lib/api/teaching';
+import { getCourses, getStudentReviews, StudentReview, getStudents, Student, getStudentProjects, StudentProject } from '@/lib/api/teaching';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useEffect, useState } from 'react';
 import { Course } from '@/lib/api/teaching';
@@ -109,7 +109,8 @@ export default function TeachingPage() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [reviews, setReviews] = useState<StudentReview[]>([]);
   const [students, setStudents] = useState<Student[]>([]);
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [studentProjects, setStudentProjects] = useState<StudentProject[]>([]);
+  const [selectedProject, setSelectedProject] = useState<StudentProject | null>(null);
 
   // 添加默认头像
   const defaultAvatar = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23CBD5E1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E";
@@ -136,14 +137,16 @@ export default function TeachingPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const [fetchedCourses, fetchedReviews, fetchedStudents] = await Promise.all([
+      const [fetchedCourses, fetchedReviews, fetchedStudents, fetchedProjects] = await Promise.all([
         getCourses(),
         getStudentReviews(),
-        getStudents()
+        getStudents(),
+        getStudentProjects()
       ]);
       setCourses(fetchedCourses);
       setReviews(fetchedReviews);
       setStudents(fetchedStudents);
+      setStudentProjects(fetchedProjects);
     };
     fetchData();
   }, []);
@@ -270,125 +273,63 @@ export default function TeachingPage() {
       <section className="bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('teaching.studentProjects')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* PCB项目 */}
-          <div 
-            className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 relative cursor-pointer"
-            onClick={() => setSelectedProject('pcb')}
-          >
-            <div className="relative h-48 overflow-hidden">
-              <div className="grid grid-cols-2 gap-1 h-full">
-                <div className="relative">
+          {studentProjects.map((project) => (
+            <div 
+              key={project.id}
+              className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 relative cursor-pointer"
+              onClick={() => setSelectedProject(project)}
+            >
+              <div className="relative h-48 overflow-hidden">
+                {project.images.length > 1 ? (
+                  <div className="grid grid-cols-2 gap-1 h-full">
+                    {project.images.map((image, index) => (
+                      <div key={index} className="relative">
+                        <Image
+                          src={image}
+                          alt={`${project.title[language]} ${index + 1}`}
+                          fill
+                          className="object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
                   <Image
-                    src="/images/pcb1.png"
-                    alt="PCB Design 1"
+                    src={project.images[0]}
+                    alt={project.title[language]}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"
                   />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+                {project.badge && (
+                  <div className="absolute top-2 right-2 bg-emerald-700/90 backdrop-blur-sm px-2 py-1 rounded text-sm text-white z-10">
+                    {project.badge.text[language]}
+                  </div>
+                )}
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1">
+                  {project.title[language]}
+                </h3>
+                <p className="text-sm text-gray-600 mb-3 line-clamp-3">
+                  {project.description[language]}
+                </p>
+                <div className="flex flex-wrap gap-1">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <span key={tech} className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
                 </div>
-                <div className="relative">
-                  <Image
-                    src="/images/pcb2.png"
-                    alt="PCB Design 2"
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1">
-                {t('teaching.pcbProject')}
-              </h3>
-              <p className="text-sm text-gray-600 mb-3 line-clamp-3">
-                {t('teaching.pcbProjectDesc')}
-              </p>
-              <div className="flex flex-wrap gap-1">
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  PCB Design
-                </span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  Hardware
-                </span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  DCS-BIOS
-                </span>
               </div>
             </div>
-          </div>
-
-          {/* 机器人项目 */}
-          <div 
-            className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 relative cursor-pointer"
-            onClick={() => setSelectedProject('robotics')}
-          >
-            <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/robotic.png"
-                alt="Robotics Project"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1">
-                {t('teaching.roboticsProject')}
-              </h3>
-              <p className="text-sm text-gray-600 mb-3 line-clamp-3">
-                {t('teaching.roboticsProjectDesc')}
-              </p>
-              <div className="flex flex-wrap gap-1">
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  Robotics
-                </span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  Wheel-Legged
-                </span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  StackForce
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* AI项目 */}
-          <div 
-            className="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow duration-300 relative cursor-pointer"
-            onClick={() => setSelectedProject('ai')}
-          >
-            <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/ai.png"
-                alt="AI Project"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
-              <div className="absolute top-2 right-2 bg-emerald-700/90 backdrop-blur-sm px-2 py-1 rounded text-sm text-white z-10">
-                Open Source
-              </div>
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1">
-                {t('teaching.aiProject')}
-              </h3>
-              <p className="text-sm text-gray-600 mb-3 line-clamp-3">
-                {t('teaching.aiProjectDesc')}
-              </p>
-              <div className="flex flex-wrap gap-1">
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  AI
-                </span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  GLM
-                </span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                  Computer Vision
-                </span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* 项目详情弹出框 */}
@@ -403,9 +344,7 @@ export default function TeachingPage() {
             >
               <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  {selectedProject === 'pcb' && t('teaching.pcbProject')}
-                  {selectedProject === 'robotics' && t('teaching.roboticsProject')}
-                  {selectedProject === 'ai' && t('teaching.aiProject')}
+                  {selectedProject.title[language]}
                 </h2>
                 <button
                   onClick={() => setSelectedProject(null)}
@@ -419,41 +358,24 @@ export default function TeachingPage() {
               <div className="p-6 space-y-6">
                 {/* 项目图片 */}
                 <div className="space-y-4">
-                  {selectedProject === 'pcb' && (
+                  {selectedProject.images.length > 1 ? (
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
-                        <Image
-                          src="https://res.mojalab.cn/images/student_projects/pcb1.png"
-                          alt="PCB Design 1"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
-                        <Image
-                          src="https://res.mojalab.cn/images/student_projects/pcb2.png"
-                          alt="PCB Design 2"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
+                      {selectedProject.images.map((image, index) => (
+                        <div key={index} className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
+                          <Image
+                            src={image}
+                            alt={`${selectedProject.title[language]} ${index + 1}`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
                     </div>
-                  )}
-                  {selectedProject === 'robotics' && (
+                  ) : (
                     <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
                       <Image
-                        src="https://res.mojalab.cn/images/student_projects/robotic.png"
-                        alt="Robotics Project"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
-                  {selectedProject === 'ai' && (
-                    <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
-                      <Image
-                        src="https://res.mojalab.cn/images/student_projects/ai.png"
-                        alt="AI Project"
+                        src={selectedProject.images[0]}
+                        alt={selectedProject.title[language]}
                         fill
                         className="object-cover"
                       />
@@ -466,9 +388,7 @@ export default function TeachingPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('teaching.projectDetails')}</h3>
                   <div className="prose max-w-none">
                     <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                      {selectedProject === 'pcb' && t('teaching.pcbProjectDetail')}
-                      {selectedProject === 'robotics' && t('teaching.roboticsProjectDetail')}
-                      {selectedProject === 'ai' && t('teaching.aiProjectDetail')}
+                      {selectedProject.detail[language]}
                     </p>
                   </div>
                 </div>
@@ -477,26 +397,11 @@ export default function TeachingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('teaching.students')}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedProject === 'pcb' && (
-                      <>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">张翼 (Yi Zhang)</span>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">马思嘉 (Sijia Ma)</span>
-                      </>
-                    )}
-                    {selectedProject === 'robotics' && (
-                      <>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">张翼 (Yi Zhang)</span>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">马思嘉 (Sijia Ma)</span>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">胡绚琦 (Xuanqi Hu)</span>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">赵轩 (Xuan Zhao)</span>
-                      </>
-                    )}
-                    {selectedProject === 'ai' && (
-                      <>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">邓睿涵 (Ruihan Deng)</span>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">王越舟 (Yuezhou Wang)</span>
-                      </>
-                    )}
+                    {selectedProject.students.map((student, index) => (
+                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                        {student.zh} ({student.en})
+                      </span>
+                    ))}
                   </div>
                 </div>
 
@@ -504,41 +409,19 @@ export default function TeachingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('teaching.technologies')}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedProject === 'pcb' && (
-                      <>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">PCB Design</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Hardware Development</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">DCS-BIOS</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">OpenHornet</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Flight Simulator</span>
-                      </>
-                    )}
-                    {selectedProject === 'robotics' && (
-                      <>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Robotics</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Wheel-Legged Robot</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">StackForce</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Robot Control</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Competition</span>
-                      </>
-                    )}
-                    {selectedProject === 'ai' && (
-                      <>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">AI</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">GLM-Edge-V-2B</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Computer Vision</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Object Detection</span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Python</span>
-                      </>
-                    )}
+                    {selectedProject.technologies.map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                {/* AI项目的GitHub链接 */}
-                {selectedProject === 'ai' && (
+                {/* GitHub链接 */}
+                {selectedProject.githubUrl && (
                   <div>
                     <a
-                      href="https://github.com/dengruihan/GLM-Edge-V-2B--Monitoring_Species"
+                      href={selectedProject.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"

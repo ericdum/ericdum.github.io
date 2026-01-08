@@ -69,6 +69,35 @@ export interface StudentReview {
   year: number;
 }
 
+export interface StudentProject {
+  id: string;
+  title: {
+    zh: string;
+    en: string;
+  };
+  description: {
+    zh: string;
+    en: string;
+  };
+  detail: {
+    zh: string;
+    en: string;
+  };
+  images: string[];
+  students: {
+    zh: string;
+    en: string;
+  }[];
+  technologies: string[];
+  githubUrl?: string;
+  badge?: {
+    text: {
+      zh: string;
+      en: string;
+    };
+  };
+}
+
 const courses: Course[] = [
   {
     id: "ict",
@@ -962,4 +991,94 @@ export async function getStudentReviews(): Promise<StudentReview[]> {
 
 export async function getStudents(): Promise<Student[]> {
   return students;
+}
+
+const studentProjects: StudentProject[] = [
+  {
+    id: "pcb",
+    title: {
+      zh: "PCB设计和硬件开发",
+      en: "PCB Design & Hardware Development"
+    },
+    description: {
+      zh: "学生张翼、马思嘉开发了F18战斗机驾驶舱中的MFD（多功能显示器）。通过DCS-Bios和OpenHornet两个项目实现了一比一复刻并与DCS模拟器联动，是一个功能完整可用的模拟器外设。此后由这两位同学主导进行了PCB的设计，经过多轮设计迭代，最终替换了杂乱的信号线，实现了更加稳定的结构。",
+      en: "Students Yi Zhang and Sijia Ma developed an MFD (Multi-Function Display) for the F-18 fighter cockpit. Through DCS-BIOS and OpenHornet projects, they achieved a 1:1 replica that integrates with DCS simulators, creating a fully functional simulator peripheral. The students then led PCB design, going through multiple design iterations to replace messy signal wires and achieve a more stable structure."
+    },
+    detail: {
+      zh: "这个项目展示了高级硬件开发技能。学生张翼、马思嘉成功创建了一个功能完整的F18战斗机驾驶舱模拟器的多功能显示器（MFD）。项目包括：\n\n• 与DCS-BIOS和OpenHornet开源项目的集成\n• 一比一复刻设计，匹配真实F18驾驶舱规格\n• 与DCS飞行模拟器的实时数据同步\n• 定制PCB设计和制造\n• 多轮设计迭代以优化信号路由\n• 用整洁的PCB布局替换杂乱的布线\n• 提升系统的稳定性和可靠性\n\n最终产品是一个专业级的模拟器外设，提供沉浸式飞行模拟体验。",
+      en: "This project demonstrates advanced hardware development skills. Students Yi Zhang and Sijia Ma successfully created a fully functional Multi-Function Display (MFD) for the F-18 fighter cockpit simulator. The project involved:\n\n• Integration with DCS-BIOS and OpenHornet open-source projects\n• 1:1 replica design matching real F-18 cockpit specifications\n• Real-time data synchronization with DCS flight simulator\n• Custom PCB design and manufacturing\n• Multiple design iterations to optimize signal routing\n• Replacement of messy wiring with clean PCB layout\n• Enhanced stability and reliability of the system\n\nThe final product is a professional-grade simulator peripheral that provides an immersive flight simulation experience."
+    },
+    images: [
+      "https://res.mojalab.cn/images/student_projects/pcb1.png",
+      "https://res.mojalab.cn/images/student_projects/pcb2.png"
+    ],
+    students: [
+      { zh: "张翼", en: "Yi Zhang" },
+      { zh: "马思嘉", en: "Sijia Ma" }
+    ],
+    technologies: ["PCB Design", "Hardware", "DCS-BIOS", "OpenHornet", "Flight Simulator"]
+  },
+  {
+    id: "robotics",
+    title: {
+      zh: "机器人方向",
+      en: "Robotics"
+    },
+    description: {
+      zh: "学生张翼、马思嘉、胡绚琦、赵轩通过StackForce的开源轮足机器人项目，完成安装、调试复杂的轮足机器人并参加了阿里巴巴机器人运动会。",
+      en: "Students Yi Zhang, Sijia Ma, Xuanqi Hu, and Xuan Zhao completed the installation and debugging of a complex wheel-legged robot through StackForce's open-source wheel-legged robot project, and participated in Alibaba's Robotics Sports Day."
+    },
+    detail: {
+      zh: "四名学生组成的团队成功组装、配置并参加了复杂轮足机器人的竞赛。项目亮点：\n\n• 复杂机器人系统的组装和集成\n• 机器人控制系统的配置和调试\n• 参加阿里巴巴机器人运动会竞赛\n• 开源机器人框架（StackForce）的应用\n• 团队协作和问题解决能力\n• 真实机器人竞赛经验\n\n团队在机器人工程方面展现了强大的技术能力，并成功参加了大型机器人赛事。",
+      en: "A team of four students successfully assembled, configured, and competed with a complex wheel-legged robot. The project highlights:\n\n• Assembly and integration of complex robotic systems\n• Configuration and debugging of robotic control systems\n• Participation in Alibaba Robotics Sports Day competition\n• Application of open-source robotics frameworks (StackForce)\n• Team collaboration and problem-solving skills\n• Real-world robotics competition experience\n\nThe team demonstrated strong technical capabilities in robotics engineering and successfully competed in a major robotics event."
+    },
+    images: [
+      "https://res.mojalab.cn/images/student_projects/robotic.png"
+    ],
+    students: [
+      { zh: "张翼", en: "Yi Zhang" },
+      { zh: "马思嘉", en: "Sijia Ma" },
+      { zh: "胡绚琦", en: "Xuanqi Hu" },
+      { zh: "赵轩", en: "Xuan Zhao" }
+    ],
+    technologies: ["Robotics", "Wheel-Legged", "StackForce", "Robot Control", "Competition"]
+  },
+  {
+    id: "ai",
+    title: {
+      zh: "AI方向",
+      en: "AI Application"
+    },
+    description: {
+      zh: "学生邓睿涵、王越舟应用GLM的开源模型实现了对福寿螺的识别。项目已开源。",
+      en: "Students Ruihan Deng and Yuezhou Wang applied GLM's open-source model to achieve recognition of Golden Apple Snails. The project is open source."
+    },
+    detail: {
+      zh: "学生邓睿涵、王越舟开发了一个基于AI的福寿螺卵自动检测和计数系统。项目特点：\n\n• 应用GLM-Edge-V-2B开源多模态模型\n• 用于目标检测和计数的计算机视觉\n• 在环境监测中的实际应用\n• GitHub上的开源项目\n• 使用AI技术解决实际问题\n• 集成边缘AI模型以实现高效处理\n\n系统允许用户上传包含福寿螺卵的图片并自动计数，展示了实用的AI应用技能。",
+      en: "Students Ruihan Deng and Yuezhou Wang developed an AI-powered system for automatic detection and counting of Golden Apple Snail eggs. The project features:\n\n• Application of GLM-Edge-V-2B open-source multimodal model\n• Computer vision for object detection and counting\n• Practical application in environmental monitoring\n• Open-source project available on GitHub\n• Real-world problem solving with AI technology\n• Integration of edge AI models for efficient processing\n\nThe system allows users to upload images containing snail eggs and automatically counts them, demonstrating practical AI application skills."
+    },
+    images: [
+      "https://res.mojalab.cn/images/student_projects/ai.png"
+    ],
+    students: [
+      { zh: "邓睿涵", en: "Ruihan Deng" },
+      { zh: "王越舟", en: "Yuezhou Wang" }
+    ],
+    technologies: ["AI", "GLM", "Computer Vision", "Object Detection", "Python"],
+    githubUrl: "https://github.com/dengruihan/GLM-Edge-V-2B--Monitoring_Species",
+    badge: {
+      text: {
+        zh: "开源",
+        en: "Open Source"
+      }
+    }
+  }
+];
+
+export async function getStudentProjects(): Promise<StudentProject[]> {
+  return studentProjects;
+}
+
+export async function getStudentProjectById(id: string): Promise<StudentProject | undefined> {
+  return studentProjects.find(project => project.id === id);
 } 
