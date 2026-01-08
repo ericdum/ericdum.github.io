@@ -451,7 +451,20 @@ const courses: Course[] = [
     target: {
       zh: "培养学生对机器学习和人工智能的深入理解，掌握核心算法和工具。通过项目实践，学生将学习如何应用机器学习解决实际问题，为未来的AI研究和应用工作做好准备。",
       en: "Cultivate students' deep understanding of machine learning and artificial intelligence, mastering core algorithms and tools. Through project practice, students will learn how to apply machine learning to solve real-world problems, preparing them for future AI research and application work."
-    }
+    },
+    resources: [
+      {
+        title: {
+          zh: "Machine Learning Specialization (Coursera)",
+          en: "Machine Learning Specialization (Coursera)"
+        },
+        url: "https://www.coursera.org/specializations/machine-learning-introduction",
+        description: {
+          zh: "由斯坦福大学和DeepLearning.AI提供的机器学习专项课程，由AI领域专家Andrew Ng教授主讲。课程涵盖监督学习、无监督学习、深度学习等核心主题，适合初学者学习机器学习的基础概念和实践技能。",
+          en: "Machine Learning Specialization offered by Stanford University and DeepLearning.AI, taught by AI visionary Andrew Ng. The course covers core topics including supervised learning, unsupervised learning, deep learning, and more, suitable for beginners to learn fundamental machine learning concepts and practical skills."
+        }
+      }
+    ]
   },
   {
     id: "school-team",
