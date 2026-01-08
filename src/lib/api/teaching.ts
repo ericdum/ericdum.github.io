@@ -1033,7 +1033,8 @@ const studentProjects: StudentProject[] = [
       en: "A team of four students successfully assembled, configured, and competed with a complex wheel-legged robot. The project highlights:\n\n• Assembly and integration of complex robotic systems\n• Configuration and debugging of robotic control systems\n• Participation in Alibaba Robotics Sports Day competition\n• Application of open-source robotics frameworks (StackForce)\n• Team collaboration and problem-solving skills\n• Real-world robotics competition experience\n\nThe team demonstrated strong technical capabilities in robotics engineering and successfully competed in a major robotics event."
     },
     images: [
-      "https://res.mojalab.cn/images/student_projects/robotic.png"
+      "https://res.mojalab.cn/images/student_projects/robotic.png",
+      "https://res.mojalab.cn/images/student_projects/robotic2.png"
     ],
     students: [
       { zh: "张翼", en: "Yi Zhang" },
