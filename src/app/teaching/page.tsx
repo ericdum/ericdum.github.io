@@ -423,7 +423,7 @@ export default function TeachingPage() {
                     <div className="grid grid-cols-2 gap-4">
                       <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
                         <Image
-                          src="/images/pcb1.png"
+                          src="https://res.mojalab.cn/images/student_projects/pcb1.png"
                           alt="PCB Design 1"
                           fill
                           className="object-cover"
@@ -431,7 +431,7 @@ export default function TeachingPage() {
                       </div>
                       <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
                         <Image
-                          src="/images/pcb2.png"
+                          src="https://res.mojalab.cn/images/student_projects/pcb2.png"
                           alt="PCB Design 2"
                           fill
                           className="object-cover"
@@ -442,7 +442,7 @@ export default function TeachingPage() {
                   {selectedProject === 'robotics' && (
                     <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
                       <Image
-                        src="/images/robotic.png"
+                        src="https://res.mojalab.cn/images/student_projects/robotic.png"
                         alt="Robotics Project"
                         fill
                         className="object-cover"
@@ -452,7 +452,7 @@ export default function TeachingPage() {
                   {selectedProject === 'ai' && (
                     <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
                       <Image
-                        src="/images/ai.png"
+                        src="https://res.mojalab.cn/images/student_projects/ai.png"
                         alt="AI Project"
                         fill
                         className="object-cover"
