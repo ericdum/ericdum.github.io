@@ -201,13 +201,13 @@ const courses: Course[] = [
       },
       {
         title: {
-          zh: "计算机通识讲义",
-          en: "Computer Science General Knowledge Textbook"
+          zh: "AI时代·计算机通识",
+          en: "AI Era · Computer Science General Knowledge"
         },
         url: "https://cs-book.yunguhs.com/",
         description: {
-          zh: "AI时代·计算机通识：一本面向AI时代的计算机通识教材，帮助学生建立对计算机科学的全面认知，理解数字世界的基本原理和思维方式。",
-          en: "AI Era · Computer Science General Knowledge: A comprehensive computer science textbook for the AI era, helping students establish a comprehensive understanding of computer science and understand the basic principles and thinking methods of the digital world."
+          zh: "一本面向AI时代的计算机通识教材，帮助学生建立对计算机科学的全面认知，理解数字世界的基本原理和思维方式。本书由我编写，内容涵盖计算机基础、编程思维、AI应用等多个方面，适合初学者系统学习计算机科学知识。",
+          en: "A comprehensive computer science textbook for the AI era, helping students establish a comprehensive understanding of computer science and understand the basic principles and thinking methods of the digital world. Written by me, the book covers computer basics, programming thinking, AI applications, and more, suitable for beginners to systematically learn computer science knowledge."
         }
       }
     ]
