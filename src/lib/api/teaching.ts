@@ -715,6 +715,39 @@ const courses: Course[] = [
           zh: "Docker工具链的学习和应用，掌握现代应用部署和容器化开发的核心技能。",
           en: "Learning and application of Docker toolchain, mastering core skills of modern application deployment and containerized development."
         }
+      },
+      {
+        id: "pcb-design-jlcpcb",
+        title: {
+          zh: "基于嘉立创的PCB设计",
+          en: "PCB Design based on JLCPCB"
+        },
+        description: {
+          zh: "使用嘉立创（JLCPCB）平台进行PCB设计与打样，掌握电路板从原理图到成品的完整流程。",
+          en: "PCB design and prototyping using JLCPCB platform, mastering the complete workflow from schematic to finished board."
+        }
+      },
+      {
+        id: "arduino-hardware",
+        title: {
+          zh: "基于Arduino的硬件开发",
+          en: "Hardware Development based on Arduino"
+        },
+        description: {
+          zh: "基于Arduino的嵌入式硬件开发，学习传感器、执行器、通信模块等外设的编程与调试。",
+          en: "Embedded hardware development with Arduino, learning programming and debugging of sensors, actuators, communication modules and other peripherals."
+        }
+      },
+      {
+        id: "robot-arduino-ros",
+        title: {
+          zh: "基于Arduino或ROS的机器人开发",
+          en: "Robot Development based on Arduino or ROS"
+        },
+        description: {
+          zh: "基于Arduino或ROS（Robot Operating System）的机器人开发，涵盖运动控制、感知与决策等机器人系统搭建。",
+          en: "Robot development based on Arduino or ROS (Robot Operating System), covering motion control, perception, decision-making and robot system building."
+        }
       }
     ],
     grade: ["G9", "G10", "G11"],
