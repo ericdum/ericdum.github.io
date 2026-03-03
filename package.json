@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "download-images": "node scripts/download-images.js"
+    "download-images": "node scripts/download-images.js",
+    "generate-ai-data": "tsx scripts/generate-ai-readable-data.ts"
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.4",
@@ -36,6 +37,7 @@
     "eslint": "^9",
     "eslint-config-next": "^15.5.7",
     "tailwindcss": "^4",
+    "tsx": "^4.7.0",
     "typescript": "^5"
   }
 }
