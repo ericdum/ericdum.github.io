@@ -797,7 +797,7 @@ const students: Student[] = [
     },
     github: "",
     courses: [courses.find(course => course.id === "ap-csp")!],
-    university: "California State University, Santa Cruz",
+    university: "University of California, Santa Cruz",
     major: "Computer Science",
     graduationYear: 2024,
     avatar: ""
@@ -825,7 +825,7 @@ const students: Student[] = [
     courses: [courses.find(course => course.id === "ap-csp")!,
                courses.find(course => course.id === "machine-learning")!, 
                courses.find(course => course.id === "cloud-computing")!],
-    university: "California State University, Davis",
+    university: "University of California, Davis",
     major: "Computer Engineering",
     graduationYear: 2025,
     avatar: "https://res.mojalab.cn/students/LiMuma.png"
@@ -840,7 +840,7 @@ const students: Student[] = [
     courses: [courses.find(course => course.id === "ap-csp")!,
                courses.find(course => course.id === "machine-learning")!, 
                courses.find(course => course.id === "cloud-computing")!],
-    university: "California State University, Riverside",
+    university: "University of California, Riverside",
     major: "Robotics",
     graduationYear: 2025,
     avatar: "https://res.mojalab.cn/students/YUHOUCHAXING.jpeg"

@@ -1089,7 +1089,7 @@ The Programming School Team is established to concentrate students with a solid 
 
 1. 吕一凡 / Yifan Lyu
 
-- 大学: California State University, Santa Cruz
+- 大学: University of California, Santa Cruz
 - 专业: Computer Science
 - 毕业年份: 2024
 课程:
@@ -1106,7 +1106,7 @@ The Programming School Team is established to concentrate students with a solid 
 
 3. 胡绚琦 / Xuanqi Hu
 
-- 大学: California State University, Davis
+- 大学: University of California, Davis
 - 专业: Computer Engineering
 - 毕业年份: 2025
 - GitHub: https://github.com/LiMuma
@@ -1117,7 +1117,7 @@ The Programming School Team is established to concentrate students with a solid 
 
 4. 赵轩 / Xuan Zhao
 
-- 大学: California State University, Riverside
+- 大学: University of California, Riverside
 - 专业: Robotics
 - 毕业年份: 2025
 - GitHub: https://github.com/YUHOUCHAXING
