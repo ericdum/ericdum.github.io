@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
+import { ReportLanguageControls } from "./ReportLanguageControls";
 
 export const metadata: Metadata = {
   title: "SpaceX IPO S-1 中英对照版",
@@ -390,21 +391,7 @@ export default function SpaceXIpoReportPage() {
           }
         }
       `}</style>
-      <input
-        aria-label="显示中文"
-        className="sec-language-toggle"
-        defaultChecked
-        id="sec-lang-zh"
-        name="sec-language"
-        type="radio"
-      />
-      <input
-        aria-label="Show English"
-        className="sec-language-toggle"
-        id="sec-lang-en"
-        name="sec-language"
-        type="radio"
-      />
+      <ReportLanguageControls />
       <div className="sec-mobile-tabs" aria-label="语言切换">
         <label className="sec-mobile-tab" htmlFor="sec-lang-zh">
           中文
