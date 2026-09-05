@@ -84,8 +84,8 @@ const profile: Profile = {
     zh: "程序员，飞行员"
   },
   currentPosition: {
-    en: "General Manager at China Tree Group Limited",
-    zh: "中澍集團（香港）總經理"
+    en: "Tsinghua MBA Student",
+    zh: "清华MBA在读学生"
   },
   previousPosition: {
     en: "Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School (2023-2026)",

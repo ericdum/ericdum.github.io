@@ -1,6 +1,6 @@
 全站数据导出
 
-生成时间: 2026-09-05T13:09:18.635Z
+生成时间: 2026-09-05T14:46:16.238Z
 
 本文档包含网站的所有公开信息，方便AI爬虫和搜索引擎索引。
 
@@ -10,7 +10,7 @@
 
 职位: 程序员，飞行员 / Coder, Pilot
 
-当前职位: 中澍集團（香港）總經理 / General Manager at China Tree Group Limited
+当前职位: 清华MBA在读学生 / Tsinghua MBA Student
 
 邮箱: dlc26@mails.tsinghua.edu.cn; ceo@mojalab.cn
 
@@ -77,7 +77,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
   - 设计和实现云原生应用架构。
   - Design and implement cloud-native application architecture.
 
-项目 (共 21 个)
+项目 (共 22 个)
 
 1. 基于 HMVC 架构的多语言社交网络平台 / Multi-language Social Network Platform Based on HMVC Architecture
 
@@ -699,6 +699,40 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 影响: 系统显著提升了出行规划的效率和质量，平均规划时间从原来的分钟级缩短到秒级，用户满意度提升40%。通过多交通方式的融合，为用户提供了更多样化的出行选择，同时实现了更优的出行体验。 / The system significantly improved the efficiency and quality of travel planning, reducing average planning time from minutes to seconds, and increasing user satisfaction by 40%. Through multi-modal transportation integration, it provided users with more diverse travel options while achieving better travel experience.
 
 相关技能: 时空网络, 实时计算, 分布式系统, 路径规划, 数据融合, 系统架构
+
+22. 云谷学校计算机特色课程体系设计与建设 / Design and Development of Yungu School's Signature Computer Science Curriculum
+
+- 公司: 杭州云谷学校 / Hangzhou Yungu School
+- 角色: 项目负责人、计算机学科课程设计者 / Project Lead & Computer Science Curriculum Designer
+- 时间: 2023-2026
+- 描述: 面向 AI 时代，为云谷学校设计并打造计算机特色课程体系。以计算机通识教育为基础，以学生兴趣和专业发展为主线，构建覆盖通识基础、专业基础、大学衔接与兴趣精修的四层培养路径，并通过项目制学习、编程校队、产业合作和升学支持形成完整的人才培养闭环。
+
+  Designed and built a signature computer science curriculum for Yungu School in response to the AI era. The program combines universal computing literacy with interest-driven and profession-oriented development through a four-tier pathway spanning general foundations, professional foundations, university preparation, and advanced interests, supported by project-based learning, a programming team, industry partnerships, and university guidance.
+
+- 项目网站: https://cs.yunguhs.com/
+
+技术细节:
+
+1. 设计通识基础、专业基础、大学衔接和兴趣精修四层课程体系，形成面向不同基础与发展目标的个性化学习路径
+   Designed a four-tier curriculum spanning general foundations, professional foundations, university preparation, and advanced interests, enabling personalized pathways for different starting points and goals
+
+2. 开发信息与智能计算、Python 应用编程、AP CSA、计算机科学基础、云计算基础、机器学习和编程校队 7 门特色课程
+   Developed seven signature offerings: Information & Intelligent Computing, Python Application Programming, AP CSA, Computer Science Fundamentals, Cloud Computing Fundamentals, Machine Learning, and the Programming Team
+
+3. 以真实问题和作品产出为导向，设计凌云营·超级大公司、跨学科项目及编程竞赛实践，推动学生从知识学习走向产品创造
+   Built authentic, outcome-oriented learning through the Super Company camp, interdisciplinary projects, and programming competitions, moving students from knowledge acquisition to product creation
+
+4. 建立五级徽章能力进阶体系，将编程基础、全栈开发、AI 辅助开发、软硬件融合与商业化产品能力纳入持续评价
+   Established a five-level badge progression covering programming foundations, full-stack development, AI-assisted development, integrated software and hardware, and commercially viable product creation
+
+5. 引入阿里巴巴、阿里云等产业资源及主流开源与商业工具，并建设中英双语课程门户，统一呈现课程、作品与升学成果
+   Connected industry resources from partners including Alibaba and Alibaba Cloud with current open-source and commercial tools, while building a bilingual portal for curricula, student work, and admissions outcomes
+
+技术栈: 胜任力教育, 项目制学习, 人机协同学习, Python, AP CSA, 机器学习, 云计算, 软硬件融合
+
+影响: 建成由 7 门特色课程、四层培养路径和五级徽章评价体系组成的计算机学科项目，覆盖课程学习、项目实践、竞赛与升学支持；项目网站集中呈现了学生作品、校企合作及 57 份大学录取 Offer。 / Established a computer science program comprising seven signature courses, a four-tier learning pathway, and a five-level badge assessment system across coursework, project practice, competitions, and university guidance. Its website showcases student work, industry partnerships, and 57 university offers.
+
+相关技能: 课程体系设计, 学科建设, 项目制学习, 胜任力评价, 师资与资源整合, 校企合作, 教育科技
 
 专利 (共 4 个)
 
@@ -1401,4 +1435,4 @@ Mr. Eric is a very practical teacher. In his class, I always learn a lot of usef
   亮点: 古寺庙, 传统园林
 
 本文档由脚本自动生成，包含网站的所有公开信息。
-生成时间: 2026-09-05T13:09:18.635Z
+生成时间: 2026-09-05T14:46:16.238Z

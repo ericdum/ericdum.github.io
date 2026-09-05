@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-05T13:09:18.635Z",
+    "generatedAt": "2026-09-05T14:46:16.238Z",
     "version": "1.0",
     "description": "全站数据导出，方便AI爬虫阅读",
     "language": "zh-CN, en-US"
@@ -15,8 +15,8 @@
       "zh": "程序员，飞行员"
     },
     "currentPosition": {
-      "en": "General Manager at China Tree Group Limited",
-      "zh": "中澍集團（香港）總經理"
+      "en": "Tsinghua MBA Student",
+      "zh": "清华MBA在读学生"
     },
     "previousPosition": {
       "en": "Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School (2023-2026)",
@@ -1646,6 +1646,78 @@
         "https://res.mojalab.cn/images/projects/21/2.jpg",
         "https://res.mojalab.cn/images/projects/21/3.jpg"
       ]
+    },
+    {
+      "id": 22,
+      "title": "云谷学校计算机特色课程体系设计与建设",
+      "titleEn": "Design and Development of Yungu School's Signature Computer Science Curriculum",
+      "company": "杭州云谷学校",
+      "companyEn": "Hangzhou Yungu School",
+      "role": "项目负责人、计算机学科课程设计者",
+      "roleEn": "Project Lead & Computer Science Curriculum Designer",
+      "period": "2023-2026",
+      "description": "面向 AI 时代，为云谷学校设计并打造计算机特色课程体系。以计算机通识教育为基础，以学生兴趣和专业发展为主线，构建覆盖通识基础、专业基础、大学衔接与兴趣精修的四层培养路径，并通过项目制学习、编程校队、产业合作和升学支持形成完整的人才培养闭环。",
+      "descriptionEn": "Designed and built a signature computer science curriculum for Yungu School in response to the AI era. The program combines universal computing literacy with interest-driven and profession-oriented development through a four-tier pathway spanning general foundations, professional foundations, university preparation, and advanced interests, supported by project-based learning, a programming team, industry partnerships, and university guidance.",
+      "technicalDetails": [
+        "设计通识基础、专业基础、大学衔接和兴趣精修四层课程体系，形成面向不同基础与发展目标的个性化学习路径",
+        "开发信息与智能计算、Python 应用编程、AP CSA、计算机科学基础、云计算基础、机器学习和编程校队 7 门特色课程",
+        "以真实问题和作品产出为导向，设计凌云营·超级大公司、跨学科项目及编程竞赛实践，推动学生从知识学习走向产品创造",
+        "建立五级徽章能力进阶体系，将编程基础、全栈开发、AI 辅助开发、软硬件融合与商业化产品能力纳入持续评价",
+        "引入阿里巴巴、阿里云等产业资源及主流开源与商业工具，并建设中英双语课程门户，统一呈现课程、作品与升学成果"
+      ],
+      "technicalDetailsEn": [
+        "Designed a four-tier curriculum spanning general foundations, professional foundations, university preparation, and advanced interests, enabling personalized pathways for different starting points and goals",
+        "Developed seven signature offerings: Information & Intelligent Computing, Python Application Programming, AP CSA, Computer Science Fundamentals, Cloud Computing Fundamentals, Machine Learning, and the Programming Team",
+        "Built authentic, outcome-oriented learning through the Super Company camp, interdisciplinary projects, and programming competitions, moving students from knowledge acquisition to product creation",
+        "Established a five-level badge progression covering programming foundations, full-stack development, AI-assisted development, integrated software and hardware, and commercially viable product creation",
+        "Connected industry resources from partners including Alibaba and Alibaba Cloud with current open-source and commercial tools, while building a bilingual portal for curricula, student work, and admissions outcomes"
+      ],
+      "technologies": [
+        "胜任力教育",
+        "项目制学习",
+        "人机协同学习",
+        "Python",
+        "AP CSA",
+        "机器学习",
+        "云计算",
+        "软硬件融合"
+      ],
+      "technologiesEn": [
+        "Competency-Based Education",
+        "Project-Based Learning",
+        "Human-AI Collaborative Learning",
+        "Python",
+        "AP CSA",
+        "Machine Learning",
+        "Cloud Computing",
+        "Software-Hardware Integration"
+      ],
+      "impact": "建成由 7 门特色课程、四层培养路径和五级徽章评价体系组成的计算机学科项目，覆盖课程学习、项目实践、竞赛与升学支持；项目网站集中呈现了学生作品、校企合作及 57 份大学录取 Offer。",
+      "impactEn": "Established a computer science program comprising seven signature courses, a four-tier learning pathway, and a five-level badge assessment system across coursework, project practice, competitions, and university guidance. Its website showcases student work, industry partnerships, and 57 university offers.",
+      "relatedSkills": [
+        "课程体系设计",
+        "学科建设",
+        "项目制学习",
+        "胜任力评价",
+        "师资与资源整合",
+        "校企合作",
+        "教育科技"
+      ],
+      "relatedSkillsEn": [
+        "Curriculum Design",
+        "Discipline Development",
+        "Project-Based Learning",
+        "Competency Assessment",
+        "Faculty and Resource Integration",
+        "Industry-Academia Collaboration",
+        "EdTech"
+      ],
+      "images": [
+        "https://cs.yunguhs.com/carousel/carousel-1.jpg",
+        "https://cs.yunguhs.com/carousel/carousel-2.jpg",
+        "https://cs.yunguhs.com/carousel/carousel-3.jpg"
+      ],
+      "projectUrl": "https://cs.yunguhs.com/"
     }
   ],
   "news": [

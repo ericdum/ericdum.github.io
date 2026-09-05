@@ -27,6 +27,7 @@ interface Project {
   relatedSkillsEn: string[];
   images?: string[];
   videos?: string[];
+  projectUrl?: string;
   newsLinks?: { title: string; titleEn: string; url: string }[];
 }
 
@@ -112,4 +113,4 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
     </Link>
   );
-} 
+}
