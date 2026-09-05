@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { Course } from '@/lib/api/teaching';
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { uniqueSchoolOffers, admissionStats } from '@/lib/csOffersData';
 
 type CourseType = {
   id: string;
@@ -521,10 +522,106 @@ export default function TeachingPage() {
                       {course.title[language]}
                     </button>
                   ))}
+                  {student.additionalCourses?.map(course => (
+                    <span
+                      key={course}
+                      className="px-2 py-1 text-xs font-medium rounded-full bg-gray-200 text-gray-700"
+                    >
+                      {course}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 升学统计：录取院校（不重复）+ 各国 / QS / 专业统计 */}
+      <section className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('teaching.admissionStats')}</h2>
+
+        <div className="mb-10">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('teaching.admissionStatsSchools')}</h3>
+          <p className="text-sm text-gray-500 mb-4">{t('teaching.admissionStatsSchoolsIntro')}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {uniqueSchoolOffers.map((offer, idx) => (
+              <div
+                key={`${offer.school}-${offer.major}-${idx}`}
+                className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100"
+              >
+                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-semibold text-sm">
+                  {offer.school.charAt(0)}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-gray-900 truncate" title={offer.school}>{offer.school}</p>
+                  <p className="text-sm text-gray-600 truncate" title={offer.major}>{offer.major}</p>
+                  <p className="text-xs text-gray-500">{offer.rankDisplay}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('teaching.admissionStatsByCountry')}</h3>
+            <ul className="space-y-3">
+              {admissionStats.byCountry.map(({ country, count, countryCode }) => (
+                <li key={country} className="flex items-center justify-between gap-4">
+                  <span className="flex items-center gap-2">
+                    <Image
+                      src={`https://flagcdn.com/w40/${countryCode}.png`}
+                      alt=""
+                      width={24}
+                      height={18}
+                      className="rounded object-cover flex-shrink-0"
+                      unoptimized
+                    />
+                    <span className="text-gray-700">{country}</span>
+                  </span>
+                  <span className="font-medium text-gray-900">{count}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('teaching.admissionStatsQS')}</h3>
+            <div className="flex items-center gap-2 mb-3">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c0/QS_University_Rankings_Logo.jpg"
+                alt="QS"
+                width={80}
+                height={28}
+                className="object-contain h-7 w-auto"
+                unoptimized
+              />
+              <span className="text-xs text-gray-500">{t('teaching.qsRankLabel')}</span>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between gap-4 p-3 rounded-lg bg-gray-50">
+                <span className="text-gray-700">{t('teaching.admissionStatsQS50')}</span>
+                <span className="font-bold text-gray-900">{admissionStats.qs50Count}</span>
+              </div>
+              <div className="flex items-center justify-between gap-4 p-3 rounded-lg bg-gray-50">
+                <span className="text-gray-700">{t('teaching.admissionStatsQS100')}</span>
+                <span className="font-bold text-gray-900">{admissionStats.qs100Count}</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('teaching.admissionStatsByMajor')}</h3>
+            <ul className="space-y-2 max-h-64 overflow-y-auto">
+              {admissionStats.byMajor.map(({ major, count }) => (
+                <li key={major} className="flex items-center justify-between gap-4 py-1.5 border-b border-gray-100 last:border-0">
+                  <span className="text-gray-700 text-sm truncate flex-1" title={major}>{major}</span>
+                  <span className="font-medium text-gray-900 flex-shrink-0">{count}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -545,4 +642,4 @@ export default function TeachingPage() {
       </section>
     </div>
   );
-} 
+}

@@ -11,24 +11,16 @@ export default function ContactPage() {
       zh: "联系信息"
     },
     officeAddress: {
-      en: "Office Address",
-      zh: "办公地址"
+      en: "Address",
+      zh: "地址"
     },
     address: {
-      en: "Hangzhou Yungu School\n1 Yungu Road\nXihu District, Hangzhou\nZhejiang Province\n310000",
-      zh: "杭州云谷学校\n浙江省杭州市西湖区\n云谷路 1 号\n310000"
+      en: "Xinlin Courtyard, Tsinghua University\nHaidian District, Beijing",
+      zh: "北京市海淀区\n清华大学新林院"
     },
     email: {
       en: "Email",
       zh: "电子邮箱"
-    },
-    officeHours: {
-      en: "Office Hours",
-      zh: "办公时间"
-    },
-    hours: {
-      en: "Monday to Friday: 9:00 AM - 5:00 PM\nWeekends: Closed",
-      zh: "周一至周五：9:00 - 17:00\n周末：休息"
     }
   };
 
@@ -47,17 +39,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-sm font-medium text-gray-500">{content.email[language]}</h3>
-                <p className="mt-1 text-gray-900">
-                  <a href="mailto:lichen.dlc@yungu.org" className="text-blue-600 hover:text-blue-800">
-                    lichen.dlc@yungu.org
+                <div className="mt-1 flex flex-col items-start">
+                  <a href="mailto:dlc26@mails.tsinghua.edu.cn" className="text-blue-600 hover:text-blue-800">
+                    dlc26@mails.tsinghua.edu.cn
                   </a>
-                </p>
-              </div>
-              <div>
-                <h3 className="text-sm font-medium text-gray-500">{content.officeHours[language]}</h3>
-                <p className="mt-1 text-gray-900 whitespace-pre-line">
-                  {content.hours[language]}
-                </p>
+                  <a href="mailto:ceo@mojalab.cn" className="text-blue-600 hover:text-blue-800">
+                    ceo@mojalab.cn
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -65,7 +54,7 @@ export default function ContactPage() {
           <div>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.0!2d120.03382!3d30.31462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDE4JzUyLjYiTiAxMjDCsDAyJzAxLjgiRQ!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps?q=Tsinghua+University+Xinlin+Courtyard+Haidian+Beijing&output=embed"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
@@ -80,4 +69,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-} 
+}

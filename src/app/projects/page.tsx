@@ -236,6 +236,17 @@ function ProjectSection({ project, isTarget }: { project: Project; isTarget: boo
         <p className="text-gray-700">
           {language === 'en' ? project.descriptionEn : project.description}
         </p>
+        {project.projectUrl && (
+          <a
+            href={project.projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center text-blue-600 hover:text-blue-800"
+          >
+            {language === 'en' ? 'Visit Project Website' : '访问项目网站'}
+            <span aria-hidden="true" className="ml-1">→</span>
+          </a>
+        )}
       </div>
 
       {project.newsLinks && project.newsLinks.length > 0 && (

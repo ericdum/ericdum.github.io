@@ -168,6 +168,9 @@ function generateMarkdown(data: any): string {
     md += `- **时间**: ${project.period}\n`;
     md += `- **描述**: ${project.description}\n\n`;
     md += `  ${project.descriptionEn}\n\n`;
+    if (project.projectUrl) {
+      md += `- **项目网站**: ${project.projectUrl}\n\n`;
+    }
     
     if (project.technicalDetails && project.technicalDetails.length > 0) {
       md += `**技术细节**:\n\n`;
@@ -298,6 +301,14 @@ function generateMarkdown(data: any): string {
           md += `- ${course.title.zh} / ${course.title.en}\n`;
         });
       }
+      if (student.additionalCourses && student.additionalCourses.length > 0) {
+        if (!student.courses || student.courses.length === 0) {
+          md += `**课程**:\n`;
+        }
+        student.additionalCourses.forEach((course: string) => {
+          md += `- ${course}\n`;
+        });
+      }
       md += `\n`;
     });
     md += `---\n\n`;
@@ -397,4 +408,3 @@ function generatePlainText(data: any): string {
 
 // 运行脚本
 generateAIData().catch(console.error);
-

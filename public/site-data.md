@@ -1,6 +1,6 @@
 # 全站数据导出
 
-**生成时间**: 2026-03-03T01:42:38.059Z
+**生成时间**: 2026-09-05T14:46:16.238Z
 
 本文档包含网站的所有公开信息，方便AI爬虫和搜索引擎索引。
 
@@ -12,9 +12,9 @@
 
 **职位**: 程序员，飞行员 / Coder, Pilot
 
-**当前职位**: 杭州云谷学校工程技术老师 & 教育科技技术顾问 / Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School
+**当前职位**: 清华MBA在读学生 / Tsinghua MBA Student
 
-**邮箱**: formateric@gmail.com
+**邮箱**: dlc26@mails.tsinghua.edu.cn; ceo@mojalab.cn
 
 **简介**:
 
@@ -30,10 +30,9 @@ Former Alibaba Group Rural Revitalization Technology Officer
 Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award. 
 2021 Alibaba Technology Person of the Year.
 
-**寻求机会**: 我正在寻求人工智能、机器人、人机交互或教育领域的 PhD 的机会，有意向的导师欢迎与我联系。 / I am seeking PhD opportunities in artificial intelligence, robotics, human-computer interaction, or education. Interested supervisors are welcome to contact me.
-
 ### 教育背景
 
+- **MBA（2026级，在读）** (MBA Candidate (Class of 2026)), 工商管理 (Business Administration), 清华大学 (Tsinghua University), 2026-present
 - **硕士** (Master's Degree), 计算机科学 (Computer Science), 浙江大学 (Zhejiang University), 2007-2010
 - **学士** (Bachelor's Degree), 计算机科学 (Computer Science), 浙江大学 (Zhejiang University), 2003-2007
 
@@ -82,7 +81,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-## 项目 (共 21 个)
+## 项目 (共 22 个)
 
 ### 1. 基于 HMVC 架构的多语言社交网络平台 / Multi-language Social Network Platform Based on HMVC Architecture
 
@@ -747,6 +746,42 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
+### 22. 云谷学校计算机特色课程体系设计与建设 / Design and Development of Yungu School's Signature Computer Science Curriculum
+
+- **公司**: 杭州云谷学校 / Hangzhou Yungu School
+- **角色**: 项目负责人、计算机学科课程设计者 / Project Lead & Computer Science Curriculum Designer
+- **时间**: 2023-2026
+- **描述**: 面向 AI 时代，为云谷学校设计并打造计算机特色课程体系。以计算机通识教育为基础，以学生兴趣和专业发展为主线，构建覆盖通识基础、专业基础、大学衔接与兴趣精修的四层培养路径，并通过项目制学习、编程校队、产业合作和升学支持形成完整的人才培养闭环。
+
+  Designed and built a signature computer science curriculum for Yungu School in response to the AI era. The program combines universal computing literacy with interest-driven and profession-oriented development through a four-tier pathway spanning general foundations, professional foundations, university preparation, and advanced interests, supported by project-based learning, a programming team, industry partnerships, and university guidance.
+
+- **项目网站**: https://cs.yunguhs.com/
+
+**技术细节**:
+
+1. 设计通识基础、专业基础、大学衔接和兴趣精修四层课程体系，形成面向不同基础与发展目标的个性化学习路径
+   Designed a four-tier curriculum spanning general foundations, professional foundations, university preparation, and advanced interests, enabling personalized pathways for different starting points and goals
+
+2. 开发信息与智能计算、Python 应用编程、AP CSA、计算机科学基础、云计算基础、机器学习和编程校队 7 门特色课程
+   Developed seven signature offerings: Information & Intelligent Computing, Python Application Programming, AP CSA, Computer Science Fundamentals, Cloud Computing Fundamentals, Machine Learning, and the Programming Team
+
+3. 以真实问题和作品产出为导向，设计凌云营·超级大公司、跨学科项目及编程竞赛实践，推动学生从知识学习走向产品创造
+   Built authentic, outcome-oriented learning through the Super Company camp, interdisciplinary projects, and programming competitions, moving students from knowledge acquisition to product creation
+
+4. 建立五级徽章能力进阶体系，将编程基础、全栈开发、AI 辅助开发、软硬件融合与商业化产品能力纳入持续评价
+   Established a five-level badge progression covering programming foundations, full-stack development, AI-assisted development, integrated software and hardware, and commercially viable product creation
+
+5. 引入阿里巴巴、阿里云等产业资源及主流开源与商业工具，并建设中英双语课程门户，统一呈现课程、作品与升学成果
+   Connected industry resources from partners including Alibaba and Alibaba Cloud with current open-source and commercial tools, while building a bilingual portal for curricula, student work, and admissions outcomes
+
+**技术栈**: 胜任力教育, 项目制学习, 人机协同学习, Python, AP CSA, 机器学习, 云计算, 软硬件融合
+
+**影响**: 建成由 7 门特色课程、四层培养路径和五级徽章评价体系组成的计算机学科项目，覆盖课程学习、项目实践、竞赛与升学支持；项目网站集中呈现了学生作品、校企合作及 57 份大学录取 Offer。 / Established a computer science program comprising seven signature courses, a four-tier learning pathway, and a five-level badge assessment system across coursework, project practice, competitions, and university guidance. Its website showcases student work, industry partnerships, and 57 university offers.
+
+**相关技能**: 课程体系设计, 学科建设, 项目制学习, 胜任力评价, 师资与资源整合, 校企合作, 教育科技
+
+---
+
 ## 专利 (共 4 个)
 
 ### 1. 电量信息的处理方法及装置 / Power Information Processing Method and Device
@@ -811,9 +846,23 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-## 新闻 (共 8 条)
+## 新闻 (共 9 条)
 
-### 1. 遨游AI世界，点燃科技梦想 / AI World, Science and Technology Dream
+### 1. 马云发起的学校，如何玩转AI / How the School Founded by Jack Ma Is Harnessing AI
+
+- **日期**: 2026-05-07
+- **作者**: 中国慈善家·龚怡洁
+- **内容**: 《中国慈善家》报道杭州云谷学校如何将AI融入真实学习场景，重点记录了代立晨带领学生通过OpenClaw实践与真实接单，培养AI难以替代的判断、推理和创造能力。
+
+  China Philanthropist reports on how Hangzhou Yungu School integrates AI into authentic learning. The article highlights Lichen Dai's work guiding students to test OpenClaw in real service scenarios and develop the judgment, reasoning, and creativity that AI cannot replace.
+
+- **来源**: https://www.zgcsj.com/zz/2026-05-07/2188.shtml
+
+**完整内容**: 2026年3月3日，阿里巴巴创始人马云在杭州云谷学校。 3月3日，春节后上班的第一天，马云现身杭州云谷学校。和他一起到来的，还有蔡崇信、吴泳铭等阿里和蚂蚁的一众围攻。 由于发起人马云的愿望，云谷学校一直以来的关注。在成为阿里巴巴门人，马云曾是教师，在成功打造一个商业帝国之后，他在2017年的专辑中发表了云谷学校。这所学校，无疑寄托着他对教育的理解和期待。 “‘教’和‘育’是两个概念。教，教授是知识；育，培养是文化……（中国的教育）‘教’非常好，‘育’一般，‘教’大于‘育’。中国成绩一般的学生，到欧美成绩最好的学生，却是竞争力最强的学生教师要通过发现、欣赏和引导，让孩子美好的内心激发，让孩子学习和探究的兴趣激发，让孩子无限的想象力和创造性激发，这些才能让孩子真正成为一个完整而幸福的人，而不是一个被动学习的机器。”马云曾这样表示。 通过教育让孩子成为一个完整的人，是一个没有终点的课题。而在AI时代浪潮涌来后，教育又面临着新的挑战。2026年初，OpenClaw等AI应用给各行各业都带来了巨大的冲击，教育领域也不例外。从建校以来就带有强大科技基因的云谷学校，也在冲击波中进一步思考AI之于教育的意义。 思考在马云3月3日在云谷的言论中可见一斑。“看一所学校不是属于AI时代的学校，不是看一所学校有多少AI服务器，有多强的AI技能。因为AI拥有了芯片，而人类拥有了心灵，AI时代对教育最大的改变，是老师们可以彻底做‘灵魂工程师’，而不是做知识的灌输者。”马云说。 言下之意，对于这所背靠科技大厂的学校而言，技术固然重要，但技术只是辅助，所有的工具都需要服务于人。 如今，AI给学生和老师带来了哪些新东西，如何服务于人，如何颠覆传统的教育模式？ 同学们下场养龙虾 今年高二的邓睿涵，一直有一种强烈的感觉：AI不可靠！ 邓睿涵很喜欢计算机。2021年，他进入杭州云谷学校初读一，当时他向家里申请了第一批，完成了台属于自己的电脑。当时还没有AI，所以关于CPU和显卡之类的硬件应该怎么选，拼装和焊接的工程知识，都是他上网一点搜罗来的信息，理解、消化，自己再动手尝试。 换到现在，邓睿涵如果要组建一台电脑，可以求助于AI，从硬件的选择指标和建议，到整个安装步骤，甚至还有注意事项、避坑指南，AI都会详细周到地给出答案。 2025年云谷学校学术周产品发布会上，包恩熹讲解自己的小程序。 也就是说，有了AI...
+
+---
+
+### 2. 遨游AI世界，点燃科技梦想 / AI World, Science and Technology Dream
 
 - **日期**: 2025-03-07
 - **作者**: 拱墅区科协
@@ -827,7 +876,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 2. 第一次见到支持学生开公司的学校，羡慕已经说累了 / First Time Seeing a School Supporting Students to Start Companies, Can't Stop Being Envious
+### 3. 第一次见到支持学生开公司的学校，羡慕已经说累了 / First Time Seeing a School Supporting Students to Start Companies, Can't Stop Being Envious
 
 - **日期**: 2024-10-22
 - **作者**: 谷雨星球
@@ -841,7 +890,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 3. 第二届科学教育大会"科技成果科普发布"年度特别策划活动举行 / Second Science Education Conference "Science and Technology Achievement Popularization Release" Annual Special Planning Activity Held
+### 4. 第二届科学教育大会"科技成果科普发布"年度特别策划活动举行 / Second Science Education Conference "Science and Technology Achievement Popularization Release" Annual Special Planning Activity Held
 
 - **日期**: 2024-08-26
 - **作者**: 省科协科普部、橙柿互动
@@ -855,7 +904,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 4. 央视新闻聚焦贵州：为大山里的孩子造"火箭" / CCTV News Focuses on Guizhou: Building 'Rockets' for Children in the Mountains
+### 5. 央视新闻聚焦贵州：为大山里的孩子造"火箭" / CCTV News Focuses on Guizhou: Building 'Rockets' for Children in the Mountains
 
 - **日期**: 2022-01-14
 - **作者**: 央视新闻
@@ -869,7 +918,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 5. 白云机场推出国内首个飞机泊位警示系统 / Baiyun Airport Launches First Aircraft Parking Warning System in China
+### 6. 白云机场推出国内首个飞机泊位警示系统 / Baiyun Airport Launches First Aircraft Parking Warning System in China
 
 - **日期**: 2021-10-14
 - **作者**: 中国民航局
@@ -883,7 +932,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 6. 科技抗疫 阿里云、千方科技助力民航疫情防控 / Tech Against COVID: Alibaba Cloud and Qianfang Technology Support Civil Aviation Epidemic Prevention
+### 7. 科技抗疫 阿里云、千方科技助力民航疫情防控 / Tech Against COVID: Alibaba Cloud and Qianfang Technology Support Civil Aviation Epidemic Prevention
 
 - **日期**: 2020-03-04
 - **作者**: 中国民航网
@@ -897,7 +946,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 7. 有一种"科技尽孝"叫远程智慧养老 / There's a Kind of 'Tech Filial Piety' Called Remote Smart Elderly Care
+### 8. 有一种"科技尽孝"叫远程智慧养老 / There's a Kind of 'Tech Filial Piety' Called Remote Smart Elderly Care
 
 - **日期**: 2019-02-25
 - **作者**: 阿里巴巴公益
@@ -911,7 +960,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 ---
 
-### 8. 阿里云IoT工程师智能改造视障家庭，让房子变得"能听会看" / Alibaba Cloud IoT Engineer Intelligently Transforms Visually Impaired Homes, Making Houses 'Able to Hear and See'
+### 9. 阿里云IoT工程师智能改造视障家庭，让房子变得"能听会看" / Alibaba Cloud IoT Engineer Intelligently Transforms Visually Impaired Homes, Making Houses 'Able to Hear and See'
 
 - **日期**: 2018-07-30
 - **作者**: 阿里云
@@ -1168,7 +1217,7 @@ The Programming School Team is established to concentrate students with a solid 
 
 ---
 
-### 学生 (共 15 位)
+### 学生 (共 16 位)
 
 #### 1. 吕一凡 / Yifan Lyu
 
@@ -1211,8 +1260,8 @@ The Programming School Team is established to concentrate students with a solid 
 
 #### 5. 张翼 / Yi Zhang
 
-- **大学**: 
-- **专业**: 
+- **大学**: Washington University in St. Louis
+- **专业**: Computer Science
 - **毕业年份**: 2026
 - **GitHub**: https://github.com/Tylerzhangyi
 - **网站**: https://tylerzhangyi.github.io/
@@ -1223,8 +1272,8 @@ The Programming School Team is established to concentrate students with a solid 
 
 #### 6. 马思嘉 / Sijia Ma
 
-- **大学**: 
-- **专业**: 
+- **大学**: Santa Clara University
+- **专业**: General Engineering
 - **毕业年份**: 2026
 - **GitHub**: https://github.com/Mathewmsj
 - **网站**: https://mathewmsj.github.io/
@@ -1232,7 +1281,15 @@ The Programming School Team is established to concentrate students with a solid 
 - AP CSA / AP CSA
 - Python应用编程 / Python Application Programming
 
-#### 7. 张羽阳 / Yuyang Zhang
+#### 7. 王冰宁 / Bingning Wang
+
+- **大学**: University of California, Davis
+- **专业**: Electrical and Computer Engineering
+- **毕业年份**: 2026
+**课程**:
+- Capstone
+
+#### 8. 张羽阳 / Yuyang Zhang
 
 - **大学**: 
 - **专业**: 
@@ -1243,7 +1300,7 @@ The Programming School Team is established to concentrate students with a solid 
 - AP CSA / AP CSA
 - Python应用编程 / Python Application Programming
 
-#### 8. 王越舟 / Yuezhou Wang
+#### 9. 王越舟 / Yuezhou Wang
 
 - **大学**: 
 - **专业**: 
@@ -1253,7 +1310,7 @@ The Programming School Team is established to concentrate students with a solid 
 **课程**:
 - Python应用编程 / Python Application Programming
 
-#### 9. 邓睿涵 / Ruihan Deng
+#### 10. 邓睿涵 / Ruihan Deng
 
 - **大学**: 
 - **专业**: 
@@ -1263,7 +1320,7 @@ The Programming School Team is established to concentrate students with a solid 
 **课程**:
 - Python应用编程 / Python Application Programming
 
-#### 10. 王家锐 / Jiarui Wang
+#### 11. 王家锐 / Jiarui Wang
 
 - **大学**: 
 - **专业**: 
@@ -1274,7 +1331,7 @@ The Programming School Team is established to concentrate students with a solid 
 - 编程校队 / Programming School Team
 - Python应用编程 / Python Application Programming
 
-#### 11. 寇子谦 / Ziqian Kou
+#### 12. 寇子谦 / Ziqian Kou
 
 - **大学**: 
 - **专业**: 
@@ -1284,7 +1341,7 @@ The Programming School Team is established to concentrate students with a solid 
 - 信息与智能计算 / Information and Intelligent Computing
 - 编程校队 / Programming School Team
 
-#### 12. 郑博纬 / Bowei Zhen
+#### 13. 郑博纬 / Bowei Zhen
 
 - **大学**: 
 - **专业**: 
@@ -1293,7 +1350,7 @@ The Programming School Team is established to concentrate students with a solid 
 **课程**:
 - 编程校队 / Programming School Team
 
-#### 13. 朱殷磊 / Yinlei Zhu
+#### 14. 朱殷磊 / Yinlei Zhu
 
 - **大学**: 
 - **专业**: 
@@ -1301,7 +1358,7 @@ The Programming School Team is established to concentrate students with a solid 
 **课程**:
 - 编程校队 / Programming School Team
 
-#### 14. 谢新晔 / Xinye Xie
+#### 15. 谢新晔 / Xinye Xie
 
 - **大学**: 
 - **专业**: 
@@ -1309,7 +1366,7 @@ The Programming School Team is established to concentrate students with a solid 
 **课程**:
 - 编程校队 / Programming School Team
 
-#### 15. 宋一豪 / Yihao Song
+#### 16. 宋一豪 / Yihao Song
 
 - **大学**: 
 - **专业**: 
@@ -1482,4 +1539,4 @@ Mr. Eric is a very practical teacher. In his class, I always learn a lot of usef
 ---
 
 *本文档由脚本自动生成，包含网站的所有公开信息。*
-*生成时间: 2026-03-03T01:42:38.059Z*
+*生成时间: 2026-09-05T14:46:16.238Z*

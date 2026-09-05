@@ -1,6 +1,6 @@
 全站数据导出
 
-生成时间: 2026-03-03T01:42:38.059Z
+生成时间: 2026-09-05T14:46:16.238Z
 
 本文档包含网站的所有公开信息，方便AI爬虫和搜索引擎索引。
 
@@ -10,9 +10,9 @@
 
 职位: 程序员，飞行员 / Coder, Pilot
 
-当前职位: 杭州云谷学校工程技术老师 & 教育科技技术顾问 / Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School
+当前职位: 清华MBA在读学生 / Tsinghua MBA Student
 
-邮箱: formateric@gmail.com
+邮箱: dlc26@mails.tsinghua.edu.cn; ceo@mojalab.cn
 
 简介:
 
@@ -28,10 +28,9 @@ Former Alibaba Group Rural Revitalization Technology Officer
 Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award. 
 2021 Alibaba Technology Person of the Year.
 
-寻求机会: 我正在寻求人工智能、机器人、人机交互或教育领域的 PhD 的机会，有意向的导师欢迎与我联系。 / I am seeking PhD opportunities in artificial intelligence, robotics, human-computer interaction, or education. Interested supervisors are welcome to contact me.
-
 教育背景
 
+- MBA（2026级，在读） (MBA Candidate (Class of 2026)), 工商管理 (Business Administration), 清华大学 (Tsinghua University), 2026-present
 - 硕士 (Master's Degree), 计算机科学 (Computer Science), 浙江大学 (Zhejiang University), 2007-2010
 - 学士 (Bachelor's Degree), 计算机科学 (Computer Science), 浙江大学 (Zhejiang University), 2003-2007
 
@@ -78,7 +77,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
   - 设计和实现云原生应用架构。
   - Design and implement cloud-native application architecture.
 
-项目 (共 21 个)
+项目 (共 22 个)
 
 1. 基于 HMVC 架构的多语言社交网络平台 / Multi-language Social Network Platform Based on HMVC Architecture
 
@@ -701,6 +700,40 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 相关技能: 时空网络, 实时计算, 分布式系统, 路径规划, 数据融合, 系统架构
 
+22. 云谷学校计算机特色课程体系设计与建设 / Design and Development of Yungu School's Signature Computer Science Curriculum
+
+- 公司: 杭州云谷学校 / Hangzhou Yungu School
+- 角色: 项目负责人、计算机学科课程设计者 / Project Lead & Computer Science Curriculum Designer
+- 时间: 2023-2026
+- 描述: 面向 AI 时代，为云谷学校设计并打造计算机特色课程体系。以计算机通识教育为基础，以学生兴趣和专业发展为主线，构建覆盖通识基础、专业基础、大学衔接与兴趣精修的四层培养路径，并通过项目制学习、编程校队、产业合作和升学支持形成完整的人才培养闭环。
+
+  Designed and built a signature computer science curriculum for Yungu School in response to the AI era. The program combines universal computing literacy with interest-driven and profession-oriented development through a four-tier pathway spanning general foundations, professional foundations, university preparation, and advanced interests, supported by project-based learning, a programming team, industry partnerships, and university guidance.
+
+- 项目网站: https://cs.yunguhs.com/
+
+技术细节:
+
+1. 设计通识基础、专业基础、大学衔接和兴趣精修四层课程体系，形成面向不同基础与发展目标的个性化学习路径
+   Designed a four-tier curriculum spanning general foundations, professional foundations, university preparation, and advanced interests, enabling personalized pathways for different starting points and goals
+
+2. 开发信息与智能计算、Python 应用编程、AP CSA、计算机科学基础、云计算基础、机器学习和编程校队 7 门特色课程
+   Developed seven signature offerings: Information & Intelligent Computing, Python Application Programming, AP CSA, Computer Science Fundamentals, Cloud Computing Fundamentals, Machine Learning, and the Programming Team
+
+3. 以真实问题和作品产出为导向，设计凌云营·超级大公司、跨学科项目及编程竞赛实践，推动学生从知识学习走向产品创造
+   Built authentic, outcome-oriented learning through the Super Company camp, interdisciplinary projects, and programming competitions, moving students from knowledge acquisition to product creation
+
+4. 建立五级徽章能力进阶体系，将编程基础、全栈开发、AI 辅助开发、软硬件融合与商业化产品能力纳入持续评价
+   Established a five-level badge progression covering programming foundations, full-stack development, AI-assisted development, integrated software and hardware, and commercially viable product creation
+
+5. 引入阿里巴巴、阿里云等产业资源及主流开源与商业工具，并建设中英双语课程门户，统一呈现课程、作品与升学成果
+   Connected industry resources from partners including Alibaba and Alibaba Cloud with current open-source and commercial tools, while building a bilingual portal for curricula, student work, and admissions outcomes
+
+技术栈: 胜任力教育, 项目制学习, 人机协同学习, Python, AP CSA, 机器学习, 云计算, 软硬件融合
+
+影响: 建成由 7 门特色课程、四层培养路径和五级徽章评价体系组成的计算机学科项目，覆盖课程学习、项目实践、竞赛与升学支持；项目网站集中呈现了学生作品、校企合作及 57 份大学录取 Offer。 / Established a computer science program comprising seven signature courses, a four-tier learning pathway, and a five-level badge assessment system across coursework, project practice, competitions, and university guidance. Its website showcases student work, industry partnerships, and 57 university offers.
+
+相关技能: 课程体系设计, 学科建设, 项目制学习, 胜任力评价, 师资与资源整合, 校企合作, 教育科技
+
 专利 (共 4 个)
 
 1. 电量信息的处理方法及装置 / Power Information Processing Method and Device
@@ -757,9 +790,21 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 - 链接: https://patents.google.com/patent/CN108462731B
 
-新闻 (共 8 条)
+新闻 (共 9 条)
 
-1. 遨游AI世界，点燃科技梦想 / AI World, Science and Technology Dream
+1. 马云发起的学校，如何玩转AI / How the School Founded by Jack Ma Is Harnessing AI
+
+- 日期: 2026-05-07
+- 作者: 中国慈善家·龚怡洁
+- 内容: 《中国慈善家》报道杭州云谷学校如何将AI融入真实学习场景，重点记录了代立晨带领学生通过OpenClaw实践与真实接单，培养AI难以替代的判断、推理和创造能力。
+
+  China Philanthropist reports on how Hangzhou Yungu School integrates AI into authentic learning. The article highlights Lichen Dai's work guiding students to test OpenClaw in real service scenarios and develop the judgment, reasoning, and creativity that AI cannot replace.
+
+- 来源: https://www.zgcsj.com/zz/2026-05-07/2188.shtml
+
+完整内容: 2026年3月3日，阿里巴巴创始人马云在杭州云谷学校。 3月3日，春节后上班的第一天，马云现身杭州云谷学校。和他一起到来的，还有蔡崇信、吴泳铭等阿里和蚂蚁的一众围攻。 由于发起人马云的愿望，云谷学校一直以来的关注。在成为阿里巴巴门人，马云曾是教师，在成功打造一个商业帝国之后，他在2017年的专辑中发表了云谷学校。这所学校，无疑寄托着他对教育的理解和期待。 “‘教’和‘育’是两个概念。教，教授是知识；育，培养是文化……（中国的教育）‘教’非常好，‘育’一般，‘教’大于‘育’。中国成绩一般的学生，到欧美成绩最好的学生，却是竞争力最强的学生教师要通过发现、欣赏和引导，让孩子美好的内心激发，让孩子学习和探究的兴趣激发，让孩子无限的想象力和创造性激发，这些才能让孩子真正成为一个完整而幸福的人，而不是一个被动学习的机器。”马云曾这样表示。 通过教育让孩子成为一个完整的人，是一个没有终点的课题。而在AI时代浪潮涌来后，教育又面临着新的挑战。2026年初，OpenClaw等AI应用给各行各业都带来了巨大的冲击，教育领域也不例外。从建校以来就带有强大科技基因的云谷学校，也在冲击波中进一步思考AI之于教育的意义。 思考在马云3月3日在云谷的言论中可见一斑。“看一所学校不是属于AI时代的学校，不是看一所学校有多少AI服务器，有多强的AI技能。因为AI拥有了芯片，而人类拥有了心灵，AI时代对教育最大的改变，是老师们可以彻底做‘灵魂工程师’，而不是做知识的灌输者。”马云说。 言下之意，对于这所背靠科技大厂的学校而言，技术固然重要，但技术只是辅助，所有的工具都需要服务于人。 如今，AI给学生和老师带来了哪些新东西，如何服务于人，如何颠覆传统的教育模式？ 同学们下场养龙虾 今年高二的邓睿涵，一直有一种强烈的感觉：AI不可靠！ 邓睿涵很喜欢计算机。2021年，他进入杭州云谷学校初读一，当时他向家里申请了第一批，完成了台属于自己的电脑。当时还没有AI，所以关于CPU和显卡之类的硬件应该怎么选，拼装和焊接的工程知识，都是他上网一点搜罗来的信息，理解、消化，自己再动手尝试。 换到现在，邓睿涵如果要组建一台电脑，可以求助于AI，从硬件的选择指标和建议，到整个安装步骤，甚至还有注意事项、避坑指南，AI都会详细周到地给出答案。 2025年云谷学校学术周产品发布会上，包恩熹讲解自己的小程序。 也就是说，有了AI...
+
+2. 遨游AI世界，点燃科技梦想 / AI World, Science and Technology Dream
 
 - 日期: 2025-03-07
 - 作者: 拱墅区科协
@@ -771,7 +816,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 在过去的两个多月里，杭州六小龙这一股"神秘的东方力量"再一次掀起了人工智能的热潮。为进一步满足拱墅区内青少年对人工智能领域科普需求，提升科学素养，拱墅区"科普助力双减 点亮科学梦想"科学家进校园活动组织了人工智能领域科技工作者走进校园，为老师和同学们带来了一场场充满未来感的科技盛宴，激发青少年对前沿科技的浓厚兴趣。 活动邀请了杭州云谷学校工程技术老师兼教育科技技术顾问代立晨为杭州市卖鱼桥小学六年级的同学们带来了主题为"拥抱AI时代——每个人都有自己的哆啦A梦"科普讲座。代老师从人工智能的发展史讲起，深入浅出，为大家讲述了大模型的工作原理以及用途，并以英语学习为例子，为大家介绍了如何运用用AI帮助学习，鼓励大家向AI学习深度思考。最后，同学们提出了"AI比人类聪明吗？""为什么会出现服务器繁忙提示？"等问题与代老师进行深入互动。 此次活动还邀请了北京航空航天大学杭州创新研究院高级副研究员马群老师为杭州市文晖中心师生带来了主题为"创想AI 走向智能"科普讲座。讲座中，马群老师以生动形象的语言和贴近生活的案例，深入浅出地讲解了人工智能的定义、发展历程、应用领域以及未来趋势。从人脸识别到语音助手，从家政服务到自动驾驶，马老师用一个个鲜活的例子，向同学们展示了人工智能如何改变着我们的生活。同时马老师也指出人工智能不是万能的，也存在着缺陷和不足，并引导大家思考人工智能带来的机遇与挑战。互动环节，同学们踊跃提问，马老师耐心解答，现场气氛热烈。同学们纷纷表示，通过此次讲座，对人工智能有了更深入的了解，也激发了对科技创新的浓厚兴趣。 随着科技的飞速发展，人工智能已经渗透到生活的方方面面，成为推动社会进步的重要力量。拱墅区"科普助力双减 点亮科学梦想"科学家进校园活动暨人工智能系列科普主题讲座进校园活动旨在普及以人工智能为代表的科学知识，弘扬科学（家）精神，培养学生的创新意识和实践能力。下一步，拱墅区科协将邀请更多科学家、科技工作者，推动更多精品课程走进校园，让学生们了解科技前沿动态，培养他们对科学的热爱和探索精神，点燃青少年科技梦想，为未来投身科技创新领域打下坚实基础。 来源：拱墅区科协
 
-2. 第一次见到支持学生开公司的学校，羡慕已经说累了 / First Time Seeing a School Supporting Students to Start Companies, Can't Stop Being Envious
+3. 第一次见到支持学生开公司的学校，羡慕已经说累了 / First Time Seeing a School Supporting Students to Start Companies, Can't Stop Being Envious
 
 - 日期: 2024-10-22
 - 作者: 谷雨星球
@@ -783,7 +828,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 大家好，我是莎莫。 我们常说，教育是为了培养更好的人，但毋庸置疑，对于大多数人来说， 教育也是让人过上更好生活的工具。 换句话说，找到一份好工作，如鱼得水进行进阶，最终在职业生涯中实现自我价值。 尤其是在 2030年接近30%工作将被自动化取代的当下， 教育如何既能实现与职业的贯通，还能发展终身能力呢？ 创校七年光是软性技术投入（不包括硬件）就高达一个亿、再度拿下全新创新教育最高奖项之一 「Apple杰出学校」的杭州云谷学校，或许最有发言权。 近十年来，这所由阿里巴巴投资创办的一所涵盖幼小初高16年的非营利性学校，背靠资源丰富的阿里，得益于杭州创新研究氛围， 毗邻西湖大学和阿里巴巴达摩院的优势 ，已经进行了范式颠覆—— 从小为真实世界而学的00后10后们，毕业竟然可以「原地上班」！ 我在云谷开公司 前段时间，我在云谷公众号上看到了一篇印象深刻的推送，哪怕是像我这样的专业人士，都自愧不如其立意和创意。 更令人惊讶的是，这竟然出自一个刚刚高中毕业，不过18岁孩子之手。 老师自豪地跟我说：娃早就开了自己的工作室，在接单，你去咨询下，因为兼顾学术， 据说业务都排不过来了。 ■袁博做的这篇微信推送，还有点击打开抽屉的互动，非常好玩。 孩子叫袁博，刚去伊利诺伊大学香槟分校（UIUC）学习最喜欢的平面设计。 早在高二时，他就和同学张含琪一起创办了设计工作室，有偿接单，已经接了10次大型活动主视觉设计，参与了100多个艺术与设计项目，设计出了200多张海报。 在AI让人人能变成设计师的现在，他早早洞悉AI无法取代的是人与人之间的共鸣：「设计关乎美和创意。但我心里它最关乎的是人。」 他曾偶然认识了一位自闭症患者母亲，向他倾诉了孩子无法正常和同龄人和自己交流的痛苦，这驱使袁博和同学们去往残疾人托养中心、特殊儿童学校、精神康养中心进一步了解不被「主流」关注的人群处境。 受到巨大震撼的他，把想法落地变成了产品。 他发现自闭症群体用图像交流更容易，于是他用两年时间设计出一整套表情符号交流系统， 最终设计出一款针对自闭症患者开发的社交软件——Spark。 成熟、有同理心、合作沟通、社会责任、自我探索……在袁博身上，我们看到这些赶超不少职场人的素养。 ■袁博登上2023U设计周，是最年轻的分享嘉宾，他分享了用设计改造一对夫妻档早餐店的故事。 袁博这样的高中生在云谷绝不是个例。 高中STEM、艺术...
 
-3. 第二届科学教育大会"科技成果科普发布"年度特别策划活动举行 / Second Science Education Conference "Science and Technology Achievement Popularization Release" Annual Special Planning Activity Held
+4. 第二届科学教育大会"科技成果科普发布"年度特别策划活动举行 / Second Science Education Conference "Science and Technology Achievement Popularization Release" Annual Special Planning Activity Held
 
 - 日期: 2024-08-26
 - 作者: 省科协科普部、橙柿互动
@@ -795,7 +840,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 小学三年级的5位小学生通过AI写了一本名为《情绪宝典》的书；初一的2位学生利用AI做了一个可以分享3D建模作品的网站；高三的3位学生通过AI做了一个可以将3位同学的特征合成到一起，并最终做成视频的虚拟数字人……这些都是正在杭州的学校里发生的事。 在这个科技飞速发展的时代，教育的变革与创新从未如此紧迫。而AIGC（生成式人工智能）技术的崛起，就如同划破黑夜的一道曙光，为科学教育带来了前所未有的机遇与挑战。 AIGC究竟可以给我们的教育带来些什么？未来的科学教育将会怎样改变？ 8月24日下午，第二届科学教育大会"科技成果科普发布"年度特别策划活动在钱塘江畔的杭州国际博览中心举行。3位在科技和教育领域颇具影响力的嘉宾，共同探讨了这个引领时代潮流、充满无限可能的主题——"智能未来：AIGC 引领科学教育新纪元"。 高校、中学、企业 多重视角看AIGC如何赋能科学教育 首先登场的是北京师范大学科学教育研究院院长、教育部基础教育教学指导委员会科学教学专委会主任委员郑永和。 想象一下，将全国某门课（比如语文）教得最好的20位教师教某一堂课的过程都记录下来，让AI学习，然后生成一个综合性的教学方案再教学生，会是怎样的效果？郑永和的这个假设让在场观众一下子打开了对于AIGC教学应用的想象。 郑永和表示，多媒体、互联网、VR、元宇宙等几轮标志性的技术变革对教育的推进，都是比较"物化"的，工具性特别强，而生成式的人工智能带有自己的"思维"，与教育结合会创造出非常大的可能性，为教育发展带来新机遇。一堂45分钟的课，或许可以先用20分钟让学生和机器进行问答、交互，再用剩下的时间让教师和学生进行深度交流。 在谈到AIGC赋能科学教育和科技创新人才培养的紧迫性时，郑永和特别谈到了"小模型"。近些年，我们可能听多了"大模型"，结合具体学科（比如生物、化学等）的小模型对教育的创新发展也具有非常重要的战略意义。 同样来自高校，但还有另一重企业家身份的朱明雄为我们带来了从社会人才需求角度的观察与思考。作为杭州国科智飞科技有限公司CEO、国科大杭高院科创俱乐部主席，朱明雄在科学教育的探索和实践中也有不少经验。 在朱明雄看来，传统的教学形态是"师-生"，新时代相对被认可的是"师-生-机"，而令部分人担忧的是会演变成"生-机"教学形态。 朱明雄表示，在国科大杭高院今年的期末考试中，有部分学科是开卷的，允许学生...
 
-4. 央视新闻聚焦贵州：为大山里的孩子造"火箭" / CCTV News Focuses on Guizhou: Building 'Rockets' for Children in the Mountains
+5. 央视新闻聚焦贵州：为大山里的孩子造"火箭" / CCTV News Focuses on Guizhou: Building 'Rockets' for Children in the Mountains
 
 - 日期: 2022-01-14
 - 作者: 央视新闻
@@ -807,7 +852,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 2021年，是中国航天事业发展的大年。这一年里，我们有了空间站，有了出差三人组……全年，中国航天发射一共55次，世界领跑。而2022年，我们要关注的第一次发射，不是在西昌、也不是在酒泉、文昌，而是在贵州。 近日，在贵州省黔西南州普安县的大山里，一枚特殊的火箭成功发射。而这一切，源于一群山里娃"想造一个真正火箭"的愿望。 帮他们实现这个愿望的，是几个城里来的年轻人，他们不但给这些山里的孩子造出了会飞的新年礼物——火箭，还给孩子们种下了探索的种子。 "我们能造一个真的火箭吗？" 这群来自贵州普安县铅矿学校四、五年级的小学生，他们对天空的想象五花八门。现在，孩子们站在大山里的一个小山包上，正兴奋地不断练习倒数计时，在期盼着什么。 山下，一个闲置的养鸡场旁，几个年轻人在冬日暖阳里，忙得满头大汗。他们正在给孩子们组装一个大家伙——火箭！ 曹林和代立晨，都是软件工程师。一个偶然的机会，他俩作为志愿者，通过线上授课的方式，给普安县铅矿学校的孩子们，上了两堂有关太空和航天知识的视频科普课，很受孩子们的欢迎。而课堂上孩子们的一个提问，让两个程序员动了心思。 乡村科普支教志愿者 曹林： （小朋友）说老师我们能造一个真的火箭吗，当时其实我们就知道这件事情非常难，但是下面有200多个小朋友看着你，然后眼睛里有期待感，我们当时就说好那我们去试一下。其实我们就带着这样的忐忑，就出发了。 说干就干，可是曹林、代立晨每天的工作都是码代码，从没接触过火箭。火箭要多高？分设几个舱？带什么功能？怎么搞追踪？动力从哪儿来？两个程序员，眼前一抹黑。 于是，曹林通过网上的火箭爱好者群或论坛，找到了还在深圳高校读书的火箭爱好者余畅一起加盟。三个小伙子通过网络沟通、分工，利用业余时间每天干到凌晨。十几天过后，终于拿出了一份很"亲近"小朋友的透明火箭设计方案。 乡村科普支教志愿者 曹林： 既要小朋友看得见，又要小朋友能感知，所以我们设定了800米的飞行高度，在这个高度上小朋友是能很清晰地看见火箭的轨迹的。火箭长度的设计是1.37米，正好比四五年级的小朋友可能略高一点点，这样小朋友抬起头就能看到一个火箭，就会非常有仪式感。 火箭的制作同样充满挑战。三个小伙伴各显神通，火箭外壳3D打印，航电系统自己焊接，固体燃料自己调配，北斗模块、发射架和降落伞网上订制…… 三个多月后，一枚小火箭需要的100多个零部件全部就绪。三个小...
 
-5. 白云机场推出国内首个飞机泊位警示系统 / Baiyun Airport Launches First Aircraft Parking Warning System in China
+6. 白云机场推出国内首个飞机泊位警示系统 / Baiyun Airport Launches First Aircraft Parking Warning System in China
 
 - 日期: 2021-10-14
 - 作者: 中国民航局
@@ -819,7 +864,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 近日，白云机场投入运行国内首个飞机泊位警示系统！该警示系统将交通信号灯和原有泊位系统结合起来，通过系统自动化控制飞机泊位引导、信息自动化处理和信号灯指挥三个流程，实现自动泊位系统根据当前机位的不同状态显示相应的交通信号，确保飞机进位的安全性，提高了服务车道运行速度，降低飞机进位风险。 民航局相关安全管理规定：在航空器进入机位过程中，任何车辆、人员不得在航空器和接机人员或目视泊位引导系统之间穿行。近年来，白云机场引进了飞机自动泊位系统来帮助飞机"自动泊车"，自动泊位不再需要人工指挥。因为泊位信号只在泊位系统与飞行员之间传递，且航站楼设施设备会遮挡视线，这就存在行驶车辆和进位航空器冲突的安全风险。 鉴于此种情况，白云机场相关工作人员通过对可能出现的问题进行实地勘察和图纸对比，最后决定借鉴道路交通信号灯的模式，联合泊位系统厂家，在现有的泊位系统工作模式上进行创新，将交通信号灯和泊位系统结合起来，开发出一套飞机泊位警示系统。泊位警示系统由自动泊位系统、中控通信系统和信号灯指示系统三部分组成，当机位有飞机正在进入时，机位正前方的服务车道就会向司机亮起红灯，禁止车辆通行；相邻两个机位前方的服务车道会向司机亮起黄灯，提醒司机慢行；飞机进位完成后，就会亮起绿灯，车辆正常通行。 目前，白云机场在T2航站楼所有存在视线盲区的37个停机位都安装了泊位警示系统，服务车道的车辆通行效率大大提高。飞机泊位警示系统是白云机场打造"平安机场""智慧机场"、解决车辆与飞机运行冲突问题的重要尝试，该系统在保证安全秩序的前提下尽可能提高了服务车道的运行效率，在国内机场尚属首创。 来源：中国民航局
 
-6. 科技抗疫 阿里云、千方科技助力民航疫情防控 / Tech Against COVID: Alibaba Cloud and Qianfang Technology Support Civil Aviation Epidemic Prevention
+7. 科技抗疫 阿里云、千方科技助力民航疫情防控 / Tech Against COVID: Alibaba Cloud and Qianfang Technology Support Civil Aviation Epidemic Prevention
 
 - 日期: 2020-03-04
 - 作者: 中国民航网
@@ -831,7 +876,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 《中国民航报》、中国民航网 记者张薇 报道：2月28日，阿里云发布航空行业热度预测服务。这项服务联合飞猪和航班管家，在疫情防控后期阶段，为航空公司的航线运行恢复以及服务的精细化管理提供支持。疫情发生以来，阿里云和联合其合作伙伴千方科技旗下的远航通，为民航疫情的防控工作提供科技助力。 据了解，该项服务将可为航空公司提供未来一个月的运行支持：包括一个月的旅客流量预测、航班分配和航线优化支持，同时提供未来一个月航班的活跃度趋势预测、城市出行趋势，同时可以对航空公司的航班执行率等具体信息进行分析复盘，提供精细化的航班管理。 新冠肺炎疫情发生以来，民航各行业、各单位、各部门都在积极抗击疫情，战斗在疫情防控的第一线。阿里云和远航通依靠多年在航空行业的经验沉淀，为航空企业提供生产效率提升、降本增效的解决方案；提供包括"千班千面"的精细化管理，针对每一次航班任务为机组操作提供关注事项和参考建议服务；同时，为了解决疫情期间航空企业机组人员远程培训的需求，提供基于阿里云的在线培训课程体系服务。 疫情期间，阿里云结合航空行业的情况积极推进了航空行业应对疫情的技术方案，从园区管理、机场、员工管理、办公协同和业务支持五大方面帮助航空企业应对疫情。阿里云为整个疫情提供防控数据的收集、统计、分析以及为政府、防疫单位，以及民航和交通类的生产单位提供了非常好的数据保障和信息流的能力。 "我们现在主要的方向是基于国内主要城市航空出行需求，从这个方面帮助航空公司判断未来主要市场需求的热度以及市场需求集中的方向，从而帮助航空公司有效的组织运力，同时能够在数据支撑下帮助航空公司合理的进行收益以及利润方面的保障。" 阿里云智能航空行业资深业务拓展专家高乐奇介绍，"航空公司、机场等很多的客户也都在使用钉钉进行在线培训，利用支付宝小程序将疫情情况上报，我们的产品可以帮助客户实现防疫的上报和汇总。" 作为阿里云重要合作伙伴，远航通基于大数据为民航企业生产优化和安全保障提供数字智能专业服务。面对此次疫情，远航通携手阿里云推出航空公司航班运行智能优化云服务，支持航空公司的生产恢复以及持续降本增效；通过线上远程的专业培训平台为航空公司机组人员提供远程培训；同时，为机场用户搭建生产安全风险的量化管理系统，针对风险预警提供快速响应的措施建议，并持续跟进风险优化效果，实现智能安全管理的闭环。 来源：中国民航网 编辑：张薇
 
-7. 有一种"科技尽孝"叫远程智慧养老 / There's a Kind of 'Tech Filial Piety' Called Remote Smart Elderly Care
+8. 有一种"科技尽孝"叫远程智慧养老 / There's a Kind of 'Tech Filial Piety' Called Remote Smart Elderly Care
 
 - 日期: 2019-02-25
 - 作者: 阿里巴巴公益
@@ -843,7 +888,7 @@ Three-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award
 
 完整内容: 国务院在2017年公布的《"十三五"国家老龄事业发展和养老体系建设规划》中指出："预计到2020年（也就是明年），全国60岁以上老年人口将增加到2.55亿人左右，独居和空巢老年人将增加到1.18亿人左右。" 在这样的形势下，远在异乡的儿女们，如何照顾家里的老人成为了一个逃不开的话题。 你们还记得去年那个为视障人士爆改一间房的代立晨（木酱）吗？ 今年他又出来搞事情了，这次他的目标是老年人。 前不久，家住武汉的一对老夫妻找到了代立晨（木酱）。 他们是开心爷爷和快乐奶奶。 两位老人一位80岁，一位77岁，平时最爱的就是玩直播，爷爷唱歌，奶奶跳舞。奶奶问："开心爷爷，你几岁啦？"爷爷回答："我8岁啦！" 一开始，网友以为爷爷是在逗大家，但问得多了，网友们发现，事实并非如此。 爷爷年轻的时候参与了南京长江大桥的建设。 像那个年代走过来的很多人一样，爷爷几乎将一生都献给了祖国的桥梁事业，一年也回不了几次家。 奶奶就坚持三四天给爷爷写一封信，这一写就是17年，2000多封信。 终于等到了爷爷退休，突如其来的疾病却夺走了他的记忆。 在这儿孙满堂之时，爷爷却叫不出他们的名字。 全球每3秒钟，就有1个人患上阿尔兹海默症，这种疾病最残忍的是——不可逆转。 从爷爷患病以后，奶奶坚持亲自护理，寸步不离。 因为一旦离开，爷爷就有可能走丢。 有一次爷爷自顾自地推门出去，家人找了8个小时才把他找回来，问他为什么出去。他说"我要找我老婆，曹雪梅"。 被爷爷和奶奶的深情和可爱打动，木酱决定与合作伙伴光速达共同研发一套远程看护解决方案来帮助他们。 在爷爷家，借助物联网传感器，可以记录爷爷在家里的所有行为。通过智能分析，对异样的行为进行预警。比如说爷爷奶奶平时9点钟睡觉突然今天 9:30 了还没有睡，系统就会给你发送一条预警， 比如爷爷晚上起夜次数多了， 第二天也会预警给你。 爷爷佩戴了一个手环，这个手环会监测爷爷的一些身体指数，再加上刚刚说的人体传感器给出的睡眠质量数据，睡觉和起床的时间等等， 系统会给一个综合的评分。如果今天给出的评分偏低了，那就要格外的关注一下爷爷的身体了。 手环更大的功能是可以实时检测爷爷的定位，如果爷爷以后再走丢可以通过地图定位找到他，还能一键呼叫爷爷，爷爷也可以一键报警。 手机软件还中有爷爷家温度湿度的数据，孙女贝贝可以实时监测到老人家里的环境， 如果爷爷奶奶家温度过低， 也会...
 
-8. 阿里云IoT工程师智能改造视障家庭，让房子变得"能听会看" / Alibaba Cloud IoT Engineer Intelligently Transforms Visually Impaired Homes, Making Houses 'Able to Hear and See'
+9. 阿里云IoT工程师智能改造视障家庭，让房子变得"能听会看" / Alibaba Cloud IoT Engineer Intelligently Transforms Visually Impaired Homes, Making Houses 'Able to Hear and See'
 
 - 日期: 2018-07-30
 - 作者: 阿里云
@@ -1085,7 +1130,7 @@ The Programming School Team is established to concentrate students with a solid 
 - 云谷高中编程校队 GitHub 组织 / Yungu High School Programming Team GitHub Organization
   校队成员将加入此GitHub组织，积累社区声誉，开源项目作品，共同建设技术社区。 / Team members will join this GitHub organization to accumulate community reputation, open source project works, and jointly build a technical community.
 
-学生 (共 15 位)
+学生 (共 16 位)
 
 1. 吕一凡 / Yifan Lyu
 
@@ -1128,8 +1173,8 @@ The Programming School Team is established to concentrate students with a solid 
 
 5. 张翼 / Yi Zhang
 
-- 大学: 
-- 专业: 
+- 大学: Washington University in St. Louis
+- 专业: Computer Science
 - 毕业年份: 2026
 - GitHub: https://github.com/Tylerzhangyi
 - 网站: https://tylerzhangyi.github.io/
@@ -1140,8 +1185,8 @@ The Programming School Team is established to concentrate students with a solid 
 
 6. 马思嘉 / Sijia Ma
 
-- 大学: 
-- 专业: 
+- 大学: Santa Clara University
+- 专业: General Engineering
 - 毕业年份: 2026
 - GitHub: https://github.com/Mathewmsj
 - 网站: https://mathewmsj.github.io/
@@ -1149,7 +1194,15 @@ The Programming School Team is established to concentrate students with a solid 
 - AP CSA / AP CSA
 - Python应用编程 / Python Application Programming
 
-7. 张羽阳 / Yuyang Zhang
+7. 王冰宁 / Bingning Wang
+
+- 大学: University of California, Davis
+- 专业: Electrical and Computer Engineering
+- 毕业年份: 2026
+课程:
+- Capstone
+
+8. 张羽阳 / Yuyang Zhang
 
 - 大学: 
 - 专业: 
@@ -1160,7 +1213,7 @@ The Programming School Team is established to concentrate students with a solid 
 - AP CSA / AP CSA
 - Python应用编程 / Python Application Programming
 
-8. 王越舟 / Yuezhou Wang
+9. 王越舟 / Yuezhou Wang
 
 - 大学: 
 - 专业: 
@@ -1170,7 +1223,7 @@ The Programming School Team is established to concentrate students with a solid 
 课程:
 - Python应用编程 / Python Application Programming
 
-9. 邓睿涵 / Ruihan Deng
+10. 邓睿涵 / Ruihan Deng
 
 - 大学: 
 - 专业: 
@@ -1180,7 +1233,7 @@ The Programming School Team is established to concentrate students with a solid 
 课程:
 - Python应用编程 / Python Application Programming
 
-10. 王家锐 / Jiarui Wang
+11. 王家锐 / Jiarui Wang
 
 - 大学: 
 - 专业: 
@@ -1191,7 +1244,7 @@ The Programming School Team is established to concentrate students with a solid 
 - 编程校队 / Programming School Team
 - Python应用编程 / Python Application Programming
 
-11. 寇子谦 / Ziqian Kou
+12. 寇子谦 / Ziqian Kou
 
 - 大学: 
 - 专业: 
@@ -1201,7 +1254,7 @@ The Programming School Team is established to concentrate students with a solid 
 - 信息与智能计算 / Information and Intelligent Computing
 - 编程校队 / Programming School Team
 
-12. 郑博纬 / Bowei Zhen
+13. 郑博纬 / Bowei Zhen
 
 - 大学: 
 - 专业: 
@@ -1210,7 +1263,7 @@ The Programming School Team is established to concentrate students with a solid 
 课程:
 - 编程校队 / Programming School Team
 
-13. 朱殷磊 / Yinlei Zhu
+14. 朱殷磊 / Yinlei Zhu
 
 - 大学: 
 - 专业: 
@@ -1218,7 +1271,7 @@ The Programming School Team is established to concentrate students with a solid 
 课程:
 - 编程校队 / Programming School Team
 
-14. 谢新晔 / Xinye Xie
+15. 谢新晔 / Xinye Xie
 
 - 大学: 
 - 专业: 
@@ -1226,7 +1279,7 @@ The Programming School Team is established to concentrate students with a solid 
 课程:
 - 编程校队 / Programming School Team
 
-15. 宋一豪 / Yihao Song
+16. 宋一豪 / Yihao Song
 
 - 大学: 
 - 专业: 
@@ -1382,4 +1435,4 @@ Mr. Eric is a very practical teacher. In his class, I always learn a lot of usef
   亮点: 古寺庙, 传统园林
 
 本文档由脚本自动生成，包含网站的所有公开信息。
-生成时间: 2026-03-03T01:42:38.059Z
+生成时间: 2026-09-05T14:46:16.238Z
