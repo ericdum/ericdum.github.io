@@ -70,17 +70,37 @@ interface Award {
 const experiences: Experience[] = [
   {
     company: {
+      zh: "中澍集團（香港）",
+      en: "China Tree Group Limited"
+    },
+    period: "2026-present",
+    positions: [
+      {
+        title: {
+          zh: "總經理",
+          en: "General Manager"
+        },
+        period: "2026-present",
+        responsibilities: {
+          zh: ["负责集团整体经营管理"],
+          en: ["Oversee the group's overall operations and management"]
+        }
+      }
+    ]
+  },
+  {
+    company: {
       zh: "杭州云谷学校",
       en: "Hangzhou Yungu School"
     },
-    period: "2023-present",
+    period: "2023-2026",
     positions: [
       {
         title: {
           zh: "高中工程技术老师兼教育科技技术顾问",
           en: "High School Engineering Technology Teacher & Educational Technology Advisor"
         },
-        period: "2023-present",
+        period: "2023-2026",
         responsibilities: {
           zh: [
             "负责高中工程技术课程教学",
@@ -233,6 +253,16 @@ const experiences: Experience[] = [
 ];
 
 const education: Education[] = [
+  {
+    school: {
+      zh: "清华大学",
+      en: "Tsinghua University"
+    },
+    degree: {
+      zh: "MBA（2026级，在读）",
+      en: "MBA Candidate (Class of 2026)"
+    }
+  },
   {
     school: {
       zh: "Arizona State University",
@@ -496,4 +526,4 @@ export default function ExperiencePage() {
       </div>
     </div>
   );
-} 
+}

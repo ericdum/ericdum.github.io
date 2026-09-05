@@ -298,6 +298,14 @@ function generateMarkdown(data: any): string {
           md += `- ${course.title.zh} / ${course.title.en}\n`;
         });
       }
+      if (student.additionalCourses && student.additionalCourses.length > 0) {
+        if (!student.courses || student.courses.length === 0) {
+          md += `**课程**:\n`;
+        }
+        student.additionalCourses.forEach((course: string) => {
+          md += `- ${course}\n`;
+        });
+      }
       md += `\n`;
     });
     md += `---\n\n`;
@@ -397,4 +405,3 @@ function generatePlainText(data: any): string {
 
 // 运行脚本
 generateAIData().catch(console.error);
-

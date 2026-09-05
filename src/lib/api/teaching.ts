@@ -53,6 +53,7 @@ export interface Student {
   github: string;
   website?: string;
   courses: Course[];
+  additionalCourses?: string[];
   university: string;
   major: string;
   graduationYear: number;
@@ -857,8 +858,8 @@ const students: Student[] = [
                courses.find(course => course.id === "machine-learning")!, 
                courses.find(course => course.id === "cloud-computing")!,
                courses.find(course => course.id === "python-app-programming")!],
-    university: "",
-    major: "",
+    university: "Washington University in St. Louis",
+    major: "Computer Science",
     graduationYear: 2026,
     avatar: "https://res.mojalab.cn/students/Tylerzhangyi.png"
   },
@@ -872,10 +873,24 @@ const students: Student[] = [
     website: "https://mathewmsj.github.io/",
     courses: [courses.find(course => course.id === "ap-csa")!,
       courses.find(course => course.id === "python-app-programming")!],
-    university: "",
-    major: "",
+    university: "Santa Clara University",
+    major: "General Engineering",
     graduationYear: 2026,
     avatar: "https://res.mojalab.cn/students/Mathewmsj.png"
+  },
+  {
+    id: "15",
+    name: {
+      zh: "王冰宁",
+      en: "Bingning Wang"
+    },
+    github: "",
+    courses: [],
+    additionalCourses: ["Capstone"],
+    university: "University of California, Davis",
+    major: "Electrical and Computer Engineering",
+    graduationYear: 2026,
+    avatar: ""
   },
   {
     id: "9",

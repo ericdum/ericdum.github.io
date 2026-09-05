@@ -68,7 +68,7 @@ export interface Profile {
     };
     year: string;
   }[];
-  seekingOpportunities: {
+  seekingOpportunities?: {
     en: string;
     zh: string;
   };
@@ -84,14 +84,14 @@ const profile: Profile = {
     zh: "程序员，飞行员"
   },
   currentPosition: {
-    en: "Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School",
-    zh: "杭州云谷学校工程技术老师 & 教育科技技术顾问"
+    en: "General Manager at China Tree Group Limited",
+    zh: "中澍集團（香港）總經理"
   },
   previousPosition: {
-    en: "Committee Member of China Organ Transplant Foundation - Easy Access Special Fund",
-    zh: "中国器官移植基金会-易捷通专项基金委员"
+    en: "Engineering Technology Teacher & Educational Technology Consultant at Hangzhou Yungu School (2023-2026)",
+    zh: "杭州云谷学校工程技术老师兼教育科技技术顾问（2023-2026）"
   },
-  email: "formateric@gmail.com",
+  email: "dlc26@mails.tsinghua.edu.cn; ceo@mojalab.cn",
   // phone: "+86 153 5544 2280",
   bio: {
     en: "Former Alibaba Cloud Aviation Industry Technical Director. \nFormer head of Alibaba Cloud IoT Innovation Lab.\nFormer Alibaba Group Rural Revitalization Technology Officer \nThree-time winner of Alibaba Group's Annual Top 10 Public Welfare Projects Award. \n2021 Alibaba Technology Person of the Year.",
@@ -261,6 +261,21 @@ const profile: Profile = {
   education: [
     {
       degree: {
+        en: "MBA Candidate (Class of 2026)",
+        zh: "MBA（2026级，在读）"
+      },
+      major: {
+        en: "Business Administration",
+        zh: "工商管理"
+      },
+      school: {
+        en: "Tsinghua University",
+        zh: "清华大学"
+      },
+      year: "2026-present"
+    },
+    {
+      degree: {
         en: "Master's Degree",
         zh: "硕士"
       },
@@ -313,13 +328,9 @@ const profile: Profile = {
       },
       year: "2022"
     }
-  ],
-  seekingOpportunities: {
-    en: "I am seeking PhD opportunities in artificial intelligence, robotics, human-computer interaction, or education. Interested supervisors are welcome to contact me.",
-    zh: "我正在寻求人工智能、机器人、人机交互或教育领域的 PhD 的机会，有意向的导师欢迎与我联系。"
-  }
+  ]
 };
 
 export async function getProfile() {
   return profile;
-} 
+}

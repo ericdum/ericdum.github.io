@@ -89,7 +89,16 @@ export const translations = {
       viewProject: "View Project",
       students: "Students",
       technologies: "Technologies",
-      projectDetails: "Project Details"
+      projectDetails: "Project Details",
+      admissionStats: "Admission Statistics",
+      admissionStatsSchools: "Offers by School",
+      admissionStatsSchoolsIntro: "School, major, and 2026 QS World University Ranking (unique entries).",
+      admissionStatsByCountry: "Offers by Country",
+      admissionStatsQS: "Offers by QS Rank",
+      admissionStatsQS50: "Top 50",
+      admissionStatsQS100: "Top 100",
+      admissionStatsByMajor: "Offers by Major",
+      qsRankLabel: "2026 QS"
     },
     experience: {
       title: "Work Experience & Education",
@@ -189,7 +198,16 @@ export const translations = {
       viewProject: "查看项目",
       students: "参与学生",
       technologies: "技术栈",
-      projectDetails: "项目详情"
+      projectDetails: "项目详情",
+      admissionStats: "升学统计",
+      admissionStatsSchools: "录取院校",
+      admissionStatsSchoolsIntro: "学校、专业及 2026 年 QS 世界大学排名（不重复）。",
+      admissionStatsByCountry: "各国 offer 数量",
+      admissionStatsQS: "QS 排名 offer 数量",
+      admissionStatsQS50: "QS50 以内",
+      admissionStatsQS100: "QS100 以内",
+      admissionStatsByMajor: "各专业 offer 数量",
+      qsRankLabel: "2026 年 QS"
     },
     experience: {
       title: "工作经历与学历",
